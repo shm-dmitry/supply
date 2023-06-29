@@ -5,6 +5,7 @@ Yes, I know about china and ali.
 But it was intresting to create it manually.
 
 Input: AC 180..240V
+
 Outputs:
 1. DC 0..50V up to 10A (banana jack)
 2. DC 5V up to 15A (banana jack & 2.54 pin pannel)
