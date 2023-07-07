@@ -978,14 +978,14 @@
         )
       )
     )
-    (symbol "Reference_Voltage:TL431DBV" (pin_numbers hide) (pin_names hide) (in_bom yes) (on_board yes)
-      (property "Reference" "U" (at 0 -2.54 0)
+    (symbol "Reference_Voltage:TL432DBZ" (pin_numbers hide) (pin_names hide) (in_bom yes) (on_board yes)
+      (property "Reference" "U" (at -2.54 2.54 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Value" "TL431DBV" (at 0 -4.445 0)
+      (property "Value" "TL432DBZ" (at 0 -2.54 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 0 -6.35 0)
+      (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 0 -3.81 0)
         (effects (font (size 1.27 1.27) italic) hide)
       )
       (property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl431.pdf" (at 0 0 0)
@@ -994,18 +994,18 @@
       (property "ki_keywords" "diode device shunt regulator" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Shunt Regulator, SOT-23-5" (at 0 0 0)
+      (property "ki_description" "Shunt Regulator, SOT-23" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_fp_filters" "SOT?23?5*" (at 0 0 0)
+      (property "ki_fp_filters" "SOT?23*" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "TL431DBV_0_1"
+      (symbol "TL432DBZ_0_1"
         (polyline
           (pts
-            (xy -2.54 0)
+            (xy -1.27 0)
             (xy 0 0)
-            (xy 2.54 0)
+            (xy 1.27 0)
           )
           (stroke (width 0) (type default))
           (fill (type none))
@@ -1030,26 +1030,18 @@
           (fill (type none))
         )
       )
-      (symbol "TL431DBV_1_1"
-        (polyline
-          (pts
-            (xy 0 1.27)
-            (xy 0 0)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
+      (symbol "TL432DBZ_1_1"
+        (pin passive line (at 0 2.54 270) (length 2.54)
+          (name "REF" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
         )
         (pin passive line (at 2.54 0 180) (length 1.27)
           (name "K" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 0 2.54 270) (length 2.54)
-          (name "REF" (effects (font (size 1.27 1.27))))
-          (number "4" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
         )
         (pin passive line (at -2.54 0 0) (length 1.27)
           (name "A" (effects (font (size 1.27 1.27))))
-          (number "5" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))
         )
       )
     )
@@ -1589,10 +1581,6 @@
     (stroke (width 0) (type default))
     (uuid 95041f34-1ef4-4b96-9767-793ec7e28d7a)
   )
-  (wire (pts (xy 54.61 77.47) (xy 54.61 74.93))
-    (stroke (width 0) (type default))
-    (uuid 9548d886-4af2-4251-a7a3-6bc2165f4efe)
-  )
   (wire (pts (xy 41.91 107.95) (xy 45.72 107.95))
     (stroke (width 0) (type default))
     (uuid 95e1b100-83e0-45f4-b87d-e708efade3d8)
@@ -1990,7 +1978,7 @@
   (symbol (lib_id "Device:R") (at 246.38 134.62 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 162b31a0-b58b-4b99-a445-a68f44888273)
-    (property "Reference" "R22" (at 248.92 133.985 0)
+    (property "Reference" "R19" (at 248.92 133.985 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "200K" (at 248.92 136.525 0)
@@ -2007,7 +1995,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
-          (reference "R22") (unit 1)
+          (reference "R19") (unit 1)
         )
       )
     )
@@ -2042,10 +2030,10 @@
   (symbol (lib_id "Device:C_Polarized") (at 25.4 35.56 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 25b5ade6-7bdf-4ef3-afe6-47b3c6d42069)
-    (property "Reference" "C3" (at 29.21 34.036 0)
+    (property "Reference" "C3" (at 29.21 33.401 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "47 uF, 450V" (at 29.21 36.576 0)
+    (property "Value" "47 uF@450V" (at 29.21 35.941 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" (at 26.3652 39.37 0)
@@ -2119,7 +2107,7 @@
   (symbol (lib_id "Device:R") (at 234.95 77.47 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 373652a2-3b26-459f-b5a5-ccc875ef22a4)
-    (property "Reference" "R21" (at 237.49 76.835 0)
+    (property "Reference" "R18" (at 237.49 76.835 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "200K" (at 237.49 79.375 0)
@@ -2136,7 +2124,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
-          (reference "R21") (unit 1)
+          (reference "R18") (unit 1)
         )
       )
     )
@@ -2145,7 +2133,7 @@
   (symbol (lib_id "Device:R") (at 220.98 134.62 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 382d8166-6d26-4157-a8ec-0cc92c2ffefc)
-    (property "Reference" "R20" (at 223.52 133.985 0)
+    (property "Reference" "R17" (at 223.52 133.985 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 223.52 136.525 0)
@@ -2162,7 +2150,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
-          (reference "R20") (unit 1)
+          (reference "R17") (unit 1)
         )
       )
     )
@@ -2197,7 +2185,7 @@
   (symbol (lib_id "Device:R") (at 80.01 104.14 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3f1d02e3-830d-4170-a94b-22fe32f5f34e)
-    (property "Reference" "R12" (at 76.2 101.6 90)
+    (property "Reference" "R9" (at 76.2 101.6 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "33" (at 81.28 101.6 90)
@@ -2214,7 +2202,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
-          (reference "R12") (unit 1)
+          (reference "R9") (unit 1)
         )
       )
     )
@@ -2235,8 +2223,8 @@
     (property "Datasheet" "~" (at 80.01 64.77 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e81a7a9c-1c72-4968-9a6d-11014f29e8ac))
-    (pin "2" (uuid 370edef8-b7eb-42b3-9fbf-e5f8def63e3d))
+    (pin "1" (uuid 429c7aa9-36ae-4011-9557-689a29243b63))
+    (pin "2" (uuid 4dc5622f-9fc7-4c12-8d20-cca08919982c))
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
@@ -2249,10 +2237,10 @@
   (symbol (lib_id "Device:C_Polarized") (at 187.96 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5304c902-c6f2-4d2d-83d8-bd50043e61bf)
-    (property "Reference" "C10" (at 191.77 72.136 0)
+    (property "Reference" "C10" (at 191.77 71.501 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "220 uF@25V" (at 191.77 74.676 0)
+    (property "Value" "220 uF@35V" (at 191.77 74.041 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" (at 188.9252 77.47 0)
@@ -2275,10 +2263,10 @@
   (symbol (lib_id "Device:R") (at 41.91 77.47 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 55a29538-e5e4-43dd-892e-f40e61cf7947)
-    (property "Reference" "R10" (at 39.37 72.39 90)
+    (property "Reference" "R7" (at 39.37 72.39 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "750K" (at 39.37 74.93 90)
+    (property "Value" "1M" (at 39.37 74.93 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 41.91 75.692 90)
@@ -2287,12 +2275,12 @@
     (property "Datasheet" "~" (at 41.91 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f02f4d5b-774f-4cba-bec6-80be83723558))
-    (pin "2" (uuid dc719b04-126f-41b4-bb8d-5c6eacbcc050))
+    (pin "1" (uuid 022f01b5-f59b-4332-bc0c-c932244e3108))
+    (pin "2" (uuid e818df40-7a3b-406c-8b74-a544575e8f11))
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
-          (reference "R10") (unit 1)
+          (reference "R7") (unit 1)
         )
       )
     )
@@ -2362,7 +2350,7 @@
   (symbol (lib_id "Device:R") (at 153.67 100.33 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6edaa31f-a47d-4f50-af9c-df16d3756b8e)
-    (property "Reference" "R16" (at 156.21 99.695 0)
+    (property "Reference" "R13" (at 156.21 99.695 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "1K2" (at 156.21 102.235 0)
@@ -2379,7 +2367,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
-          (reference "R16") (unit 1)
+          (reference "R13") (unit 1)
         )
       )
     )
@@ -2388,7 +2376,7 @@
   (symbol (lib_id "Device:L") (at 166.37 67.31 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 71a725d9-ff57-45ab-afef-fc2a041e18d4)
-    (property "Reference" "L2" (at 166.37 60.96 90)
+    (property "Reference" "L1" (at 166.37 60.96 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "BLM18EG221SN1D" (at 166.37 63.5 90)
@@ -2405,34 +2393,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
-          (reference "L2") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Reference_Voltage:TL431DBV") (at 153.67 115.57 270) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 73bd2b71-e36f-40e1-9a06-d95f86e06e48)
-    (property "Reference" "U5" (at 151.13 113.665 90)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Value" "TL431DBV" (at 151.13 116.84 90)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 147.32 115.57 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl431.pdf" (at 153.67 115.57 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (pin "3" (uuid 93235733-1d2a-4000-9441-1bcfa9b1673a))
-    (pin "4" (uuid 5b168b2d-5d48-4f38-8d62-eecb1a4ef86a))
-    (pin "5" (uuid 9102d3aa-a27b-4a9e-b051-0b1b9f601795))
-    (instances
-      (project "supply"
-        (path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
-          (reference "U5") (unit 1)
+          (reference "L1") (unit 1)
         )
       )
     )
@@ -2441,7 +2402,7 @@
   (symbol (lib_id "Device:R") (at 80.01 111.76 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 76eb10db-0f6a-46aa-9ce7-594260e7345c)
-    (property "Reference" "R13" (at 76.2 109.22 90)
+    (property "Reference" "R10" (at 76.2 109.22 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 81.28 109.22 90)
@@ -2458,7 +2419,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
-          (reference "R13") (unit 1)
+          (reference "R10") (unit 1)
         )
       )
     )
@@ -2493,7 +2454,7 @@
   (symbol (lib_id "Device:R") (at 153.67 81.28 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7ebf9236-d356-47a2-a5f7-f8de30bea828)
-    (property "Reference" "R15" (at 156.21 80.645 0)
+    (property "Reference" "R12" (at 156.21 80.645 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "1K" (at 156.21 83.185 0)
@@ -2510,7 +2471,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
-          (reference "R15") (unit 1)
+          (reference "R12") (unit 1)
         )
       )
     )
@@ -2584,7 +2545,7 @@
   (symbol (lib_id "Device:R") (at 137.16 173.99 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8ae875e4-5768-434e-87cd-81d080f449b9)
-    (property "Reference" "R14" (at 138.43 167.64 90)
+    (property "Reference" "R11" (at 138.43 167.64 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "1K" (at 138.43 170.18 90)
@@ -2601,7 +2562,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
-          (reference "R14") (unit 1)
+          (reference "R11") (unit 1)
         )
       )
     )
@@ -2610,7 +2571,7 @@
   (symbol (lib_id "Device:R") (at 177.8 109.22 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8cb32fff-352c-4d0b-b600-9779d068d12f)
-    (property "Reference" "R17" (at 180.34 108.585 0)
+    (property "Reference" "R14" (at 180.34 108.585 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "20K" (at 180.34 111.125 0)
@@ -2627,7 +2588,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
-          (reference "R17") (unit 1)
+          (reference "R14") (unit 1)
         )
       )
     )
@@ -2666,10 +2627,10 @@
   (symbol (lib_id "Device:C_Polarized") (at 135.89 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 99420f94-7d25-4c4a-a265-0d11d4391609)
-    (property "Reference" "C8" (at 139.7 72.136 0)
+    (property "Reference" "C8" (at 139.7 71.501 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "220 uF@25V" (at 139.7 74.676 0)
+    (property "Value" "220 uF@35V" (at 139.7 74.041 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" (at 136.8552 77.47 0)
@@ -2775,7 +2736,7 @@
   (symbol (lib_id "Device:R") (at 215.9 81.28 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid aad62e6a-63d8-4f6e-badb-4a5e410a5909)
-    (property "Reference" "R19" (at 218.44 80.645 0)
+    (property "Reference" "R16" (at 218.44 80.645 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "1K" (at 218.44 83.185 0)
@@ -2792,7 +2753,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
-          (reference "R19") (unit 1)
+          (reference "R16") (unit 1)
         )
       )
     )
@@ -2826,10 +2787,10 @@
   (symbol (lib_id "Device:R") (at 31.75 77.47 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ba08fd93-a5a6-4564-9d4a-a8795bfef162)
-    (property "Reference" "R9" (at 29.21 72.39 90)
+    (property "Reference" "R6" (at 29.21 72.39 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "750K" (at 29.21 74.93 90)
+    (property "Value" "1M" (at 29.21 74.93 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 31.75 75.692 90)
@@ -2838,12 +2799,12 @@
     (property "Datasheet" "~" (at 31.75 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 423380af-d4e9-4d29-b61d-db43b1c95078))
-    (pin "2" (uuid b78d2e15-0b6f-43bf-8706-70a29e066b1f))
+    (pin "1" (uuid 226ef221-48b8-4e3e-85c4-96b0d4290783))
+    (pin "2" (uuid 2f658293-ef5e-44ee-af8a-48054d1d762c))
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
-          (reference "R9") (unit 1)
+          (reference "R6") (unit 1)
         )
       )
     )
@@ -2881,6 +2842,36 @@
     )
   )
 
+  (symbol (lib_id "Reference_Voltage:TL432DBZ") (at 153.67 115.57 270) (mirror x) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid d03eeb3f-95f7-4bc5-b089-4e93bfee8944)
+    (property "Reference" "U24" (at 151.13 116.84 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "TL432DBZ" (at 151.13 114.3 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23-3" (at 149.86 115.57 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl431.pdf" (at 153.67 115.57 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (pin "1" (uuid 7d1b76c0-663f-43c7-85ca-cb96c65e76e7))
+    (pin "2" (uuid d945bd47-8c59-409c-8f94-b423b6a37dda))
+    (pin "3" (uuid 64b1823e-fa20-4123-b00f-a02fe9f1fb9e))
+    (instances
+      (project "supply"
+        (path "/1e139717-fcd1-4008-a6ea-4c993845e928/bcabd54f-a555-4409-9a4f-89c20a3d7682"
+          (reference "U24") (unit 1)
+        )
+        (path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
+          (reference "U5") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:PWR_FLAG") (at 22.86 154.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e21fb25a-57a0-4e7a-9918-9501e4c7e3eb)
@@ -2909,7 +2900,7 @@
   (symbol (lib_id "Device:R") (at 22.86 114.3 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e6285d18-7120-4b28-91f1-62f5ef832a02)
-    (property "Reference" "R8" (at 27.94 114.3 0)
+    (property "Reference" "R5" (at 27.94 114.3 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "65K" (at 29.21 116.84 0)
@@ -2926,7 +2917,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
-          (reference "R8") (unit 1)
+          (reference "R5") (unit 1)
         )
       )
     )
@@ -2935,7 +2926,7 @@
   (symbol (lib_id "Device:R") (at 177.8 121.92 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f2f03480-d00c-46ac-bd1c-5af2cc2b20b8)
-    (property "Reference" "R18" (at 180.34 121.285 0)
+    (property "Reference" "R15" (at 180.34 121.285 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "4K5" (at 180.34 123.825 0)
@@ -2952,7 +2943,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
-          (reference "R18") (unit 1)
+          (reference "R15") (unit 1)
         )
       )
     )
@@ -2964,7 +2955,7 @@
     (property "Reference" "C11" (at 228.6 147.32 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "1 nF" (at 229.87 149.86 0)
+    (property "Value" "100 nF" (at 231.14 149.86 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 220.0148 144.78 0)
@@ -2987,7 +2978,7 @@
   (symbol (lib_id "Device:R") (at 73.66 64.77 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f8f5e6bc-59a8-4966-8721-5a348b890ff9)
-    (property "Reference" "R11" (at 66.04 64.77 0)
+    (property "Reference" "R8" (at 66.04 64.77 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "305K" (at 66.04 62.23 0)
@@ -3004,7 +2995,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
-          (reference "R11") (unit 1)
+          (reference "R8") (unit 1)
         )
       )
     )

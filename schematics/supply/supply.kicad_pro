@@ -53,6 +53,11 @@
           "gap": 0.0,
           "via_gap": 0.0,
           "width": 0.0
+        },
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.5
         }
       ],
       "drc_exclusions": [
@@ -72,6 +77,7 @@
         "silk_edge_clearance|181500000|235750000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|392a691f-1ec1-4af5-9771-ded4f8e0e301",
         "silk_edge_clearance|181500000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|16942d55-fb8e-4692-bc44-fccc0e70b0f5",
         "silk_edge_clearance|183810000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|1a4c3755-3933-4679-b164-d9305310c29e",
+        "silk_over_copper|110501146|190163886|4609ccbc-7b08-4baa-a51f-a826a57ee299|00000000-0000-0000-0000-000000000000",
         "silk_over_copper|286136114|118926146|987d363e-aa04-4cb5-96b3-ac8aa246f8ae|00000000-0000-0000-0000-000000000000"
       ],
       "meta": {
