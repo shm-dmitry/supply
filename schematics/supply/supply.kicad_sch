@@ -658,6 +658,64 @@
     )
   )
 
+  (symbol (lib_id "Mechanical:MountingHole") (at 31.75 269.24 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 44600c15-774e-4042-beb1-94b8c77da16c)
+    (property "Reference" "H1" (at 34.29 267.9699 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MountingHole" (at 34.29 270.5099 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_2.2mm_M2" (at 31.75 269.24 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 31.75 269.24 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "xray"
+        (path "/002cc585-3681-421a-8dca-b0910197d82b"
+          (reference "H1") (unit 1)
+        )
+      )
+      (project "supply"
+        (path "/1e139717-fcd1-4008-a6ea-4c993845e928"
+          (reference "H5") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 31.75 276.86 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 4b6592f1-8206-41d7-af08-c0f35ff4b312)
+    (property "Reference" "H1" (at 34.29 275.5899 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MountingHole" (at 34.29 278.1299 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_2.2mm_M2" (at 31.75 276.86 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 31.75 276.86 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "xray"
+        (path "/002cc585-3681-421a-8dca-b0910197d82b"
+          (reference "H1") (unit 1)
+        )
+      )
+      (project "supply"
+        (path "/1e139717-fcd1-4008-a6ea-4c993845e928"
+          (reference "H6") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:PWR_FLAG") (at 193.04 99.06 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6ca772c3-956e-43e9-a56b-b9e3c3b78141)
@@ -785,7 +843,7 @@
       )
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928"
-          (reference "H5") (unit 1)
+          (reference "H7") (unit 1)
         )
       )
     )
@@ -868,7 +926,7 @@
       )
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928"
-          (reference "H7") (unit 1)
+          (reference "H9") (unit 1)
         )
       )
     )
@@ -928,7 +986,7 @@
       )
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928"
-          (reference "H6") (unit 1)
+          (reference "H8") (unit 1)
         )
       )
     )

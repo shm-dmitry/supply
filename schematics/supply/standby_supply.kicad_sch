@@ -2819,7 +2819,7 @@
     (property "Value" "FR303" (at 127 64.77 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Diode_THT:D_DO-201AD_P3.81mm_Vertical_KathodeUp" (at 127 67.31 0)
+    (property "Footprint" "Diode_THT:D_DO-201AD_P3.81mm_Vertical_AnodeUp" (at 127 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 127 67.31 0)
