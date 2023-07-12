@@ -574,6 +574,14 @@
     (uuid f9c8fee1-b1f1-4b56-8d69-d36997242f9d)
   )
 
+  (text_box "Startup sequence:\n1. UV board\n1.0 check resistance on 220V connector, OUT_400V connector and STB VCC connector\n1.1 connect 220V\n1.2 check: \n    - OUT_400V is a 310V\n    - PFC EN jumper has 13.7V on one side \n    - STB EN is a HIGH on one side\n    - STB VCC has no power\n    - relay is OFF\n    - LED PFCRDY is ON\n    - LED STBOK is OFF\n1.3 solder PFC EN jumoer\n1.4 check:\n    - OUT_400V is a 400V\n    - PFC EN jumper has 13.7V\n    - STB EN is a LOW on one side\n    - STB VCC has no power\n    - relay is ON\n    - LED PFCRDY is ON\n    - LED STBOK is OFF\n1.5 solder STB EN\n1.6 check:\n    - OUT_400V is a 400V\n    - PFC EN jumper has 13.7V\n    - STB EN is a LOW\n    - STB VCC has 13.7V\n    - relay is ON\n    - LED PFCRDY is ON\n    - LED STBOK is ON\n\n2. UV board & power boards\n2.1 check resistance on +400V connector, PWR OUT connector, 5V connector 3.3V connector and all jumpers\n2.2 flush firmwares\n2.3 connect VV board to power board and connect 220V\n2.4 check:\n    - +400V has 400V\n    - STB VCC has 13.7V\n    - PWR OUT has now power\n    - +5V and 3.3V connectors power\n    - USBx jumper and +5V SYS jumper has 5V on one side\n2.5 solder +5V SYS jumper\n2.6 check:\n    - +5V and 3.3V connectors has no power\n    - USBx jumper has 5V on one side\n    - +5V SYS has 5V\n    - Display is ON\n    - PWR OUT voltage controlled by chips\n    - FAN controlled by termisters and chip\n2.7 solder USB2 & USB3 jumpers\n2.8 check: \n    - usb2 & usb3 works\n    - usb2 & usb3 leds works\n    - display shows usb2 & usb3 voltage and current\n2.9 solder USB1 jumper\n2.10 check \n    - usb1 works\n    - usb1 QC works\n    - usb1 led works\n    - display shows usb1 voltage and current\n"
+    (at -48.26 30.48 0) (size 49.53 135.89)
+    (stroke (width 0) (type default))
+    (fill (type none))
+    (effects (font (size 1.27 1.27) (thickness 0.254) bold) (justify left top))
+    (uuid 5601008e-46c0-4942-9a93-41942d5b3260)
+  )
+
   (symbol (lib_id "Mechanical:MountingHole") (at 31.75 254 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 18aa4ee3-9047-4ba1-9d9c-b1f17d6a7f12)
