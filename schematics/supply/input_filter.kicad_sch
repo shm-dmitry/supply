@@ -2330,7 +2330,7 @@
     (property "Value" "0.01" (at 60.96 95.25 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistor_SMD:R_1206_3216Metric" (at 64.262 93.98 90)
+    (property "Footprint" "Resistor_SMD:R_2512_6332Metric" (at 64.262 93.98 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 66.04 93.98 0)
