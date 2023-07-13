@@ -1170,10 +1170,6 @@
       (effects (font (size 1.27 1.27)) (justify left))
       (uuid c480345b-0f54-40bd-a323-d4a9ef6cf6b2)
     )
-    (pin "+5V" input (at 129.54 187.96 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 92d7bee8-db5f-4afa-83d7-5afb4115a71f)
-    )
     (pin "POWER_OUT" input (at 172.72 219.71 0)
       (effects (font (size 1.27 1.27)) (justify right))
       (uuid f60412e5-b4ec-4a2b-b741-32dfe8de7ce3)
@@ -1189,6 +1185,10 @@
     (pin "POWER_OUTPUT_FB" input (at 172.72 214.63 0)
       (effects (font (size 1.27 1.27)) (justify right))
       (uuid 51a34509-b02b-4983-b5af-9e820f0eaa8d)
+    )
+    (pin "+5V_VSYS" input (at 129.54 187.96 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid fd649a1f-61c7-4001-b0ee-5d43b7608fb2)
     )
     (instances
       (project "supply"
@@ -1296,10 +1296,6 @@
       (effects (font (size 1.27 1.27)) (justify left))
       (uuid 6f88bb09-811c-40a3-b0b3-f62c30b06ead)
     )
-    (pin "+5V" input (at 212.09 147.32 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid de9bebc6-4099-4fff-8acc-4234b7636177)
-    )
     (pin "SIGNAL_OUT" input (at 259.08 142.24 0)
       (effects (font (size 1.27 1.27)) (justify right))
       (uuid a21bfbb8-c17a-49fe-92fd-d80e56fc0feb)
@@ -1315,6 +1311,10 @@
     (pin "POWER_OUTPUT_VOLT_SENSE" input (at 259.08 149.86 0)
       (effects (font (size 1.27 1.27)) (justify right))
       (uuid 17d0f91f-be27-4249-a33b-107f031a5cb5)
+    )
+    (pin "+5V_VSYS" input (at 212.09 147.32 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 1a05d621-d9f5-4523-9798-5935cddd6f17)
     )
     (instances
       (project "supply"

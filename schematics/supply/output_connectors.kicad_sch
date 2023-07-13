@@ -1286,7 +1286,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR099") (unit 1)
+          (reference "#PWR0103") (unit 1)
         )
       )
     )
@@ -1315,7 +1315,7 @@
           (reference "R20") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "R76") (unit 1)
+          (reference "R78") (unit 1)
         )
       )
     )
@@ -1399,7 +1399,7 @@
           (reference "R29") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "R78") (unit 1)
+          (reference "R77") (unit 1)
         )
       )
     )
@@ -1439,7 +1439,7 @@
     (property "Reference" "J17" (at 203.2 19.05 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "banana jack + fuse 20A" (at 203.2 21.59 0)
+    (property "Value" "banana jack + fuse 12A" (at 203.2 21.59 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Connector_Wire:SolderWire-1.5sqmm_1x02_P6mm_D1.7mm_OD3mm" (at 201.93 19.05 0)
@@ -1539,7 +1539,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR094") (unit 1)
+          (reference "#PWR098") (unit 1)
         )
       )
     )
@@ -1568,7 +1568,7 @@
           (reference "R29") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "R77") (unit 1)
+          (reference "R76") (unit 1)
         )
       )
     )
@@ -1693,7 +1693,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR090") (unit 1)
+          (reference "#PWR094") (unit 1)
         )
       )
     )
@@ -1781,10 +1781,10 @@
   (symbol (lib_id "Connector:Conn_01x02_Socket") (at 208.28 41.91 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9f0f516d-f802-4cb7-b372-198508b7f2a6)
-    (property "Reference" "J19" (at 209.55 42.545 0)
+    (property "Reference" "J18" (at 209.55 41.91 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "banana jack + fuse 15A" (at 209.55 45.085 0)
+    (property "Value" "banana jack + fuse 12A" (at 209.55 44.45 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Connector_Wire:SolderWire-1.5sqmm_1x02_P6mm_D1.7mm_OD3mm" (at 208.28 41.91 0)
@@ -1798,7 +1798,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "J19") (unit 1)
+          (reference "J18") (unit 1)
         )
       )
     )
@@ -1826,7 +1826,7 @@
           (reference "#PWR04") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR0101") (unit 1)
+          (reference "#PWR099") (unit 1)
         )
       )
     )
@@ -1857,7 +1857,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR097") (unit 1)
+          (reference "#PWR0104") (unit 1)
         )
       )
     )
@@ -1917,7 +1917,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR091") (unit 1)
+          (reference "#PWR095") (unit 1)
         )
       )
     )
@@ -1978,7 +1978,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR096") (unit 1)
+          (reference "#PWR0101") (unit 1)
         )
       )
     )
@@ -2067,7 +2067,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR093") (unit 1)
+          (reference "#PWR097") (unit 1)
         )
       )
     )
@@ -2098,7 +2098,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR095") (unit 1)
+          (reference "#PWR0100") (unit 1)
         )
       )
     )
@@ -2107,7 +2107,7 @@
   (symbol (lib_id "Connector_Generic:Conn_02x04_Odd_Even") (at 256.54 87.63 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e5f90eab-a4b3-4b4a-ac3d-0b02f8f61f0e)
-    (property "Reference" "J18" (at 257.81 78.74 0)
+    (property "Reference" "J19" (at 257.81 78.74 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_02x04_Odd_Even" (at 257.81 81.28 0)
@@ -2130,7 +2130,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "J18") (unit 1)
+          (reference "J19") (unit 1)
         )
       )
     )
@@ -2161,7 +2161,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR098") (unit 1)
+          (reference "#PWR0102") (unit 1)
         )
       )
     )
@@ -2192,7 +2192,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR092") (unit 1)
+          (reference "#PWR096") (unit 1)
         )
       )
     )
