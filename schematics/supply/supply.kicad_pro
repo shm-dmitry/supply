@@ -237,6 +237,7 @@
         0.5,
         1.0,
         2.0,
+        2.5,
         3.0,
         5.0,
         8.0
@@ -457,7 +458,9 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      "pin_to_pin|3467100|965200|7c20a8a8-04b1-456a-95dd-7d60b1d41d3e|24e422ea-0067-4ba6-8da1-86754ffac95f|/1e139717-fcd1-4008-a6ea-4c993845e928/bcabd54f-a555-4409-9a4f-89c20a3d7682|/1e139717-fcd1-4008-a6ea-4c993845e928/bcabd54f-a555-4409-9a4f-89c20a3d7682|/1e139717-fcd1-4008-a6ea-4c993845e928/bcabd54f-a555-4409-9a4f-89c20a3d7682"
+    ],
     "meta": {
       "version": 0
     },
