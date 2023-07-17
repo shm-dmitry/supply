@@ -2198,7 +2198,7 @@
     (property "Reference" "F1" (at 214.63 110.49 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "4A" (at 214.63 113.03 90)
+    (property "Value" "1808, 4A" (at 214.63 113.03 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Library:FuseHolder1808" (at 214.63 117.348 90)
