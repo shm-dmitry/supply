@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/opt/work-iot/supply/schematics/supply/supply.kicad_sch</source>
-    <date>Пн 17 июл 2023 16:56:55</date>
+    <date>Пн 17 июл 2023 18:04:18</date>
     <tool>Eeschema 7.0.6-7.0.6~ubuntu22.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -132,116 +132,6 @@
     </sheet>
   </design>
   <components>
-    <comp ref="H1">
-      <value>MountingHole</value>
-      <footprint>MountingHole:MountingHole_2.2mm_M2</footprint>
-      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="supply.kicad_sch"/>
-      <property name="ki_description" value="Mounting Hole without connection"/>
-      <property name="ki_keywords" value="mounting hole"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>8a17c356-e89b-42f0-a19e-0529b769b957</tstamps>
-    </comp>
-    <comp ref="H2">
-      <value>MountingHole</value>
-      <footprint>MountingHole:MountingHole_2.2mm_M2</footprint>
-      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="supply.kicad_sch"/>
-      <property name="ki_description" value="Mounting Hole without connection"/>
-      <property name="ki_keywords" value="mounting hole"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>36f66905-a1ce-4153-8334-3354a74838a1</tstamps>
-    </comp>
-    <comp ref="H3">
-      <value>MountingHole</value>
-      <footprint>MountingHole:MountingHole_2.2mm_M2</footprint>
-      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="supply.kicad_sch"/>
-      <property name="ki_description" value="Mounting Hole without connection"/>
-      <property name="ki_keywords" value="mounting hole"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>913d0436-be61-47cf-9cea-72ab21522b70</tstamps>
-    </comp>
-    <comp ref="H4">
-      <value>MountingHole</value>
-      <footprint>MountingHole:MountingHole_2.2mm_M2</footprint>
-      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="supply.kicad_sch"/>
-      <property name="ki_description" value="Mounting Hole without connection"/>
-      <property name="ki_keywords" value="mounting hole"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>18aa4ee3-9047-4ba1-9d9c-b1f17d6a7f12</tstamps>
-    </comp>
-    <comp ref="H5">
-      <value>MountingHole</value>
-      <footprint>MountingHole:MountingHole_2.2mm_M2</footprint>
-      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="supply.kicad_sch"/>
-      <property name="ki_description" value="Mounting Hole without connection"/>
-      <property name="ki_keywords" value="mounting hole"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>d67ea1b8-279e-4fe5-8444-15b68378db84</tstamps>
-    </comp>
-    <comp ref="H6">
-      <value>MountingHole</value>
-      <footprint>MountingHole:MountingHole_2.2mm_M2</footprint>
-      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="supply.kicad_sch"/>
-      <property name="ki_description" value="Mounting Hole without connection"/>
-      <property name="ki_keywords" value="mounting hole"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>44600c15-774e-4042-beb1-94b8c77da16c</tstamps>
-    </comp>
-    <comp ref="H7">
-      <value>MountingHole</value>
-      <footprint>MountingHole:MountingHole_2.2mm_M2</footprint>
-      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="supply.kicad_sch"/>
-      <property name="ki_description" value="Mounting Hole without connection"/>
-      <property name="ki_keywords" value="mounting hole"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>4b6592f1-8206-41d7-af08-c0f35ff4b312</tstamps>
-    </comp>
-    <comp ref="H8">
-      <value>MountingHole</value>
-      <footprint>MountingHole:MountingHole_2.2mm_M2</footprint>
-      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="supply.kicad_sch"/>
-      <property name="ki_description" value="Mounting Hole without connection"/>
-      <property name="ki_keywords" value="mounting hole"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>b46b7092-c2dd-4e50-bb12-f2be41c2ca4a</tstamps>
-    </comp>
-    <comp ref="H9">
-      <value>MountingHole</value>
-      <footprint>MountingHole:MountingHole_2.2mm_M2</footprint>
-      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="supply.kicad_sch"/>
-      <property name="ki_description" value="Mounting Hole without connection"/>
-      <property name="ki_keywords" value="mounting hole"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>ee3188c0-c4c3-40b8-a581-2174e57dbda8</tstamps>
-    </comp>
-    <comp ref="H10">
-      <value>MountingHole</value>
-      <footprint>MountingHole:MountingHole_2.2mm_M2</footprint>
-      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="supply.kicad_sch"/>
-      <property name="ki_description" value="Mounting Hole without connection"/>
-      <property name="ki_keywords" value="mounting hole"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>e3791bbb-c87f-48fd-94e2-5d49e1682b80</tstamps>
-    </comp>
     <comp ref="J1">
       <value>Conn_01x02_Pin</value>
       <footprint>Connector_Wire:SolderWire-1.5sqmm_1x02_P6mm_D1.7mm_OD3mm</footprint>
@@ -411,8 +301,8 @@
       <tstamps>18f9c60c-7fc1-48a3-9256-e8c6d7c3c621</tstamps>
     </comp>
     <comp ref="F1">
-      <value>1808, 4A</value>
-      <footprint>Library:FuseHolder1808</footprint>
+      <value>C10G4 with fuseholder</value>
+      <footprint>Connector_Wire:SolderWire-1.5sqmm_1x02_P6mm_D1.7mm_OD3mm</footprint>
       <libsource lib="Device" part="Fuse" description="Fuse"/>
       <property name="Sheetname" value="Input power with filter"/>
       <property name="Sheetfile" value="input_filter.kicad_sch"/>
@@ -3586,8 +3476,34 @@
       <sheetpath names="/Output connectors/" tstamps="/39d9543b-2a42-4758-87e9-56ce3e85ea36/"/>
       <tstamps>dd0b4f7c-c14e-4c4d-9116-faf402a6743b</tstamps>
     </comp>
+    <comp ref="F8">
+      <value>15A</value>
+      <libsource lib="Device" part="Fuse" description="Fuse"/>
+      <property name="Sheetname" value="Output connectors"/>
+      <property name="Sheetfile" value="output_connectors.kicad_sch"/>
+      <property name="Поле2" value=""/>
+      <property name="exclude_from_board"/>
+      <property name="dnp"/>
+      <property name="ki_description" value="Fuse"/>
+      <property name="ki_keywords" value="fuse"/>
+      <sheetpath names="/Output connectors/" tstamps="/39d9543b-2a42-4758-87e9-56ce3e85ea36/"/>
+      <tstamps>23db3a04-387d-4d68-9ff3-98c10fd9b990</tstamps>
+    </comp>
+    <comp ref="F9">
+      <value>15A</value>
+      <libsource lib="Device" part="Fuse" description="Fuse"/>
+      <property name="Sheetname" value="Output connectors"/>
+      <property name="Sheetfile" value="output_connectors.kicad_sch"/>
+      <property name="Поле2" value=""/>
+      <property name="exclude_from_board"/>
+      <property name="dnp"/>
+      <property name="ki_description" value="Fuse"/>
+      <property name="ki_keywords" value="fuse"/>
+      <sheetpath names="/Output connectors/" tstamps="/39d9543b-2a42-4758-87e9-56ce3e85ea36/"/>
+      <tstamps>e69c8f74-2d08-49b1-85f2-90cbcad8ad29</tstamps>
+    </comp>
     <comp ref="J17">
-      <value>banana jack + fuse 12A</value>
+      <value>banana jack + fuse 15A</value>
       <footprint>Connector_Wire:SolderWire-1.5sqmm_1x02_P6mm_D1.7mm_OD3mm</footprint>
       <libsource lib="Connector" part="Conn_01x02_Socket" description="Generic connector, single row, 01x02, script generated"/>
       <property name="Sheetname" value="Output connectors"/>
@@ -3599,7 +3515,7 @@
       <tstamps>3adf4a02-e037-44f9-a11c-78b6c3a8dcb1</tstamps>
     </comp>
     <comp ref="J18">
-      <value>banana jack + fuse 12A</value>
+      <value>banana jack + fuse 15A</value>
       <footprint>Connector_Wire:SolderWire-1.5sqmm_1x02_P6mm_D1.7mm_OD3mm</footprint>
       <libsource lib="Connector" part="Conn_01x02_Socket" description="Generic connector, single row, 01x02, script generated"/>
       <property name="Sheetname" value="Output connectors"/>
@@ -3735,30 +3651,6 @@
       <tstamps>6fbd4702-bda1-4a65-9dd0-1f8366ae242d</tstamps>
     </comp>
     <comp ref="R74">
-      <value>10K</value>
-      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Sheetname" value="Output connectors"/>
-      <property name="Sheetfile" value="output_connectors.kicad_sch"/>
-      <property name="Поле2" value=""/>
-      <property name="ki_description" value="Resistor"/>
-      <property name="ki_keywords" value="R res resistor"/>
-      <sheetpath names="/Output connectors/" tstamps="/39d9543b-2a42-4758-87e9-56ce3e85ea36/"/>
-      <tstamps>25c04586-eff6-428b-b89b-c68444406b71</tstamps>
-    </comp>
-    <comp ref="R75">
-      <value>10K</value>
-      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Sheetname" value="Output connectors"/>
-      <property name="Sheetfile" value="output_connectors.kicad_sch"/>
-      <property name="Поле2" value=""/>
-      <property name="ki_description" value="Resistor"/>
-      <property name="ki_keywords" value="R res resistor"/>
-      <sheetpath names="/Output connectors/" tstamps="/39d9543b-2a42-4758-87e9-56ce3e85ea36/"/>
-      <tstamps>46465de6-9361-4913-9e4a-bc015bb764b4</tstamps>
-    </comp>
-    <comp ref="R76">
       <value>0.01</value>
       <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
@@ -3770,7 +3662,7 @@
       <sheetpath names="/Output connectors/" tstamps="/39d9543b-2a42-4758-87e9-56ce3e85ea36/"/>
       <tstamps>5bf664b0-63a1-4d92-891c-b8f904ab96f9</tstamps>
     </comp>
-    <comp ref="R77">
+    <comp ref="R75">
       <value>0.01</value>
       <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
@@ -3781,6 +3673,30 @@
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/Output connectors/" tstamps="/39d9543b-2a42-4758-87e9-56ce3e85ea36/"/>
       <tstamps>346962ee-2ad6-4638-a4d8-2b6efb2e4b66</tstamps>
+    </comp>
+    <comp ref="R76">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Output connectors"/>
+      <property name="Sheetfile" value="output_connectors.kicad_sch"/>
+      <property name="Поле2" value=""/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Output connectors/" tstamps="/39d9543b-2a42-4758-87e9-56ce3e85ea36/"/>
+      <tstamps>25c04586-eff6-428b-b89b-c68444406b71</tstamps>
+    </comp>
+    <comp ref="R77">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Output connectors"/>
+      <property name="Sheetfile" value="output_connectors.kicad_sch"/>
+      <property name="Поле2" value=""/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Output connectors/" tstamps="/39d9543b-2a42-4758-87e9-56ce3e85ea36/"/>
+      <tstamps>46465de6-9361-4913-9e4a-bc015bb764b4</tstamps>
     </comp>
     <comp ref="R78">
       <value>10K</value>
@@ -5302,7 +5218,7 @@
     </net>
     <net code="43" name="/Internal 5V &amp; out usb/+3.3_VOUT">
       <node ref="C31" pin="2" pintype="passive"/>
-      <node ref="R76" pin="2" pintype="passive"/>
+      <node ref="R74" pin="2" pintype="passive"/>
       <node ref="U16" pin="2" pinfunction="VO" pintype="power_out"/>
       <node ref="U25" pin="15" pinfunction="IN+2" pintype="input"/>
     </net>
@@ -5322,7 +5238,7 @@
       <node ref="R19" pin="2" pintype="passive"/>
       <node ref="R33" pin="1" pintype="passive"/>
       <node ref="R36" pin="1" pintype="passive"/>
-      <node ref="R77" pin="2" pintype="passive"/>
+      <node ref="R75" pin="2" pintype="passive"/>
       <node ref="RV3" pin="1" pintype="passive"/>
       <node ref="U16" pin="3" pinfunction="VI" pintype="power_in"/>
       <node ref="U25" pin="12" pinfunction="IN+1" pintype="input"/>
@@ -5449,7 +5365,7 @@
     </net>
     <net code="63" name="/Output connectors/3.3V_-">
       <node ref="F6" pin="1" pintype="passive"/>
-      <node ref="R76" pin="1" pintype="passive"/>
+      <node ref="R74" pin="1" pintype="passive"/>
       <node ref="U25" pin="14" pinfunction="IN-2" pintype="input"/>
     </net>
     <net code="64" name="/Output connectors/3.3V_FUSE">
@@ -5462,7 +5378,7 @@
     </net>
     <net code="65" name="/Output connectors/5V_-">
       <node ref="F7" pin="1" pintype="passive"/>
-      <node ref="R77" pin="1" pintype="passive"/>
+      <node ref="R75" pin="1" pintype="passive"/>
       <node ref="U25" pin="11" pinfunction="IN-1" pintype="input"/>
     </net>
     <net code="66" name="/Output connectors/5V_FUSE">
@@ -5482,13 +5398,13 @@
       <node ref="D29" pin="2" pinfunction="A2" pintype="passive"/>
       <node ref="J19" pin="7" pinfunction="Pin_7" pintype="passive"/>
       <node ref="Q13" pin="3" pinfunction="D" pintype="passive"/>
-      <node ref="R74" pin="2" pintype="passive"/>
+      <node ref="R76" pin="2" pintype="passive"/>
     </net>
     <net code="69" name="/Output connectors/SIGNAL_OUT_PWR_5V">
       <node ref="D30" pin="2" pinfunction="A2" pintype="passive"/>
       <node ref="J19" pin="5" pinfunction="Pin_5" pintype="passive"/>
       <node ref="Q14" pin="3" pinfunction="D" pintype="passive"/>
-      <node ref="R75" pin="2" pintype="passive"/>
+      <node ref="R77" pin="2" pintype="passive"/>
     </net>
     <net code="70" name="/Power output/RC_SNABBER_MIDDLEPOINT">
       <node ref="C54" pin="1" pintype="passive"/>
@@ -5608,8 +5524,8 @@
       <node ref="R67" pin="1" pintype="passive"/>
       <node ref="R70" pin="1" pintype="passive"/>
       <node ref="R71" pin="1" pintype="passive"/>
-      <node ref="R74" pin="1" pintype="passive"/>
-      <node ref="R75" pin="1" pintype="passive"/>
+      <node ref="R76" pin="1" pintype="passive"/>
+      <node ref="R77" pin="1" pintype="passive"/>
       <node ref="RV2" pin="2" pintype="passive"/>
       <node ref="RV3" pin="2" pintype="passive"/>
       <node ref="RV4" pin="3" pinfunction="3" pintype="passive"/>
@@ -6193,64 +6109,76 @@
       <node ref="R78" pin="2" pintype="passive"/>
       <node ref="U25" pin="16" pinfunction="VPU" pintype="power_in"/>
     </net>
-    <net code="196" name="unconnected-(J13-Pin_3-Pad3)">
+    <net code="196" name="unconnected-(F8-Pad1)">
+      <node ref="F8" pin="1" pintype="passive+no_connect"/>
+    </net>
+    <net code="197" name="unconnected-(F8-Pad2)">
+      <node ref="F8" pin="2" pintype="passive+no_connect"/>
+    </net>
+    <net code="198" name="unconnected-(F9-Pad1)">
+      <node ref="F9" pin="1" pintype="passive+no_connect"/>
+    </net>
+    <net code="199" name="unconnected-(F9-Pad2)">
+      <node ref="F9" pin="2" pintype="passive+no_connect"/>
+    </net>
+    <net code="200" name="unconnected-(J13-Pin_3-Pad3)">
       <node ref="J13" pin="3" pinfunction="Pin_3" pintype="passive+no_connect"/>
     </net>
-    <net code="197" name="unconnected-(J14-Pin_3-Pad3)">
+    <net code="201" name="unconnected-(J14-Pin_3-Pad3)">
       <node ref="J14" pin="3" pinfunction="Pin_3" pintype="passive+no_connect"/>
     </net>
-    <net code="198" name="unconnected-(K1-Pad4)">
+    <net code="202" name="unconnected-(K1-Pad4)">
       <node ref="K1" pin="4" pintype="passive+no_connect"/>
     </net>
-    <net code="199" name="unconnected-(U6-CRITICAL-Pad9)">
+    <net code="203" name="unconnected-(U6-CRITICAL-Pad9)">
       <node ref="U6" pin="9" pinfunction="CRITICAL" pintype="open_collector+no_connect"/>
     </net>
-    <net code="200" name="unconnected-(U6-PV-Pad10)">
+    <net code="204" name="unconnected-(U6-PV-Pad10)">
       <node ref="U6" pin="10" pinfunction="PV" pintype="open_collector+no_connect"/>
     </net>
-    <net code="201" name="unconnected-(U6-TC-Pad13)">
+    <net code="205" name="unconnected-(U6-TC-Pad13)">
       <node ref="U6" pin="13" pinfunction="TC" pintype="open_collector+no_connect"/>
     </net>
-    <net code="202" name="unconnected-(U6-WARNING-Pad8)">
+    <net code="206" name="unconnected-(U6-WARNING-Pad8)">
       <node ref="U6" pin="8" pinfunction="WARNING" pintype="open_collector+no_connect"/>
     </net>
-    <net code="203" name="unconnected-(U12-CSN{slash}NTC-Pad1)">
+    <net code="207" name="unconnected-(U12-CSN{slash}NTC-Pad1)">
       <node ref="U12" pin="1" pinfunction="CSN/NTC" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="204" name="unconnected-(U12-CSP{slash}FA-Pad2)">
+    <net code="208" name="unconnected-(U12-CSP{slash}FA-Pad2)">
       <node ref="U12" pin="2" pinfunction="CSP/FA" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="205" name="unconnected-(U17-ADC6-Pad19)">
+    <net code="209" name="unconnected-(U17-ADC6-Pad19)">
       <node ref="U17" pin="19" pinfunction="ADC6" pintype="input+no_connect"/>
     </net>
-    <net code="206" name="unconnected-(U17-ADC7-Pad22)">
+    <net code="210" name="unconnected-(U17-ADC7-Pad22)">
       <node ref="U17" pin="22" pinfunction="ADC7" pintype="input+no_connect"/>
     </net>
-    <net code="207" name="unconnected-(U18-PA4-Pad5)">
+    <net code="211" name="unconnected-(U18-PA4-Pad5)">
       <node ref="U18" pin="5" pinfunction="PA4" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="208" name="unconnected-(U18-PA6-Pad7)">
+    <net code="212" name="unconnected-(U18-PA6-Pad7)">
       <node ref="U18" pin="7" pinfunction="PA6" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="209" name="unconnected-(U18-PB5-Pad9)">
+    <net code="213" name="unconnected-(U18-PB5-Pad9)">
       <node ref="U18" pin="9" pinfunction="PB5" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="210" name="unconnected-(U18-PC0-Pad15)">
+    <net code="214" name="unconnected-(U18-PC0-Pad15)">
       <node ref="U18" pin="15" pinfunction="PC0" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="211" name="unconnected-(U18-PC3-Pad18)">
+    <net code="215" name="unconnected-(U18-PC3-Pad18)">
       <node ref="U18" pin="18" pinfunction="PC3" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="212" name="unconnected-(U25-CRITICAL-Pad9)">
+    <net code="216" name="unconnected-(U25-CRITICAL-Pad9)">
       <node ref="U25" pin="9" pinfunction="CRITICAL" pintype="open_collector+no_connect"/>
     </net>
-    <net code="213" name="unconnected-(U25-PV-Pad10)">
+    <net code="217" name="unconnected-(U25-PV-Pad10)">
       <node ref="U25" pin="10" pinfunction="PV" pintype="open_collector+no_connect"/>
     </net>
-    <net code="214" name="unconnected-(U25-TC-Pad13)">
+    <net code="218" name="unconnected-(U25-TC-Pad13)">
       <node ref="U25" pin="13" pinfunction="TC" pintype="open_collector+no_connect"/>
     </net>
-    <net code="215" name="unconnected-(U25-WARNING-Pad8)">
+    <net code="219" name="unconnected-(U25-WARNING-Pad8)">
       <node ref="U25" pin="8" pinfunction="WARNING" pintype="open_collector+no_connect"/>
     </net>
   </nets>

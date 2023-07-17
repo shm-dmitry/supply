@@ -2193,22 +2193,22 @@
   )
 
   (symbol (lib_id "Device:Fuse") (at 214.63 115.57 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid 1df132af-8090-4eba-a0dd-662da190545b)
-    (property "Reference" "F1" (at 214.63 110.49 90)
+    (property "Reference" "F1" (at 207.01 110.49 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "1808, 4A" (at 214.63 113.03 90)
+    (property "Value" "C10G4 with fuseholder" (at 217.17 113.03 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Library:FuseHolder1808" (at 214.63 117.348 90)
+    (property "Footprint" "Connector_Wire:SolderWire-1.5sqmm_1x02_P6mm_D1.7mm_OD3mm" (at 214.63 117.348 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 214.63 115.57 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 545749e1-a45c-4399-8b8b-d97a46560857))
-    (pin "2" (uuid 38a89900-2102-4601-a6fb-072ab651f645))
+    (pin "1" (uuid 5f7b2514-b6ed-4c15-95fe-741c18c3e33f))
+    (pin "2" (uuid dda75f59-fc52-4cd9-a6a7-05d6d8ff7a29))
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/b56319b0-4827-4b6e-9ec0-247d1d8495e7"
