@@ -2936,7 +2936,7 @@
     (property "Reference" "L2" (at 269.24 129.54 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "SPM6550T-2R2M" (at 269.24 132.08 90)
+    (property "Value" "SPM6550T-R68M" (at 269.24 132.08 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Inductor_SMD:L_Sumida_CDMC6D28_7.25x6.5mm" (at 267.97 135.89 0)

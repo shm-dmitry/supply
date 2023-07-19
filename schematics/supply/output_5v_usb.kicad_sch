@@ -6250,7 +6250,7 @@
     (property "Reference" "C20" (at 116.84 228.6 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "0.1 uF" (at 116.84 231.14 0)
+    (property "Value" "100 nF" (at 116.84 231.14 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 112.0648 226.06 0)

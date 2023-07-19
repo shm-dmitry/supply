@@ -2851,11 +2851,11 @@
     (property "Datasheet" "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" (at 218.44 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid cfeb9526-15b1-4c0c-ab77-37e8ae5f06af))
-    (pin "2" (uuid 4d7b8fe4-5365-4744-a9b6-b8514714c24c))
-    (pin "3" (uuid 2a9e6685-170c-4ea2-9343-f1e268363145))
-    (pin "4" (uuid 956b9481-bee3-42fd-931b-aeaf3da27de8))
-    (pin "5" (uuid 95089abc-f41d-4108-9f30-0c60a81ebbcf))
+    (pin "1" (uuid 3b42bddf-93fc-42da-9d45-10a4aa3a3fab))
+    (pin "2" (uuid 2b42c30e-f437-4705-8571-6ad703f8fadc))
+    (pin "3" (uuid b31b6df1-da8d-44da-8ad1-054d11ac9523))
+    (pin "4" (uuid f36fefbc-a669-4da5-bfd0-843a29e05ac4))
+    (pin "5" (uuid 8b804bab-7c48-41d2-b2af-ab58cced6fbb))
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/b56319b0-4827-4b6e-9ec0-247d1d8495e7"

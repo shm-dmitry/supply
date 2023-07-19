@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/opt/work-iot/supply/schematics/supply/supply.kicad_sch</source>
-    <date>Пн 17 июл 2023 18:04:18</date>
+    <date>Ср 19 июл 2023 17:19:21</date>
     <tool>Eeschema 7.0.6-7.0.6~ubuntu22.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -885,7 +885,7 @@
       <tstamps>85aa68ca-85af-4f2f-b3e0-a545a982ba5d</tstamps>
     </comp>
     <comp ref="R5">
-      <value>65K</value>
+      <value>62K</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value="Standby Supply"/>
@@ -995,7 +995,7 @@
       <tstamps>8cb32fff-352c-4d0b-b600-9779d068d12f</tstamps>
     </comp>
     <comp ref="R15">
-      <value>4K5</value>
+      <value>4K7</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value="Standby Supply"/>
@@ -1170,7 +1170,7 @@
       <tstamps>848bbf84-b90e-46ae-8a7a-614e8b235b9c</tstamps>
     </comp>
     <comp ref="C20">
-      <value>0.1 uF</value>
+      <value>100 nF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Sheetname" value="Internal 5V &amp; out usb"/>
@@ -3132,7 +3132,7 @@
       <tstamps>7cf609bf-c856-4696-b1ec-ade000d846a1</tstamps>
     </comp>
     <comp ref="L4">
-      <value>SPM6550T-2R2M</value>
+      <value>SPM6550T-R68M</value>
       <footprint>Inductor_SMD:L_Sumida_CDMC6D28_7.25x6.5mm</footprint>
       <libsource lib="Device" part="L" description="Inductor"/>
       <property name="Sheetname" value="Power output"/>
