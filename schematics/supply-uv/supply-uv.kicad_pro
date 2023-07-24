@@ -48,71 +48,9 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [
-        {
-          "gap": 0.0,
-          "via_gap": 0.0,
-          "width": 0.0
-        },
-        {
-          "gap": 0.0,
-          "via_gap": 0.0,
-          "width": 0.5
-        }
-      ],
+      "diff_pair_dimensions": [],
       "drc_exclusions": [
-        "courtyards_overlap|112010001|80850001|015eb06d-e7a4-418e-a48d-2b11350caeee|7b44580a-234f-401b-a327-989b87f1b21b",
-        "courtyards_overlap|150778318|144595001|83eadd68-0a15-4d0e-a5a6-41a5d654ea22|dee69c15-e3ca-4bd0-9269-2f951a1867f7",
-        "courtyards_overlap|159500001|196180001|84eb8481-2f2d-4ff4-bcda-5700b932dd47|dee94b97-a0f3-45ee-8100-d4aedba39faf",
-        "courtyards_overlap|168578318|144600001|964809fe-2047-43f6-a08e-5c7905adc42e|a835db61-4256-4f0b-8dff-ad22520ffa6f",
-        "silk_edge_clearance|103360000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|8a302dd0-7ba4-42de-a40c-194e347bb936",
-        "silk_edge_clearance|115140000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|3570e2ed-ff2b-4b07-afa3-07050a962c93",
-        "silk_edge_clearance|129860000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|65a756f8-8423-48f2-8f62-f49d4ad66613",
-        "silk_edge_clearance|141640000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|6ce96f1c-e6d0-4d3d-857a-b7021f222537",
-        "silk_edge_clearance|156360000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|7750fd4c-8cc9-4f9c-8e06-7d403ee7216b",
-        "silk_edge_clearance|166940000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|b8cf5ef1-fb1b-4164-be64-744018e64215",
-        "silk_edge_clearance|169250000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|4d4965f1-f757-448d-a40b-e9293a903580",
-        "silk_edge_clearance|169750000|235750000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|30f02590-693c-47c1-9052-c356d18376a0",
-        "silk_edge_clearance|169750000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|5374d9d7-abe4-4a76-9ec7-425b49d9f3a7",
-        "silk_edge_clearance|171750000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|75e4686a-9122-492c-bd61-18c03c54a6ba",
-        "silk_edge_clearance|172250000|235750000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|aeda9b2c-64a3-4145-a810-7478dda6fa49",
-        "silk_edge_clearance|172250000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|5b7b0e83-f36e-44d5-b25a-caca0da3b30c",
-        "silk_edge_clearance|174560000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|b50b84b8-0ca0-4977-82a1-dfaa046a7690",
-        "silk_edge_clearance|176190000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|ae39b0ca-bd51-4e21-b0f5-71d77657719e",
-        "silk_edge_clearance|178500000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|7d8ea786-a44f-41ac-b182-5b17161fb1fd",
-        "silk_edge_clearance|179000000|235750000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|47cfcb19-387f-449a-b2e6-054c86829a50",
-        "silk_edge_clearance|179000000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|5e07277f-71f3-4dbb-94e3-ba6890ea19bd",
-        "silk_edge_clearance|181000000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|43b42379-7252-4c59-a8ef-803f6badc8c2",
-        "silk_edge_clearance|181500000|235750000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|9c8ee6e4-4846-4a44-8d65-1d58573331b3",
-        "silk_edge_clearance|181500000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|f2253abe-e1d0-4ff6-a71f-0b5f34c5f299",
-        "silk_edge_clearance|183810000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|fede087b-ffff-4708-ba02-ce8fff1d04af",
-        "silk_edge_clearance|185020000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|0c1b91c7-1a75-4a18-a0a7-c33fe5225531",
-        "silk_edge_clearance|185140000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|9d88f558-648b-4939-8251-be22e722f623",
-        "silk_edge_clearance|185258095|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|7b458868-9744-475a-89d5-739cf64d5da2",
-        "silk_edge_clearance|185376190|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|c1d3a213-3969-497a-acad-fe94ff8f6377",
-        "silk_edge_clearance|185494285|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|0a606665-3f3f-4d95-aa1d-f46a1437ffa2",
-        "silk_edge_clearance|185612380|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|21b9cbb4-d3d5-49e0-973f-925c0b935c8f",
-        "silk_edge_clearance|185730475|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|819c291b-209b-4c53-8658-58a6fb5798ca",
-        "silk_edge_clearance|185848570|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|8aad3bc7-2ba8-4ef8-a96d-bdce2fb1429f",
-        "silk_edge_clearance|185966665|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|9678464b-de2c-4d9a-ac85-dce5a61314de",
-        "silk_edge_clearance|186084760|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|02853298-90ba-4e07-a08e-d99cc0778bcb",
-        "silk_edge_clearance|186202855|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|9435d9de-d153-4656-8656-890142c6307c",
-        "silk_edge_clearance|186320950|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|4b18988d-63fc-48f5-aadd-90c385c563dc",
-        "silk_edge_clearance|186439045|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|ad520f28-52d4-4931-a954-d0cd79dae53b",
-        "silk_edge_clearance|186557140|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|4f4db11c-6dd8-4f8a-b821-e41bcabbb43a",
-        "silk_edge_clearance|186675235|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|2b153737-6481-4450-b8c3-e3f1f84484ff",
-        "silk_edge_clearance|186793330|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|9cb137e1-a0a2-43c1-8c62-46802d24d21c",
-        "silk_edge_clearance|186911425|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|5855cee1-bcb9-4e6f-930c-8ef09f14eaa6",
-        "silk_edge_clearance|187029520|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|593a5e4e-1bd7-4598-969e-5e2e13458e8d",
-        "silk_edge_clearance|187147615|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|2c7403b4-7ce2-4a81-8c11-7057d8982612",
-        "silk_edge_clearance|187265710|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|91706a0e-cbd0-415e-8e94-df2e2848f0f7",
-        "silk_edge_clearance|187383805|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|21ce9c39-0a0b-4b0f-a606-1575bb9654b2",
-        "silk_edge_clearance|187501900|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|32cdbd16-684d-4ce8-a8f1-da561dd8329c",
-        "silk_edge_clearance|187620000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|3a14c6a8-cba2-4498-abba-cf6d3aa3184f",
-        "silk_edge_clearance|190160000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|9ca425d6-fcad-420e-b4ec-f9a095f69a87",
-        "silk_edge_clearance|192700000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|42655081-7c6b-4ef5-b8e3-983fbde6b80d",
-        "silk_edge_clearance|195300000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|55a7b5e1-007d-4868-851e-416078580187",
-        "silk_edge_clearance|88640000|235800000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|9f4c3250-28fe-4991-91d6-223ff2a9a60b"
+        "courtyards_overlap|87500001|125795001|2ec3efe7-0092-4b06-9771-90464041ad92|f3d98f82-369f-4f8b-b4ea-d775f3026f01"
       ],
       "meta": {
         "version": 2
@@ -193,10 +131,10 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 5,
-          "td_on_pad_in_zone": true,
+          "td_on_pad_in_zone": false,
           "td_onpadsmd": true,
           "td_onroundshapesonly": false,
-          "td_ontrackend": true,
+          "td_ontrackend": false,
           "td_onviapad": true
         }
       ],
@@ -229,38 +167,49 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [
-        0.0,
-        0.2,
-        0.3,
-        0.5,
-        1.0,
-        2.0,
-        2.5,
-        3.0,
-        5.0,
-        8.0
-      ],
-      "via_dimensions": [
-        {
-          "diameter": 0.0,
-          "drill": 0.0
-        },
-        {
-          "diameter": 0.8,
-          "drill": 0.4
-        }
-      ],
+      "track_widths": [],
+      "via_dimensions": [],
       "zones_allow_external_fillets": false
     },
     "layer_presets": [
       {
         "activeLayer": -2,
         "layers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
           37,
           39,
           44,
-          47
+          47,
+          59
         ],
         "name": "Вид сверху (кроме Fab)",
         "renderLayers": [
@@ -304,60 +253,43 @@
       {
         "activeLayer": -2,
         "layers": [
-          36,
-          38,
-          44,
-          46
-        ],
-        "name": "Вид снизу (кроме Fab)",
-        "renderLayers": [
-          125,
-          126,
-          127,
-          128,
-          129,
-          130,
-          133,
-          134,
-          135,
-          136,
-          137,
-          138,
-          140,
-          141,
-          142,
-          143,
-          144,
-          145,
-          146,
-          147,
-          148,
-          149,
-          150,
-          151,
-          152,
-          153,
-          154,
-          155,
-          157,
-          158,
-          159,
-          160,
-          161,
-          164,
-          165
-        ]
-      },
-      {
-        "activeLayer": -2,
-        "layers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
           36,
           38,
           44,
           46,
-          47
+          59
         ],
-        "name": "Вид снизу - проверка отверстий",
+        "name": "Вид снизу (кроме Fab)",
         "renderLayers": [
           125,
           126,
@@ -632,8 +564,8 @@
         1,
         0,
         2,
-        0,
-        0,
+        2,
+        2,
         2
       ],
       [
@@ -645,7 +577,7 @@
         0,
         1,
         0,
-        0,
+        2,
         0,
         0,
         2
@@ -659,7 +591,7 @@
         0,
         1,
         0,
-        0,
+        2,
         0,
         0,
         2
@@ -716,13 +648,11 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": [
-      "Library"
-    ],
+    "pinned_footprint_libs": [],
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "supply.kicad_pro",
+    "filename": "supply-uv.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -787,14 +717,6 @@
       "version": 1
     },
     "net_format_name": "",
-    "ngspice": {
-      "fix_include_paths": true,
-      "meta": {
-        "version": 0
-      },
-      "model_mode": 0,
-      "workbook_filename": ""
-    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "spice_current_sheet_as_root": false,
@@ -807,24 +729,16 @@
   },
   "sheets": [
     [
-      "1e139717-fcd1-4008-a6ea-4c993845e928",
+      "ef40850c-d0bf-4cba-961b-9aba418f8e73",
       ""
     ],
     [
-      "bcabd54f-a555-4409-9a4f-89c20a3d7682",
-      "Internal 5V & out usb"
+      "aa600f88-5ff9-4da5-b0de-adabe09c1ceb",
+      "Input power with filter"
     ],
     [
-      "ce2ff71a-422a-4b17-921a-2433d38ec044",
-      "Control & Fan"
-    ],
-    [
-      "4671650e-ec71-47e3-a051-fc2ad6d25f63",
-      "Power output"
-    ],
-    [
-      "39d9543b-2a42-4758-87e9-56ce3e85ea36",
-      "Output connectors"
+      "1d298a4f-cf0d-440c-81b9-131daf06c23a",
+      "Standby Supply"
     ]
   ],
   "text_variables": {}
