@@ -2373,7 +2373,7 @@
           (reference "R31") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/4671650e-ec71-47e3-a051-fc2ad6d25f63"
-          (reference "R62") (unit 1)
+          (reference "R63") (unit 1)
         )
       )
     )
@@ -2465,7 +2465,7 @@
           (reference "R25") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/4671650e-ec71-47e3-a051-fc2ad6d25f63"
-          (reference "R60") (unit 1)
+          (reference "R61") (unit 1)
         )
       )
     )
@@ -2494,7 +2494,7 @@
           (reference "R39") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/4671650e-ec71-47e3-a051-fc2ad6d25f63"
-          (reference "R68") (unit 1)
+          (reference "R69") (unit 1)
         )
       )
     )
@@ -2591,7 +2591,7 @@
           (reference "R25") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/4671650e-ec71-47e3-a051-fc2ad6d25f63"
-          (reference "R59") (unit 1)
+          (reference "R60") (unit 1)
         )
       )
     )
@@ -2649,7 +2649,7 @@
           (reference "R32") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/4671650e-ec71-47e3-a051-fc2ad6d25f63"
-          (reference "R63") (unit 1)
+          (reference "R64") (unit 1)
         )
       )
     )
@@ -3002,7 +3002,7 @@
   (symbol (lib_id "Device:R") (at 358.14 167.64 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5ba5e768-2188-4753-a623-38578adfb7a6)
-    (property "Reference" "R70" (at 360.68 166.37 0)
+    (property "Reference" "R71" (at 360.68 166.37 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "49K5" (at 360.68 168.91 0)
@@ -3019,7 +3019,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/4671650e-ec71-47e3-a051-fc2ad6d25f63"
-          (reference "R70") (unit 1)
+          (reference "R71") (unit 1)
         )
       )
     )
@@ -3200,7 +3200,7 @@
           (reference "R39") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/4671650e-ec71-47e3-a051-fc2ad6d25f63"
-          (reference "R64") (unit 1)
+          (reference "R65") (unit 1)
         )
       )
     )
@@ -3257,7 +3257,7 @@
           (reference "R39") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/4671650e-ec71-47e3-a051-fc2ad6d25f63"
-          (reference "R65") (unit 1)
+          (reference "R66") (unit 1)
         )
       )
     )
@@ -3266,7 +3266,7 @@
   (symbol (lib_id "Device:R") (at 306.07 167.64 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7adaa897-ac57-4277-b0a1-b22ebb3b7b0e)
-    (property "Reference" "R67" (at 308.61 166.37 0)
+    (property "Reference" "R68" (at 308.61 166.37 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "1K" (at 308.61 168.91 0)
@@ -3283,7 +3283,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/4671650e-ec71-47e3-a051-fc2ad6d25f63"
-          (reference "R67") (unit 1)
+          (reference "R68") (unit 1)
         )
       )
     )
@@ -3362,7 +3362,7 @@
           (reference "R27") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/4671650e-ec71-47e3-a051-fc2ad6d25f63"
-          (reference "R61") (unit 1)
+          (reference "R62") (unit 1)
         )
       )
     )
@@ -3371,7 +3371,7 @@
   (symbol (lib_id "Device:R") (at 306.07 156.21 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b0dff74f-ae2e-40be-989c-7b8f5780c48c)
-    (property "Reference" "R66" (at 308.61 154.94 0)
+    (property "Reference" "R67" (at 308.61 154.94 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "9K1" (at 308.61 157.48 0)
@@ -3388,7 +3388,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/4671650e-ec71-47e3-a051-fc2ad6d25f63"
-          (reference "R66") (unit 1)
+          (reference "R67") (unit 1)
         )
       )
     )
@@ -3817,7 +3817,7 @@
   (symbol (lib_id "Device:R") (at 358.14 135.89 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ecdf55a5-3296-4c59-b777-f2d6f0343735)
-    (property "Reference" "R69" (at 358.14 130.81 90)
+    (property "Reference" "R70" (at 358.14 130.81 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0.01" (at 358.14 133.35 90)
@@ -3834,7 +3834,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/4671650e-ec71-47e3-a051-fc2ad6d25f63"
-          (reference "R69") (unit 1)
+          (reference "R70") (unit 1)
         )
       )
     )
