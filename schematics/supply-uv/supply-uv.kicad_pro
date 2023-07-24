@@ -48,9 +48,17 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [
-        "courtyards_overlap|87500001|125795001|2ec3efe7-0092-4b06-9771-90464041ad92|f3d98f82-369f-4f8b-b4ea-d775f3026f01"
+        "courtyards_overlap|81750001|129632501|2ec3efe7-0092-4b06-9771-90464041ad92|f3d98f82-369f-4f8b-b4ea-d775f3026f01",
+        "silk_edge_clearance|101500000|50000000|2c8b8d77-d4ae-475d-9697-8ba13897ac68|f7e10cbf-871a-4152-9338-21ea925968f2",
+        "silk_edge_clearance|60500000|50000000|2c8b8d77-d4ae-475d-9697-8ba13897ac68|db1dff20-458e-4f23-95c7-a053662be2e3"
       ],
       "meta": {
         "version": 2
@@ -167,8 +175,22 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
-      "via_dimensions": [],
+      "track_widths": [
+        0.0,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        },
+        {
+          "diameter": 0.8,
+          "drill": 0.4
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "layer_presets": [

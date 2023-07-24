@@ -699,7 +699,7 @@
   (symbol (lib_id "Connector:Conn_01x01_Pin") (at 157.48 52.07 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7cd98f51-d6db-4714-9829-7e625cc60056)
-    (property "Reference" "J4" (at 158.75 51.435 90)
+    (property "Reference" "J2" (at 158.75 51.435 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Conn_01x01_Pin" (at 158.75 53.975 90)
@@ -715,7 +715,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928"
-          (reference "J4") (unit 1)
+          (reference "J2") (unit 1)
         )
       )
     )
@@ -861,7 +861,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Pin") (at 57.15 68.58 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f0414081-4aa2-4406-848b-fc32d0e253ce)
-    (property "Reference" "J2" (at 69.85 57.15 0)
+    (property "Reference" "J1" (at 69.85 57.15 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "Conn_01x02_Pin" (at 69.85 59.69 0)
@@ -878,7 +878,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928"
-          (reference "J2") (unit 1)
+          (reference "J1") (unit 1)
         )
       )
     )

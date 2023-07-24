@@ -1384,7 +1384,7 @@
           (reference "D13") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "D29") (unit 1)
+          (reference "D23") (unit 1)
         )
       )
       (project "3dprinter_module_kicad"
@@ -1418,7 +1418,7 @@
           (reference "R54") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "R73") (unit 1)
+          (reference "R55") (unit 1)
         )
       )
     )
@@ -1478,7 +1478,7 @@
           (reference "R20") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "R79") (unit 1)
+          (reference "R61") (unit 1)
         )
       )
     )
@@ -1518,7 +1518,7 @@
   (symbol (lib_id "Device:Fuse") (at 205.74 29.21 90) (unit 1)
     (in_bom yes) (on_board no) (dnp yes) (fields_autoplaced)
     (uuid 23db3a04-387d-4d68-9ff3-98c10fd9b990)
-    (property "Reference" "F8" (at 205.74 24.13 90)
+    (property "Reference" "F7" (at 205.74 24.13 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "15A" (at 205.74 26.67 90)
@@ -1535,7 +1535,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "F8") (unit 1)
+          (reference "F7") (unit 1)
         )
       )
     )
@@ -1564,7 +1564,7 @@
           (reference "R54") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "R77") (unit 1)
+          (reference "R59") (unit 1)
         )
       )
     )
@@ -1573,7 +1573,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Socket") (at 266.7 45.72 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2f52aca0-ce70-4371-b416-cc5e12fb7f3f)
-    (property "Reference" "J21" (at 267.97 43.18 0)
+    (property "Reference" "J18" (at 267.97 43.18 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "jst xh angle" (at 267.97 45.72 0)
@@ -1590,7 +1590,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "J21") (unit 1)
+          (reference "J18") (unit 1)
         )
       )
     )
@@ -1650,7 +1650,7 @@
           (reference "R29") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "R76") (unit 1)
+          (reference "R58") (unit 1)
         )
       )
     )
@@ -1678,7 +1678,7 @@
           (reference "#FLG08") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#FLG019") (unit 1)
+          (reference "#FLG014") (unit 1)
         )
       )
     )
@@ -1687,7 +1687,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Socket") (at 201.93 19.05 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3adf4a02-e037-44f9-a11c-78b6c3a8dcb1)
-    (property "Reference" "J17" (at 203.2 19.05 0)
+    (property "Reference" "J14" (at 203.2 19.05 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "banana jack + fuse 15A" (at 203.2 21.59 0)
@@ -1704,7 +1704,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "J17") (unit 1)
+          (reference "J14") (unit 1)
         )
       )
     )
@@ -1733,7 +1733,7 @@
           (reference "R54") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "R78") (unit 1)
+          (reference "R60") (unit 1)
         )
       )
     )
@@ -1742,7 +1742,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Socket") (at 266.7 21.59 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 519a4d78-8760-4468-a2bd-5c5d84aaac9f)
-    (property "Reference" "J20" (at 267.97 19.05 0)
+    (property "Reference" "J17" (at 267.97 19.05 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "jst xh angle" (at 267.97 21.59 0)
@@ -1759,7 +1759,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "J20") (unit 1)
+          (reference "J17") (unit 1)
         )
       )
     )
@@ -1819,7 +1819,7 @@
           (reference "R29") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "R75") (unit 1)
+          (reference "R57") (unit 1)
         )
       )
     )
@@ -1849,7 +1849,7 @@
           (reference "Q10") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "Q12") (unit 1)
+          (reference "Q10") (unit 1)
         )
       )
     )
@@ -1884,7 +1884,7 @@
           (reference "Q9") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "Q14") (unit 1)
+          (reference "Q12") (unit 1)
         )
       )
     )
@@ -1944,7 +1944,7 @@
           (reference "R54") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "R74") (unit 1)
+          (reference "R56") (unit 1)
         )
       )
     )
@@ -2019,7 +2019,7 @@
           (reference "U6") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "U25") (unit 1)
+          (reference "U20") (unit 1)
         )
       )
     )
@@ -2054,7 +2054,7 @@
           (reference "Q9") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "Q13") (unit 1)
+          (reference "Q11") (unit 1)
         )
       )
     )
@@ -2114,7 +2114,7 @@
           (reference "D13") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "D32") (unit 1)
+          (reference "D26") (unit 1)
         )
       )
       (project "3dprinter_module_kicad"
@@ -2128,7 +2128,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Socket") (at 208.28 41.91 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9f0f516d-f802-4cb7-b372-198508b7f2a6)
-    (property "Reference" "J18" (at 209.55 41.91 0)
+    (property "Reference" "J15" (at 209.55 41.91 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "banana jack + fuse 15A" (at 209.55 44.45 0)
@@ -2145,7 +2145,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "J18") (unit 1)
+          (reference "J15") (unit 1)
         )
       )
     )
@@ -2265,7 +2265,7 @@
           (reference "Q10") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "Q11") (unit 1)
+          (reference "Q9") (unit 1)
         )
       )
     )
@@ -2325,7 +2325,7 @@
           (reference "R54") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "R72") (unit 1)
+          (reference "R54") (unit 1)
         )
       )
     )
@@ -2354,7 +2354,7 @@
           (reference "D13") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "D30") (unit 1)
+          (reference "D24") (unit 1)
         )
       )
       (project "3dprinter_module_kicad"
@@ -2450,7 +2450,7 @@
           (reference "D13") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "D31") (unit 1)
+          (reference "D25") (unit 1)
         )
       )
       (project "3dprinter_module_kicad"
@@ -2484,7 +2484,7 @@
           (reference "F2") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "F7") (unit 1)
+          (reference "F6") (unit 1)
         )
       )
     )
@@ -2493,7 +2493,7 @@
   (symbol (lib_id "Connector_Generic:Conn_02x04_Odd_Even") (at 256.54 87.63 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e5f90eab-a4b3-4b4a-ac3d-0b02f8f61f0e)
-    (property "Reference" "J19" (at 257.81 78.74 0)
+    (property "Reference" "J16" (at 257.81 78.74 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_02x04_Odd_Even" (at 257.81 81.28 0)
@@ -2516,7 +2516,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "J19") (unit 1)
+          (reference "J16") (unit 1)
         )
       )
     )
@@ -2525,7 +2525,7 @@
   (symbol (lib_id "Device:Fuse") (at 207.01 52.07 90) (unit 1)
     (in_bom yes) (on_board no) (dnp yes) (fields_autoplaced)
     (uuid e69c8f74-2d08-49b1-85f2-90cbcad8ad29)
-    (property "Reference" "F9" (at 207.01 46.99 90)
+    (property "Reference" "F8" (at 207.01 46.99 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "15A" (at 207.01 49.53 90)
@@ -2542,7 +2542,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "F9") (unit 1)
+          (reference "F8") (unit 1)
         )
       )
     )
@@ -2633,7 +2633,7 @@
           (reference "F2") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "F6") (unit 1)
+          (reference "F5") (unit 1)
         )
       )
     )
