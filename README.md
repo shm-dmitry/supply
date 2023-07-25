@@ -13,3 +13,4 @@ Outputs:
 4. one PWM channel 5V & 3.3V up to 1A each (configured from UI)
 5. one USB port with QC2.0 chip (up to 18W)
 6. two USB ports with 5V/1.5A output
+7. One Li-Ion charger with 1A output current
