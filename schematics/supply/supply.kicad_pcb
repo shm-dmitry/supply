@@ -3645,7 +3645,7 @@
       (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp 363003ba-9d2f-4733-9edd-823828533832))
     (fp_line (start 12.45 3.4) (end 12.45 -2.35)
       (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp a92ecda7-df56-41d4-ae60-29b9522e5bf7))
-    (pad "1" thru_hole roundrect (at 0 0 270) (size 1.7 1.95) (drill 0.95) (layers "*.Cu" "*.Mask") (roundrect_rratio 0.147059)
+    (pad "1" thru_hole roundrect (at 0 0 270) (size 1.7 1.95) (drill 0.95) (layers "*.Cu" "*.Mask") (roundrect_rratio 0.1470588235)
       (net 2 "GND") (pinfunction "Pin_1") (pintype "passive") (tstamp 220a574a-7f16-4ae0-ae97-b5c8803be3da))
     (pad "2" thru_hole oval (at 2.5 0 270) (size 1.7 1.95) (drill 0.95) (layers "*.Cu" "*.Mask")
       (net 133 "/Output connectors/LIION_CHARGE_VBAT") (pinfunction "Pin_2") (pintype "passive") (tstamp 44910956-9caf-4194-812f-e263937d1d69))
@@ -12242,9 +12242,9 @@
       (stroke (width 0.1) (type solid)) (layer "B.Fab") (tstamp 30d6b6bc-1976-4152-8393-eb6a8873e20e))
     (fp_line (start 1 0.625) (end 1 -0.625)
       (stroke (width 0.1) (type solid)) (layer "B.Fab") (tstamp cf28b9cd-4a38-4992-a0ed-8f993fc22447))
-    (pad "1" smd roundrect (at -0.9125 0 270) (size 1.025 1.4) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.243902)
+    (pad "1" smd roundrect (at -0.9125 0 270) (size 1.025 1.4) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.243902439)
       (net 2 "GND") (pintype "passive") (tstamp cb40ef93-1044-466b-84b0-41fd57ab074f))
-    (pad "2" smd roundrect (at 0.9125 0 270) (size 1.025 1.4) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.243902)
+    (pad "2" smd roundrect (at 0.9125 0 270) (size 1.025 1.4) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.243902439)
       (net 150 "Net-(U20-ISET)") (pintype "passive") (tstamp f89d5256-d65b-437a-8cce-9f2aebe419e2))
     (model "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.wrl"
       (offset (xyz 0 0 0))
@@ -13892,9 +13892,9 @@
       (stroke (width 0.1) (type solid)) (layer "B.Fab") (tstamp cb1115f1-b532-414a-8e82-b744f1cafd95))
     (fp_line (start 1 0.625) (end 1 -0.625)
       (stroke (width 0.1) (type solid)) (layer "B.Fab") (tstamp 8ca87997-3ed9-42af-aceb-6d9fea6460bf))
-    (pad "1" smd roundrect (at -0.9125 0 180) (size 1.025 1.4) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.243902)
+    (pad "1" smd roundrect (at -0.9125 0 180) (size 1.025 1.4) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.243902439)
       (net 42 "/Internal 5V & out usb/+5V_OUT") (pintype "passive") (tstamp 039a2552-40a9-4ff6-9b3c-4943bfeefd06))
-    (pad "2" smd roundrect (at 0.9125 0 180) (size 1.025 1.4) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.243902)
+    (pad "2" smd roundrect (at 0.9125 0 180) (size 1.025 1.4) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.243902439)
       (net 149 "Net-(J14-Pin_5)") (pintype "passive") (tstamp bacdce1f-92da-483a-b14a-eb43062369cf))
     (model "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.wrl"
       (offset (xyz 0 0 0))
@@ -16426,6 +16426,75 @@
   )
   (gr_text "GND" (at 112.25 209.5) (layer "F.SilkS") (tstamp fcffb86c-5f41-4ee2-8c37-47cc260f0350)
     (effects (font (size 1 1) (thickness 0.15)) (justify left bottom))
+  )
+  (gr_text "Толщина платы: " (at 349.021421 25.394) (layer "User.1") (tstamp 0bfab9ac-c7c6-4d77-9e8c-998ad8ed6424)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
+  )
+  (gr_text "4" (at 312.007141 25.394) (layer "User.1") (tstamp 1438afa5-2d04-4a34-b753-727b26259eb9)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
+  )
+  (gr_text "Количество слоёв меди: " (at 271.85 25.394) (layer "User.1") (tstamp 28fd517b-9697-4a94-a525-f6dac9960201)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
+  )
+  (gr_text "Периферийные полу-отверстия: " (at 271.85 41.222) (layer "User.1") (tstamp 365f07fc-01e8-4f98-88f4-23c7a85ddfa1)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
+  )
+  (gr_text "Мин. дорожка/зазор: " (at 271.85 33.308) (layer "User.1") (tstamp 485137ed-b0f4-4455-b13c-be568ca291c7)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
+  )
+  (gr_text "Габариты платы: " (at 271.85 29.351) (layer "User.1") (tstamp 522984a3-1481-42bc-a8e9-0acb3c388a79)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
+  )
+  (gr_text "Мин. сверло: " (at 349.021421 33.308) (layer "User.1") (tstamp 56f255be-c6be-4243-9d5d-7ae2e8d7bde8)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
+  )
+  (gr_text "Нет" (at 376.607136 37.265) (layer "User.1") (tstamp 659d1fc8-3387-498f-bab2-99843c33d28e)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
+  )
+  (gr_text "Контроль импеданса: " (at 349.021421 37.265) (layer "User.1") (tstamp 736ccc0e-d616-4e42-9bfb-46748ac58566)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
+  )
+  (gr_text "110,0000 mm x 175,0000 mm" (at 312.007141 29.351) (layer "User.1") (tstamp 807211ef-b4ff-4a6b-9f62-d9aa4556b839)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
+  )
+  (gr_text "None" (at 312.007141 37.265) (layer "User.1") (tstamp 8b7a0ee2-2ee5-450a-b0b3-fc22ba2378d3)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
+  )
+  (gr_text "Нет" (at 376.607136 41.222) (layer "User.1") (tstamp 8caba954-9fd2-4507-866c-c7bee777b311)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
+  )
+  (gr_text "Нет" (at 312.007141 45.179) (layer "User.1") (tstamp 8cae5032-510a-4c70-9292-7fc84607ec86)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
+  )
+  (gr_text "" (at 349.021421 29.351) (layer "User.1") (tstamp 97584542-618d-4a3a-ba2a-ca0d0623e70e)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
+  )
+  (gr_text "Покрытие меди: " (at 271.85 37.265) (layer "User.1") (tstamp 9ddd0f56-54ff-4b05-bf25-7ee60b267137)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
+  )
+  (gr_text "Нет" (at 312.007141 41.222) (layer "User.1") (tstamp a226faaf-a7c1-4141-83ac-1c969bf0bfee)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
+  )
+  (gr_text "" (at 376.607136 29.351) (layer "User.1") (tstamp b28a6cec-5f06-4634-b74f-6f1b2c9f94ec)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
+  )
+  (gr_text "0,3000 mm" (at 376.607136 33.308) (layer "User.1") (tstamp b29c0600-97ef-421b-9ddb-9213dd12ffad)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
+  )
+  (gr_text "1,6000 mm" (at 376.607136 25.394) (layer "User.1") (tstamp bb301a07-bf95-4678-8b18-b7c7567b25d8)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
+  )
+  (gr_text "0,0000 mm / 0,0000 mm" (at 312.007141 33.308) (layer "User.1") (tstamp bf8efdb3-ac0b-457b-9789-3843c7a35fd9)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
+  )
+  (gr_text "Краевой соединитель: " (at 271.85 45.179) (layer "User.1") (tstamp c52c5261-a81b-4d71-8d20-c7d6050ea6fa)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
+  )
+  (gr_text "ХАРАКТЕРИСТИКИ ПЛАТЫ" (at 271.1 19.9) (layer "User.1") (tstamp d38eff0f-d84b-450f-9e8d-778055bbda02)
+    (effects (font (size 2 2) (thickness 0.4)) (justify left top))
+  )
+  (gr_text "Метал. торцы: " (at 349.021421 41.222) (layer "User.1") (tstamp d50891c1-1e65-49d2-94ec-f2d8f67db00b)
+    (effects (font (size 1.5 1.5) (thickness 0.2)) (justify left top))
   )
 
   (via (at 156 158.75) (size 0.8) (drill 0.4) (layers "F.Cu" "B.Cu") (net 1) (tstamp 75674b89-8287-454c-852a-789ab9f1cfd7))
@@ -35114,6 +35183,33 @@
         (xy 126 158.75)
         (xy 116.05 158.55)
       )
+    )
+  )
+  (group "group-boardCharacteristics" (id b7c5549e-9abb-47fe-bdfb-868d471fbcc3)
+    (members
+      0bfab9ac-c7c6-4d77-9e8c-998ad8ed6424
+      1438afa5-2d04-4a34-b753-727b26259eb9
+      28fd517b-9697-4a94-a525-f6dac9960201
+      365f07fc-01e8-4f98-88f4-23c7a85ddfa1
+      485137ed-b0f4-4455-b13c-be568ca291c7
+      522984a3-1481-42bc-a8e9-0acb3c388a79
+      56f255be-c6be-4243-9d5d-7ae2e8d7bde8
+      659d1fc8-3387-498f-bab2-99843c33d28e
+      736ccc0e-d616-4e42-9bfb-46748ac58566
+      807211ef-b4ff-4a6b-9f62-d9aa4556b839
+      8b7a0ee2-2ee5-450a-b0b3-fc22ba2378d3
+      8caba954-9fd2-4507-866c-c7bee777b311
+      8cae5032-510a-4c70-9292-7fc84607ec86
+      97584542-618d-4a3a-ba2a-ca0d0623e70e
+      9ddd0f56-54ff-4b05-bf25-7ee60b267137
+      a226faaf-a7c1-4141-83ac-1c969bf0bfee
+      b28a6cec-5f06-4634-b74f-6f1b2c9f94ec
+      b29c0600-97ef-421b-9ddb-9213dd12ffad
+      bb301a07-bf95-4678-8b18-b7c7567b25d8
+      bf8efdb3-ac0b-457b-9789-3843c7a35fd9
+      c52c5261-a81b-4d71-8d20-c7d6050ea6fa
+      d38eff0f-d84b-450f-9e8d-778055bbda02
+      d50891c1-1e65-49d2-94ec-f2d8f67db00b
     )
   )
 )
