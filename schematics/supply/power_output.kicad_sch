@@ -3010,7 +3010,7 @@
     (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 358.14 151.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "http://www.ti.com/lit/ds/symlink/ina169.pdf" (at 358.013 151.13 0)
+    (property "Datasheet" "https://static.chipdip.ru/lib/285/DOC014285024.pdf" (at 358.013 151.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid a5db8ec5-bd78-43c5-8de3-47ad80344c76))

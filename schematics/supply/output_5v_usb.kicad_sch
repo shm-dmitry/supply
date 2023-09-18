@@ -7249,8 +7249,8 @@
     (property "Datasheet" "~" (at 220.98 48.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 031794d0-7782-4a87-8c70-3b50c0c2a33b))
-    (pin "2" (uuid b922f4a2-645e-464f-81c0-171e1c00d3f7))
+    (pin "1" (uuid 7d36ddfc-8746-497d-aaa0-a8b1db2891cf))
+    (pin "2" (uuid 4283c3ac-8a55-4292-881d-cb344f1ecfea))
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/bcabd54f-a555-4409-9a4f-89c20a3d7682"
