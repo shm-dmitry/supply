@@ -3,7 +3,7 @@
 #include "Arduino.h"
 
 // C2
-#define OVERLOADED_PIN 2
+#define OVERLOADED_PIN A2
 
 void overloaded_led_init() {
   pinMode(OVERLOADED_PIN, OUTPUT);

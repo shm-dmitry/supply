@@ -1,9 +1,11 @@
 #include "power_output_control.h"
 
+#include "Arduino.h"
+
 #include "overloaded_led.h"
 #include "power_output_sense.h"
 
-#include "Arduino.h"
+#include "config.h"
 
 uint16_t power_output_control_I_x1000 = 0;
 uint16_t power_output_control_V_x1000 = 0;
@@ -11,8 +13,10 @@ bool power_output_control_enabled = false;
 
 bool power_output_control_out_enabled = false;
 
+#ifndef POWER_OUTPUT_FB
 // PC1
 #define POWER_OUTPUT_FB 1
+#endif
 
 void power_output_control_init() {
   pinMode(POWER_OUTPUT_FB, OUTPUT);
@@ -46,6 +50,7 @@ void power_output_control_status(t_power_output_stats & status) {
   status.limit_V = power_output_control_V_x1000;
   status.actual_I = power_output_sense_readI_x1000();
   status.actual_V = power_output_sense_readV_x1000();
+  status.enabled = power_output_control_enabled;
 }
 
 void power_output_control_setV(uint16_t voltage_x1000) {
