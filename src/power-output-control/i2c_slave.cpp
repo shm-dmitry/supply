@@ -3,13 +3,24 @@
 #include "Arduino.h"
 #include "Wire.h"
 #include "power_output_control.h"
+#include "CRC.h"
 
-#define I2C_SLAVE_ADDRESS 0x13
-
-#define I2C_COMMAND_UNKNOWN 0x00
 #define I2C_COMMAND_SET_LIMIT_V 0x01
 #define I2C_COMMAND_SET_LIMIT_I 0x02
 #define I2C_COMMAND_SET_ENABLE  0x03
+#define I2C_COMMAND_ADD_LIMIT_V 0x04
+#define I2C_COMMAND_ADD_LIMIT_I 0x05
+#define I2C_COMMAND_SUB_LIMIT_V 0x06
+#define I2C_COMMAND_SUB_LIMIT_I 0x07
+
+#define I2C_TIMEOUT_MSEC 5
+
+#define I2C_WAIT_FOR_DATA() \
+  while(!Wire.available()) { \
+    if (millis() > timeout) { \
+      return; \
+    } \
+  }
 
 void i2c_slave_on_receive(int bytes);
 void i2c_slave_on_request();
@@ -20,26 +31,43 @@ void i2c_slave_init() {
   Wire.onRequest(i2c_slave_on_request);
 }
 
-void i2c_slave_on_receive(int) {
-  uint8_t command = I2C_COMMAND_UNKNOWN;
-  if (Wire.available()) {
-    command = Wire.read();
+void i2c_slave_on_receive(int bytes) {
+  if (bytes != 4) {
+    return;
   }
 
-  uint16_t arg = 0;
-  if (Wire.available()) {
-    arg = Wire.read() * 0xFF;
-  }
-  if (Wire.available()) {
-    arg += Wire.read();
-  }
+  unsigned long timeout = millis() + I2C_TIMEOUT_MSEC;
 
-  if (command == I2C_COMMAND_SET_LIMIT_V) {
-    power_output_control_setV(arg);
-  } else if (command == I2C_COMMAND_SET_LIMIT_I) {
-    power_output_control_setI(arg);
-  } else if (command == I2C_COMMAND_SET_ENABLE) {
-    power_output_control_start(arg == 0x01 ? true : false);
+  I2C_WAIT_FOR_DATA();
+  uint8_t command = Wire.read();
+
+  I2C_WAIT_FOR_DATA();
+  uint8_t arg1 = Wire.read();
+  I2C_WAIT_FOR_DATA();
+  uint8_t arg2 = Wire.read();
+
+  I2C_WAIT_FOR_DATA();
+  uint8_t crc = Wire.read();
+
+  uint8_t data[3] = { command, arg1, arg2 };
+  uint8_t calc_crc = calcCRC8(data, sizeof(data));
+
+  if (crc == calc_crc) {
+    if (command == I2C_COMMAND_SET_LIMIT_V) {
+      power_output_control_setV(arg1 * 0xFF + arg2);
+    } else if (command == I2C_COMMAND_SET_LIMIT_I) {
+      power_output_control_setI(arg1 * 0xFF + arg2);
+    } else if (command == I2C_COMMAND_SET_ENABLE) {
+      power_output_control_start(arg1 == 0x01 ? true : false);
+    } else if (command == I2C_COMMAND_ADD_LIMIT_V) {
+      power_output_control_addV(arg1 * 0xFF + arg2, true);
+    } else if (command == I2C_COMMAND_ADD_LIMIT_I) {
+      power_output_control_addI(arg1 * 0xFF + arg2, true);
+    } else if (command == I2C_COMMAND_SUB_LIMIT_V) {
+      power_output_control_addV(arg1 * 0xFF + arg2, false);
+    } else if (command == I2C_COMMAND_SUB_LIMIT_I) {
+      power_output_control_addI(arg1 * 0xFF + arg2, false);
+    }
   }
 }
 
@@ -48,15 +76,24 @@ void i2c_slave_on_request() {
   memset(&status, 0, sizeof(t_power_output_stats));
   power_output_control_status(status);
 
-  Wire.write(status.limit_I % 0xFF);
-  Wire.write(status.limit_I / 0xFF);
-  Wire.write(status.limit_V % 0xFF);
-  Wire.write(status.limit_V / 0xFF);
-  Wire.write(status.actual_I % 0xFF);
-  Wire.write(status.actual_I / 0xFF);
-  Wire.write(status.actual_V % 0xFF);
-  Wire.write(status.actual_V / 0xFF);
-  Wire.write(status.enabled ? 0x01 : 0x00);
+  uint8_t data[10] = { 
+    (uint8_t)(status.limit_I / 0xFF),
+    (uint8_t)(status.limit_I % 0xFF),
+    (uint8_t)(status.limit_V / 0xFF),
+    (uint8_t)(status.limit_V % 0xFF),
+    (uint8_t)(status.actual_I / 0xFF),
+    (uint8_t)(status.actual_I % 0xFF),
+    (uint8_t)(status.actual_V / 0xFF),
+    (uint8_t)(status.actual_V % 0xFF),
+    (uint8_t)(status.enabled ? 0x01 : 0x00),
+    0x00
+   };
+
+  uint8_t crc = calcCRC8(data, sizeof(data) - 1);
+
+  data[sizeof(data) - 1] = crc;
+
+  Wire.write(data, sizeof(data));
 }
 
 #ifdef SIMUL_ENABLED

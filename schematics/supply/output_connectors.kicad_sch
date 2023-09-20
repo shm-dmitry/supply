@@ -2901,7 +2901,7 @@
     (property "Footprint" "Package_DFN_QFN:Texas_RGV_S-PVQFN-N16_EP2.1x2.1mm" (at 173.99 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "http://www.ti.com/lit/ds/symlink/ina3221.pdf" (at 173.99 111.76 0)
+    (property "Datasheet" "https://www.switchdoc.com/wp-content/uploads/2015/01/ina3221.pdf" (at 173.99 111.76 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 68afa39c-12ae-4671-8cd6-e6013578493b))

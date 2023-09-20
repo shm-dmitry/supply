@@ -3,16 +3,6 @@
 #include "Arduino.h"
 #include "config.h"
 
-#ifndef POWER_OUTPUT_SENSE_PIN_I
-// A7
-#define POWER_OUTPUT_SENSE_PIN_I A7
-#endif
-
-#ifndef POWER_OUTPUT_SENSE_PIN_V
-// B4
-#define POWER_OUTPUT_SENSE_PIN_V 4
-#endif
-
 #define POWER_OUTPUT_SENSE_MX_TO_X ((uint32_t)1000)
 #define POWER_OUTPUT_SENSE_1024 ((uint32_t)1024)
 
@@ -29,15 +19,26 @@
 // v = readV * 5 * (9100(r1) + 1000(r2)) / 1000(r2) * 1000(V to mV) / 1024
 #define POWER_OUTPUT_SENSE_VV_TO_V(value) ((((((uint32_t)value) * POWER_OUTPUT_SENSE_V_OFFSET * (POWER_OUTPUT_SENSE_VV_R1 + POWER_OUTPUT_SENSE_VV_R2)) / POWER_OUTPUT_SENSE_VV_R2) * POWER_OUTPUT_SENSE_MX_TO_X) / POWER_OUTPUT_SENSE_1024)
 
+uint16_t power_output_sense_cache_i = 0;
+uint16_t power_output_sense_cache_v = 0;
+
 void power_output_sense_init() {
   pinMode(POWER_OUTPUT_SENSE_PIN_I, INPUT);
   pinMode(POWER_OUTPUT_SENSE_PIN_V, INPUT);
 }
 
-uint16_t power_output_sense_readI_x1000() {
-  return POWER_OUTPUT_SENSE_VI_TO_I(analogRead(POWER_OUTPUT_SENSE_PIN_I));
+uint16_t power_output_sense_readI_x1000(bool readactual) {
+  if (readactual) {
+    power_output_sense_cache_i = POWER_OUTPUT_SENSE_VI_TO_I(analogRead(POWER_OUTPUT_SENSE_PIN_I));
+  }
+  
+  return power_output_sense_cache_i;
 }
 
-uint16_t power_output_sense_readV_x1000() {
-  return POWER_OUTPUT_SENSE_VV_TO_V(analogRead(POWER_OUTPUT_SENSE_PIN_V));
+uint16_t power_output_sense_readV_x1000(bool readactual) {
+  if (readactual) {
+  power_output_sense_cache_v = POWER_OUTPUT_SENSE_VV_TO_V(analogRead(POWER_OUTPUT_SENSE_PIN_V));
+  }
+
+  return power_output_sense_cache_v;
 }

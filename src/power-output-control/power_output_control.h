@@ -16,6 +16,8 @@ void power_output_control_init();
 
 void power_output_control_on_main_loop();
 
+void power_output_control_addV(uint16_t delta, bool add);
+void power_output_control_addI(uint16_t delta, bool add);
 void power_output_control_setV(uint16_t voltage_x1000);
 void power_output_control_setI(uint16_t current_x1000);
 void power_output_control_start(bool enable);

@@ -4128,7 +4128,7 @@
     (property "Footprint" "Package_QFP:TQFP-32_7x7mm_P0.8mm" (at 63.5 68.58 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
-    (property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" (at 63.5 68.58 0)
+    (property "Datasheet" "https://static.chipdip.ru/lib/549/DOC001549488.pdf" (at 63.5 68.58 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 5a6baebb-e9ca-47b1-89b3-63c36b46480c))

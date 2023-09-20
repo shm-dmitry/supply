@@ -1,0 +1,10 @@
+#ifndef CONFIG_H_
+#define CONFIG_H_
+
+#define DISPLAY_TYOE_SIMUL_ADAFRUIT false
+#define DISPLAY_TYPE_ST7335_ADAFRUIT false
+#define DISPLAY_TYPE_SIMIL_CUSTOM true
+#define DISPLAY_TYPE_ST7335_CUSTOM true
+
+
+#endif /* CONFIG_H_ */
