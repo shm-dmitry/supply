@@ -31,8 +31,8 @@ This code based on projects:
 uint8_t display_spi_dc;
 SPISettings settings;
 
-#define DISPLAY_WIDTH 320
-#define DISPLAY_HEIGHT 240
+#define DISPLAY_WIDTH 160
+#define DISPLAY_HEIGHT 128
 
 #define DISPLAY_SPI_CASET 0x2A ///< Column Address Set
 #define DISPLAY_SPI_PASET 0x2B ///< Page Address Set
@@ -307,7 +307,7 @@ void display_spi_print16(uint16_t value) {
 
 void display_spi_print32(uint32_t value) {
   char buffer[10] = {0};
-  itoa(value, buffer, 10);
+  ltoa(value, buffer, 10);
   display_spi_prints(buffer);
 }
 

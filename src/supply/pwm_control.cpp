@@ -5,7 +5,7 @@
 // PB2
 #define PWM_CONTROL_PIN 10
 
-#define PWM_CONTROL_DEFAULT_FREQ 50000
+#define PWM_CONTROL_DEFAULT_FREQ 40000
 #define PWM_CONTROL_DEFAULT_DUTY 20
 
 #define PWM_CONTROL_MAX_FREQ 1000000
@@ -43,20 +43,38 @@ void pwm_control_add_freq(uint16_t delta, bool add) {
   if (OCR1A == 0) {
     pwm_control_set(delta, 0);
   } else {
+    uint16_t prevOCR1A = OCR1A;
     t_pwm_control_status status;
     pwm_control_status(status);
-    if (add) {
-      status.freq += delta;
-      if (status.freq > PWM_CONTROL_MAX_FREQ) {
-        status.freq = PWM_CONTROL_MAX_FREQ;
+      
+    while(prevOCR1A == OCR1A) {
+      if (add) {
+        status.freq += delta;
+        if (status.freq > PWM_CONTROL_MAX_FREQ) {
+          status.freq = PWM_CONTROL_MAX_FREQ;
+        }
+      } else {
+        if (status.freq < (uint32_t)delta) {
+          status.freq = 0;
+        } else {
+          status.freq -= delta;
+        }
       }
-    } else {
-      if (status.freq < delta) {
-        status.freq = 0;
+
+      pwm_control_set(status.freq, status.duty);
+
+      if (status.freq == 0 || status.freq == PWM_CONTROL_MAX_FREQ) {
+        break;
       }
     }
 
-    pwm_control_set(status.freq, status.duty);
+    // correct duty
+    uint8_t expected = status.duty;
+    pwm_control_status(status);
+
+    if (status.duty < expected) {
+      OCR1B++;
+    }
   }
 }
 
@@ -64,25 +82,35 @@ void pwm_control_add_duty(uint8_t delta, bool add) {
   if (OCR1A == 0) {
     pwm_control_set(PWM_CONTROL_DEFAULT_FREQ, delta);
   } else {
+    uint16_t saveOCR1B = OCR1B;
+
     t_pwm_control_status status;
     pwm_control_status(status);
-    if (add) {
-      if (delta > 100) {
-        delta = 100;
+    while (saveOCR1B == OCR1B) {
+      if (add) {
+        if (delta > 100) {
+          delta = 100;
+        }
+
+        if (status.duty > 100 - delta) {
+          status.duty = 100;
+        } else {
+          status.duty += delta;
+        }
+      } else {
+        if (status.duty < delta) {
+          status.duty = 0;
+        } else {
+          status.duty -= delta;
+        }
       }
 
-      if (status.duty > 100 - delta) {
-        status.duty = 100;
-      } else {
-        status.duty += delta;
-      }
-    } else {
-      if (status.duty < delta) {
-        status.duty = 0;
+      pwm_control_set(status.freq, status.duty);
+
+      if (status.duty == 100 || status.duty == 0) {
+        break;
       }
     }
-
-    pwm_control_set(status.freq, status.duty);
   }
 }
 

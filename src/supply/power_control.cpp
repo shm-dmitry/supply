@@ -8,6 +8,8 @@
 
 #include "CRC.h"
 
+#include "config.h"
+
 #define POWER_CONTROL_RESET       A1
 #define POWER_CONTROL_ENABLE_PIN  9
 
@@ -15,7 +17,7 @@
 #define POWER_CONTROL_DEFAULT_I  3000
 #define POWER_CONTROL_DEFAULT_EN false
 
-#define I2C_ADDRESS_POWER_OUTPUT 0x13
+#define I2C_ADDRESS_POWER_OUTPUT 0x33
 #define I2C_ADDRESS_USB          0x41
 #define I2C_ADDRESS_5V_3V3       0x43
 
@@ -47,6 +49,7 @@ void power_control_init() {
   digitalWrite(POWER_CONTROL_ENABLE_PIN, HIGH); // disable
 
   Wire.begin();
+  Wire.setClock(100000);
 
   // configure power-control chip with default configuration
   power_control_set_V(POWER_CONTROL_DEFAULT_V);
@@ -152,11 +155,14 @@ void power_control_inv_enabled() {
 }
 
 bool power_control_powerout_status(t_power_output_stats & status) {
-  Wire.requestFrom(I2C_ADDRESS_POWER_OUTPUT, 10, true);
+  Wire.beginTransmission(I2C_ADDRESS_POWER_OUTPUT);
+  Wire.write(0);
+  Wire.endTransmission(false);
+  Wire.requestFrom(I2C_ADDRESS_POWER_OUTPUT, 10, 1);
 
   unsigned long timeout = millis() + I2C_TIMEOUT_MS;
 
-  uint8_t data[10];
+  uint8_t data[11];
   memset(data, 0, sizeof(data));
 
   for (uint8_t i = 0; i<10; i++) {
@@ -164,10 +170,18 @@ bool power_control_powerout_status(t_power_output_stats & status) {
     data[i] = Wire.read();
   }
 
+  #if I2C_SIMUL_MEMORY
+  ;
+  #else
   uint8_t crc = calcCRC8(data, 10 - 1);
   if (crc != data[10 - 1]) {
+//    Serial.print("BAD crc: ");
+//    Serial.print(crc, HEX);
+//    Serial.print(" / ");
+//    Serial.println(data[9], HEX);
     return false;
   }
+  #endif
 
   status.limit_I = data[0] * 0xFF + data[1];
   status.limit_V = data[2] * 0xFF + data[3];
@@ -184,10 +198,14 @@ bool power_control_powerout_status(t_power_output_stats & status) {
 
 bool power_control_ina3221_read_busv(uint8_t address, uint8_t channel, uint16_t & result) {
   Wire.beginTransmission(address);
-  Wire.write(1 + (channel - 1) * 2 + 1);
+  #if I2C_SIMUL_MEMORY
+  Wire.write((uint8_t)((channel - 1) * 4));
+  #else
+  Wire.write((uint8_t)(1 + (channel - 1) * 2 + 1));
+  #endif
   Wire.endTransmission(false);
 
-  Wire.requestFrom(address, (uint8_t)2);
+  Wire.requestFrom(address, (uint8_t)2, 1);
 
   unsigned long timeout = millis() + I2C_TIMEOUT_MS;
   I2C_WAIT_FOR_DATA();
@@ -200,10 +218,14 @@ bool power_control_ina3221_read_busv(uint8_t address, uint8_t channel, uint16_t 
 
 bool power_control_ina3221_read_i(uint8_t address, uint8_t channel, uint16_t & result) {
   Wire.beginTransmission(address);
-  Wire.write(1 + (channel - 1) * 2);
+  #if I2C_SIMUL_MEMORY
+  Wire.write((uint8_t)((channel - 1) * 4 + 2));
+  #else
+  Wire.write((uint8_t)(1 + (channel - 1) * 2));
+  #endif
   Wire.endTransmission(false);
 
-  Wire.requestFrom(address, (uint8_t)2);
+  Wire.requestFrom(address, (uint8_t)2, 1);
 
   unsigned long timeout = millis() + I2C_TIMEOUT_MS;
   I2C_WAIT_FOR_DATA();

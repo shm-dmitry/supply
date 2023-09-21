@@ -13,40 +13,30 @@
 #define I2C_COMMAND_SUB_LIMIT_V 0x06
 #define I2C_COMMAND_SUB_LIMIT_I 0x07
 
-#define I2C_TIMEOUT_MSEC 5
-
-#define I2C_WAIT_FOR_DATA() \
-  while(!Wire.available()) { \
-    if (millis() > timeout) { \
-      return; \
-    } \
-  }
-
 void i2c_slave_on_receive(int bytes);
 void i2c_slave_on_request();
 
+int x = 0;
+
 void i2c_slave_init() {
   Wire.begin(I2C_SLAVE_ADDRESS);
-  Wire.onReceive(i2c_slave_on_receive);
-  Wire.onRequest(i2c_slave_on_request);
+  Wire.setClock(100000);
+  Wire.onReceive(&i2c_slave_on_receive);
+  Wire.onRequest(&i2c_slave_on_request);
 }
 
 void i2c_slave_on_receive(int bytes) {
+  x++;
   if (bytes != 4) {
     return;
   }
 
-  unsigned long timeout = millis() + I2C_TIMEOUT_MSEC;
-
-  I2C_WAIT_FOR_DATA();
+  if (Wire.available() < 4) {
+    return;
+  }
   uint8_t command = Wire.read();
-
-  I2C_WAIT_FOR_DATA();
   uint8_t arg1 = Wire.read();
-  I2C_WAIT_FOR_DATA();
   uint8_t arg2 = Wire.read();
-
-  I2C_WAIT_FOR_DATA();
   uint8_t crc = Wire.read();
 
   uint8_t data[3] = { command, arg1, arg2 };
@@ -76,7 +66,7 @@ void i2c_slave_on_request() {
   memset(&status, 0, sizeof(t_power_output_stats));
   power_output_control_status(status);
 
-  uint8_t data[10] = { 
+  uint8_t data[12] = { 
     (uint8_t)(status.limit_I / 0xFF),
     (uint8_t)(status.limit_I % 0xFF),
     (uint8_t)(status.limit_V / 0xFF),
@@ -85,19 +75,30 @@ void i2c_slave_on_request() {
     (uint8_t)(status.actual_I % 0xFF),
     (uint8_t)(status.actual_V / 0xFF),
     (uint8_t)(status.actual_V % 0xFF),
-    (uint8_t)(status.enabled ? 0x01 : 0x00),
+    (status.enabled ? (uint8_t)0x01 : (uint8_t)0x00),
+    0x00,
     0x00
    };
 
-  uint8_t crc = calcCRC8(data, sizeof(data) - 1);
+  uint8_t crc = calcCRC8(data, 10 - 1);
 
-  data[sizeof(data) - 1] = crc;
-
-  Wire.write(data, sizeof(data));
+  data[10 - 1] = crc;
+/*
+  for (uint8_t i = 0; i<10; i++) {
+    Serial.print(data[i], HEX);
+    Serial.print(" ");
+  }
+  Serial.println();
+  */
+  Wire.write(data, 12);
 }
 
-#ifdef SIMUL_ENABLED
+#if UART_ENABLED
 void i2c_slave_on_main_loop() {
+  if (x > 0) {
+    Serial.println("CALLBACK!!");
+  }
+
   if (Serial.available()) {
     uint8_t v = Serial.read();
     if (v == 'I') {

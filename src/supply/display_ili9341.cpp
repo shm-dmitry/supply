@@ -4,6 +4,12 @@
 
 #include "avr/pgmspace.h"
 
+#define MADCTL_MY 0x80  ///< Bottom to top
+#define MADCTL_MX 0x40  ///< Right to left
+#define MADCTL_MV 0x20  ///< Reverse Mode
+#define MADCTL_BGR 0x08 ///< Blue-Green-Red pixel order
+#define MADCTL_RGB 0x00 ///< Red-Green-Blue pixel order
+
 #define ILI9341_SWRESET 0x01 ///< Software reset register
 #define ILI9341_PWCTR1 0xC0 ///< Power Control 1
 #define ILI9341_PWCTR2 0xC1 ///< Power Control 2

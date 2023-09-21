@@ -12,7 +12,9 @@
 #define GUI_PAGE_ACTION_ONRESET    1
 #define GUI_PAGE_ACTION_ONACTION   2
 
-#define PAGES_COUNT    2
+#define GUI_MANAGER_START_PAGE     1
+
+#define PAGES_COUNT    1
 #define PAGE_CALLBACKS (GUI_PAGE_ACTION_ONACTION + 1)
 
 uint8_t gui_page_current = 0;
@@ -28,14 +30,10 @@ void gui_manager_init() {
 }
 
 void gui_manager_on_main_loop() {
-  if (!display_is_on()) {
-    return;
-  }
-
   bool refresh = false;
 
   if (gui_page_current == 0xFF) {
-    gui_page_current = 0x00;
+    gui_page_current = GUI_MANAGER_START_PAGE;
     t_page_callback func = PAGES_VTABLE[gui_page_current][GUI_PAGE_ACTION_ONRESET];
     if (func != NULL) {
       func(0x00, 0x00);

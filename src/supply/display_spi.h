@@ -28,4 +28,5 @@ void display_spi_print32(uint32_t value);
 uint16_t display_spi_get_cursor_x();
 uint16_t display_spi_get_cursor_y();
 
+
 #endif /* DISPLAY_SPI_H_ */

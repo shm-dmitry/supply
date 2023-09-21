@@ -24,25 +24,13 @@ Adafruit_ST7735 * display_tft = NULL;
 
 void display_init() {
   pinMode(DISPLAY_ENABLE_PIN, OUTPUT);
-  digitalWrite(DISPLAY_ENABLE_PIN, HIGH);
-  delay(1000);
-
-  display_on();
-}
-
-void display_on() {
-  Serial.println("display_on");
-
-  if (display_is_on()) {
-    return;
-  }
-
   digitalWrite(DISPLAY_ENABLE_PIN, LOW);
-  delay(100); // await for a power up
+  delay(100);
 
 #if DISPLAY_TYOE_SIMUL_ADAFRUIT
   display_tft = new Adafruit_ILI9341(-1, DISPLAY_DC_PIN, -1);
   display_tft->begin();
+  display_tft->setRotation(3);
 #elif DISPLAY_TYPE_ST7335_ADAFRUIT
   display_tft = new Adafruit_ST7735(-1, DISPLAY_DC_PIN, -1);
   display_tft->initR(INITR_BLACKTAB);
@@ -54,20 +42,6 @@ void display_on() {
 #endif
 
   display_fill_rect(0, 0, 160, 128, DISPLAY_BLACK);
-}
-
-void display_off() {
-  digitalWrite(DISPLAY_ENABLE_PIN, HIGH);
-  digitalWrite(DISPLAY_DC_PIN, LOW);
-  delay(100);
-#if DISPLAY_TYOE_SIMUL_ADAFRUIT or DISPLAY_TYPE_ST7335_ADAFRUIT
-  delete display_tft;
-  display_tft = NULL;
-#endif
-}
-
-bool display_is_on() {
-  return digitalRead(DISPLAY_ENABLE_PIN) == LOW;
 }
 
 #if DISPLAY_TYOE_SIMUL_ADAFRUIT or DISPLAY_TYPE_ST7335_ADAFRUIT

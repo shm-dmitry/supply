@@ -10,13 +10,10 @@
 #define DISPLAY_YELLOW 0xFFE0
 #define DISPLAY_GRAY   0xC659
 
-#define DISPLAY_W      320
-#define DISPLAY_H      240
+#define DISPLAY_W      160
+#define DISPLAY_H      128
 
 void display_init();
-void display_on();
-void display_off();
-bool display_is_on();
 
 void display_fill_rect(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color);
 void display_draw_rect(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color);

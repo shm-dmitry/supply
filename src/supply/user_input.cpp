@@ -2,6 +2,8 @@
 
 #include "Arduino.h"
 
+#include "config.h"
+
 #define USERINPUT_BIT_I_LEFT     (_BV(0))
 #define USERINPUT_BIT_I_RIGHT    (_BV(1))
 #define USERINPUT_BIT_I_CLICK    (_BV(2))
@@ -29,9 +31,6 @@ volatile bool userinput_i_turnFlag = false;
 volatile uint8_t userinput_v_lastStateA = LOW;
 volatile bool userinput_v_turnFlag = false;
 
-volatile bool userinput_i_clickFlag = false;
-volatile bool userinput_v_clickFlag = false;
-
 #define USERINPUT_SETFLAG(flag)   user_input_flags |= flag
 #define USERINPUT_RESETFLAG(flag) user_input_flags &= ~(flag)
 
@@ -44,20 +43,28 @@ ISR(PCINT0_vect) {
 }
 
 ISR(PCINT2_vect) {
-  if (digitalRead(USERINPUT_PIN_I_CLICK) == HIGH) {
-    userinput_i_clickFlag = true;
-  } else if (userinput_i_clickFlag) {
+  if (digitalRead(USERINPUT_PIN_I_CLICK) == LOW) {
     USERINPUT_SETFLAG(USERINPUT_BIT_I_CLICK);
-    userinput_i_clickFlag = false; 
   }
 
-  if (digitalRead(USERINPUT_PIN_V_CLICK) == HIGH) {
-    userinput_v_clickFlag = true;
-  } else if (userinput_v_clickFlag) {
+  if (digitalRead(USERINPUT_PIN_V_CLICK) == LOW) {
     USERINPUT_SETFLAG(USERINPUT_BIT_V_CLICK);
-    userinput_v_clickFlag = false; 
   }
 
+  #if USER_INPUT_SIMUL
+  if (digitalRead(USERINPUT_PIN_I_A) == LOW) {
+    USERINPUT_SETFLAG(USERINPUT_BIT_I_LEFT);
+  } else if (digitalRead(USERINPUT_PIN_I_B) == LOW) {
+    USERINPUT_SETFLAG(USERINPUT_BIT_I_RIGHT);
+  }
+
+  if (digitalRead(USERINPUT_PIN_V_A) == LOW) {
+    USERINPUT_SETFLAG(USERINPUT_BIT_V_LEFT);
+  } else if (digitalRead(USERINPUT_PIN_V_B) == LOW) {
+    USERINPUT_SETFLAG(USERINPUT_BIT_V_RIGHT);
+  }
+  #else
+  
   uint8_t stateiA = digitalRead(USERINPUT_PIN_I_A);
   uint8_t statevA = digitalRead(USERINPUT_PIN_V_A);
 
@@ -104,6 +111,8 @@ ISR(PCINT2_vect) {
       }
     }
   }
+
+  #endif
 }
 
 void user_input_init() {
@@ -158,13 +167,13 @@ uint8_t user_input_encoder_i_status() {
       USERINPUT_RESETFLAG(USERINPUT_BIT_I_FAST);
       result = USER_INPUT_STATUS_RIGHT_FAST;
     } else {
-      USERINPUT_RESETFLAG(USERINPUT_BIT_I_LEFT);
+      USERINPUT_RESETFLAG(USERINPUT_BIT_I_RIGHT);
       result = USER_INPUT_STATUS_RIGHT;
     }
   }
 
   SREG = oldSREG;
-  
+
   return result;
 }
 
@@ -190,7 +199,7 @@ uint8_t user_input_encoder_v_status() {
       USERINPUT_RESETFLAG(USERINPUT_BIT_V_FAST);
       result = USER_INPUT_STATUS_RIGHT_FAST;
     } else {
-      USERINPUT_RESETFLAG(USERINPUT_BIT_V_LEFT);
+      USERINPUT_RESETFLAG(USERINPUT_BIT_V_RIGHT);
       result = USER_INPUT_STATUS_RIGHT;
     }
   }

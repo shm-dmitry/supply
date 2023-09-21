@@ -5,7 +5,7 @@
 
 void i2c_slave_init();
 
-#ifdef SIMUL_ENABLED
+#ifdef UART_ENABLED
 void i2c_slave_on_main_loop();
 #endif
 
