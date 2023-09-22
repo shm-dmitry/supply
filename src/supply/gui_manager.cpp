@@ -12,9 +12,9 @@
 #define GUI_PAGE_ACTION_ONRESET    1
 #define GUI_PAGE_ACTION_ONACTION   2
 
-#define GUI_MANAGER_START_PAGE     1
+#define GUI_MANAGER_START_PAGE     0
 
-#define PAGES_COUNT    1
+#define PAGES_COUNT    2
 #define PAGE_CALLBACKS (GUI_PAGE_ACTION_ONACTION + 1)
 
 uint8_t gui_page_current = 0;

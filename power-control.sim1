@@ -1,115 +1,115 @@
 <circuit version="1.1.0-RC0" rev="1909" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
 
-<item itemtype="Push" CircId="Push-82" mainComp="false" Show_id="false" Show_Val="false" Pos="564,92" rotation="0" hflip="1" vflip="1" label="Push-82" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
-
-<item itemtype="Push" CircId="Push-85" mainComp="false" Show_id="false" Show_Val="false" Pos="480,164" rotation="0" hflip="1" vflip="1" label="Push-85" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
-
-<item itemtype="I2CRam" CircId="I2CRam-58" mainComp="false" Show_id="true" Show_Val="false" Pos="840,368" rotation="0" hflip="1" vflip="1" label="ina-usb" idLabPos="-17.417,-28.9594" labelrot="0" valLabPos="-16,20" valLabRot="0" Size_bytes="16 _Bytes" Control_Code="65" Frequency="100 _KHz" Persistent="false" />
-
-<item itemtype="I2CRam" CircId="I2CRam-57" mainComp="false" Show_id="true" Show_Val="false" Pos="848,296" rotation="0" hflip="1" vflip="1" label="power-control" idLabPos="-31.5868,-31.0849" labelrot="0" valLabPos="-16,20" valLabRot="0" Size_bytes="65536 _Bytes" Control_Code="51" Frequency="100 _KHz" Persistent="false" />
-
-<item itemtype="I2CRam" CircId="I2CRam-61" mainComp="false" Show_id="true" Show_Val="false" Pos="840,432" rotation="0" hflip="1" vflip="1" label="ina-5v-3.3v" idLabPos="-17.417,-28.9594" labelrot="0" valLabPos="-16,20" valLabRot="0" Size_bytes="16 _Bytes" Control_Code="67" Frequency="100 _KHz" Persistent="false" />
-
-<item itemtype="Push" CircId="Push-80" mainComp="false" Show_id="false" Show_Val="false" Pos="524,68" rotation="0" hflip="1" vflip="1" label="Push-80" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
-
 <item itemtype="Subcircuit" CircId="Uno-15" mainComp="false" Show_id="true" Show_Val="false" Pos="488,272" rotation="0" hflip="1" vflip="1" label="main-chip" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
-<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="src/supply/build/GyverCore.avr.nano/supply.ino.with_bootloader.hex" Auto_Load="false" saveEepr="true" SerialMon="1" />
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="src/supply/build/GyverCore.avr.nano/supply.ino.with_bootloader.hex" Auto_Load="false" saveEepr="true" SerialMon="-1" />
 </item>
-
-<item itemtype="Push" CircId="Push-81" mainComp="false" Show_id="false" Show_Val="false" Pos="484,92" rotation="0" hflip="1" vflip="1" label="Push-81" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
-
-<item itemtype="Ground" CircId="Ground-67" mainComp="false" Show_id="false" Show_Val="false" Pos="692,200" rotation="0" hflip="1" vflip="1" label="Ground-67" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
-
-<item itemtype="Push" CircId="Push-84" mainComp="false" Show_id="false" Show_Val="false" Pos="520,140" rotation="0" hflip="1" vflip="1" label="Push-84" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
-
-<item itemtype="Ground" CircId="Ground-89" mainComp="false" Show_id="false" Show_Val="false" Pos="596,132" rotation="0" hflip="1" vflip="1" label="Ground-89" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
-
-<item itemtype="Fixed Voltage" CircId="Fixed Voltage-68" mainComp="false" Show_id="false" Show_Val="false" Pos="672,244" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-68" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
 
 <item itemtype="Ground" CircId="Ground-86" mainComp="false" Show_id="false" Show_Val="false" Pos="540,220" rotation="0" hflip="1" vflip="1" label="Ground-86" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
 
-<item itemtype="Push" CircId="Push-83" mainComp="false" Show_id="false" Show_Val="false" Pos="560,164" rotation="0" hflip="1" vflip="1" label="Push-83" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
+<item itemtype="Push" CircId="Push-84" mainComp="false" Show_id="false" Show_Val="false" Pos="520,140" rotation="0" hflip="1" vflip="1" label="Push-84" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
+
+<item itemtype="I2CRam" CircId="I2CRam-58" mainComp="false" Show_id="true" Show_Val="false" Pos="840,368" rotation="0" hflip="1" vflip="1" label="ina-usb" idLabPos="-17.417,-28.9594" labelrot="0" valLabPos="-16,20" valLabRot="0" Size_bytes="16 _Bytes" Control_Code="65" Frequency="100 _KHz" Persistent="false" />
 
 <item itemtype="Ili9341" CircId="Ili9341-65" mainComp="false" Show_id="true" Show_Val="false" Pos="820,-8" rotation="0" hflip="1" vflip="1" label="Ili9341-65" idLabPos="-32,-180" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Push" CircId="Push-82" mainComp="false" Show_id="false" Show_Val="false" Pos="564,92" rotation="0" hflip="1" vflip="1" label="Push-82" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
+
+<item itemtype="Push" CircId="Push-83" mainComp="false" Show_id="false" Show_Val="false" Pos="560,164" rotation="0" hflip="1" vflip="1" label="Push-83" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
+
+<item itemtype="I2CRam" CircId="I2CRam-57" mainComp="false" Show_id="true" Show_Val="false" Pos="848,296" rotation="0" hflip="1" vflip="1" label="power-control" idLabPos="-31.5868,-31.0849" labelrot="0" valLabPos="-16,20" valLabRot="0" Size_bytes="32 _Bytes" Control_Code="51" Frequency="100 _KHz" Persistent="false" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-68" mainComp="false" Show_id="false" Show_Val="false" Pos="672,244" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-68" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="I2CRam" CircId="I2CRam-61" mainComp="false" Show_id="true" Show_Val="false" Pos="840,432" rotation="0" hflip="1" vflip="1" label="ina-5v-3.3v" idLabPos="-17.417,-28.9594" labelrot="0" valLabPos="-16,20" valLabRot="0" Size_bytes="16 _Bytes" Control_Code="67" Frequency="100 _KHz" Persistent="false" />
+
+<item itemtype="Ground" CircId="Ground-89" mainComp="false" Show_id="false" Show_Val="false" Pos="596,132" rotation="0" hflip="1" vflip="1" label="Ground-89" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Push" CircId="Push-81" mainComp="false" Show_id="false" Show_Val="false" Pos="484,92" rotation="0" hflip="1" vflip="1" label="Push-81" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
+
+<item itemtype="Push" CircId="Push-85" mainComp="false" Show_id="false" Show_Val="false" Pos="480,164" rotation="0" hflip="1" vflip="1" label="Push-85" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
+
+<item itemtype="Push" CircId="Push-80" mainComp="false" Show_id="false" Show_Val="false" Pos="524,68" rotation="0" hflip="1" vflip="1" label="Push-80" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
+
+<item itemtype="Ground" CircId="Ground-67" mainComp="false" Show_id="false" Show_Val="false" Pos="692,200" rotation="0" hflip="1" vflip="1" label="Ground-67" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Node" CircId="Node-66" mainComp="false" Pos="740,304" />
+
+<item itemtype="Node" CircId="Node-90" mainComp="false" Pos="592,116" />
 
 <item itemtype="Node" CircId="Node-63" mainComp="false" Pos="740,376" />
 
 <item itemtype="Node" CircId="Node-59" mainComp="false" Pos="764,296" />
 
-<item itemtype="Node" CircId="Node-62" mainComp="false" Pos="764,360" />
-
-<item itemtype="Node" CircId="Node-66" mainComp="false" Pos="740,304" />
+<item itemtype="Node" CircId="Node-87" mainComp="false" Pos="540,204" />
 
 <item itemtype="Node" CircId="Node-91" mainComp="false" Pos="540,116" />
 
-<item itemtype="Node" CircId="Node-87" mainComp="false" Pos="540,204" />
-
 <item itemtype="Node" CircId="Node-88" mainComp="false" Pos="536,204" />
 
-<item itemtype="Node" CircId="Node-90" mainComp="false" Pos="592,116" />
-
-<item itemtype="Connector" uid="Connector-107" startpinid="I2CRam-57-in3" endpinid="I2CRam-57-in3" pointList="872,296,872,296" />
-
-<item itemtype="Connector" uid="Connector-139" startpinid="Node-87-2" endpinid="Ground-86-Gnd" pointList="540,204,540,204" />
-
-<item itemtype="Connector" uid="Connector-140" startpinid="Push-85-switch0pinN" endpinid="Node-88-1" pointList="496,164,516,164,516,204,536,204" />
-
-<item itemtype="Connector" uid="Connector-85" startpinid="Uno-15-A4" endpinid="Node-59-0" pointList="640,296,764,296" />
-
-<item itemtype="Connector" uid="Connector-96" startpinid="I2CRam-58-in1" endpinid="Node-63-0" pointList="816,376,740,376" />
-
-<item itemtype="Connector" uid="Connector-105" startpinid="Ground-67-Gnd" endpinid="Ili9341-65-PinCS" pointList="692,184,764,184,764,176" />
-
-<item itemtype="Connector" uid="Connector-94" startpinid="Node-62-2" endpinid="Node-59-1" pointList="764,360,764,296" />
-
-<item itemtype="Connector" uid="Connector-148" startpinid="Push-81-switch0pinN" endpinid="Node-91-0" pointList="500,92,500,116,540,116" />
-
-<item itemtype="Connector" uid="Connector-154" startpinid="Push-83-pinP0" endpinid="Uno-15-6" pointList="544,164,524,164,524,336,496,336" />
-
-<item itemtype="Connector" uid="Connector-99" startpinid="Uno-15-A5" endpinid="Node-66-1" pointList="640,288,740,288,740,304" />
-
-<item itemtype="Connector" uid="Connector-151" startpinid="Push-80-pinP0" endpinid="Uno-15-4" pointList="508,68,388,68,388,320,496,320" />
+<item itemtype="Node" CircId="Node-62" mainComp="false" Pos="764,360" />
 
 <item itemtype="Connector" uid="Connector-141" startpinid="Push-84-switch0pinN" endpinid="Node-88-0" pointList="536,140,536,204" />
 
-<item itemtype="Connector" uid="Connector-152" startpinid="Push-82-pinP0" endpinid="Uno-15-3" pointList="548,92,508,92,508,124,396,124,396,312,496,312" />
+<item itemtype="Connector" uid="Connector-154" startpinid="Push-83-pinP0" endpinid="Uno-15-6" pointList="544,164,524,164,524,336,496,336" />
 
-<item itemtype="Connector" uid="Connector-153" startpinid="Push-85-pinP0" endpinid="Uno-15-5" pointList="464,164,444,164,444,328,496,328" />
-
-<item itemtype="Connector" uid="Connector-86" startpinid="Node-59-2" endpinid="I2CRam-57-in0" pointList="764,296,824,296,824,288" />
-
-<item itemtype="Connector" uid="Connector-146" startpinid="Node-90-2" endpinid="Ground-89-Gnd" pointList="592,116,596,116" />
-
-<item itemtype="Connector" uid="Connector-93" startpinid="I2CRam-58-in0" endpinid="Node-62-0" pointList="816,360,764,360" />
-
-<item itemtype="Connector" uid="Connector-102" startpinid="Ili9341-65-PinDC" endpinid="Uno-15-A3" pointList="780,176,780,304,640,304" />
-
-<item itemtype="Connector" uid="Connector-104" startpinid="Ili9341-65-PinSck" endpinid="Uno-15-13" pointList="796,176,796,400,496,400" />
-
-<item itemtype="Connector" uid="Connector-92" startpinid="I2CRam-61-in0" endpinid="Node-62-1" pointList="816,424,764,424,764,360" />
+<item itemtype="Connector" uid="Connector-151" startpinid="Push-80-pinP0" endpinid="Uno-15-4" pointList="508,68,388,68,388,320,496,320" />
 
 <item itemtype="Connector" uid="Connector-150" startpinid="Push-81-pinP0" endpinid="Uno-15-2" pointList="468,92,404,92,404,304,496,304" />
 
+<item itemtype="Connector" uid="Connector-102" startpinid="Ili9341-65-PinDC" endpinid="Uno-15-A3" pointList="780,176,780,304,640,304" />
+
+<item itemtype="Connector" uid="Connector-149" startpinid="Node-91-2" endpinid="Node-90-0" pointList="540,116,592,116" />
+
+<item itemtype="Connector" uid="Connector-152" startpinid="Push-82-pinP0" endpinid="Uno-15-3" pointList="548,92,508,92,508,124,396,124,396,312,496,312" />
+
+<item itemtype="Connector" uid="Connector-92" startpinid="I2CRam-61-in0" endpinid="Node-62-1" pointList="816,424,764,424,764,360" />
+
+<item itemtype="Connector" uid="Connector-146" startpinid="Node-90-2" endpinid="Ground-89-Gnd" pointList="592,116,596,116" />
+
+<item itemtype="Connector" uid="Connector-153" startpinid="Push-85-pinP0" endpinid="Uno-15-5" pointList="464,164,444,164,444,328,496,328" />
+
+<item itemtype="Connector" uid="Connector-140" startpinid="Push-85-switch0pinN" endpinid="Node-88-1" pointList="496,164,516,164,516,204,536,204" />
+
+<item itemtype="Connector" uid="Connector-99" startpinid="Uno-15-A5" endpinid="Node-66-1" pointList="640,288,740,288,740,304" />
+
+<item itemtype="Connector" uid="Connector-147" startpinid="Push-80-switch0pinN" endpinid="Node-91-1" pointList="540,68,540,116" />
+
 <item itemtype="Connector" uid="Connector-142" startpinid="Node-88-2" endpinid="Node-87-1" pointList="536,204,540,204" />
+
+<item itemtype="Connector" uid="Connector-94" startpinid="Node-62-2" endpinid="Node-59-1" pointList="764,360,764,296" />
+
+<item itemtype="Connector" uid="Connector-106" startpinid="Fixed Voltage-68-outnod" endpinid="Ili9341-65-PinRst" pointList="688,244,688,176,772,176" />
+
+<item itemtype="Connector" uid="Connector-139" startpinid="Node-87-2" endpinid="Ground-86-Gnd" pointList="540,204,540,204" />
 
 <item itemtype="Connector" uid="Connector-103" startpinid="Ili9341-65-PinMosi" endpinid="Uno-15-11" pointList="788,176,788,384,496,384" />
 
+<item itemtype="Connector" uid="Connector-148" startpinid="Push-81-switch0pinN" endpinid="Node-91-0" pointList="500,92,500,116,540,116" />
+
 <item itemtype="Connector" uid="Connector-100" startpinid="I2CRam-57-in1" endpinid="Node-66-0" pointList="824,304,740,304" />
+
+<item itemtype="Connector" uid="Connector-93" startpinid="I2CRam-58-in0" endpinid="Node-62-0" pointList="816,360,764,360" />
+
+<item itemtype="Connector" uid="Connector-105" startpinid="Ground-67-Gnd" endpinid="Ili9341-65-PinCS" pointList="692,184,764,184,764,176" />
+
+<item itemtype="Connector" uid="Connector-96" startpinid="I2CRam-58-in1" endpinid="Node-63-0" pointList="816,376,740,376" />
+
+<item itemtype="Connector" uid="Connector-107" startpinid="I2CRam-57-in3" endpinid="I2CRam-57-in3" pointList="872,296,872,296" />
+
+<item itemtype="Connector" uid="Connector-101" startpinid="Node-66-2" endpinid="Node-63-2" pointList="740,304,740,376" />
+
+<item itemtype="Connector" uid="Connector-104" startpinid="Ili9341-65-PinSck" endpinid="Uno-15-13" pointList="796,176,796,400,496,400" />
+
+<item itemtype="Connector" uid="Connector-85" startpinid="Uno-15-A4" endpinid="Node-59-0" pointList="640,296,764,296" />
+
+<item itemtype="Connector" uid="Connector-155" startpinid="Push-84-pinP0" endpinid="Uno-15-7" pointList="504,140,428,140,428,344,496,344" />
+
+<item itemtype="Connector" uid="Connector-86" startpinid="Node-59-2" endpinid="I2CRam-57-in0" pointList="764,296,824,296,824,288" />
 
 <item itemtype="Connector" uid="Connector-144" startpinid="Push-82-switch0pinN" endpinid="Node-90-1" pointList="580,92,592,92,592,116" />
 
 <item itemtype="Connector" uid="Connector-95" startpinid="I2CRam-61-in1" endpinid="Node-63-1" pointList="816,440,740,440,740,376" />
 
-<item itemtype="Connector" uid="Connector-106" startpinid="Fixed Voltage-68-outnod" endpinid="Ili9341-65-PinRst" pointList="688,244,688,176,772,176" />
-
 <item itemtype="Connector" uid="Connector-138" startpinid="Push-83-switch0pinN" endpinid="Node-87-0" pointList="576,164,576,204,540,204" />
-
-<item itemtype="Connector" uid="Connector-147" startpinid="Push-80-switch0pinN" endpinid="Node-91-1" pointList="540,68,540,116" />
-
-<item itemtype="Connector" uid="Connector-155" startpinid="Push-84-pinP0" endpinid="Uno-15-7" pointList="504,140,428,140,428,344,496,344" />
-
-<item itemtype="Connector" uid="Connector-149" startpinid="Node-91-2" endpinid="Node-90-0" pointList="540,116,592,116" />
-
-<item itemtype="Connector" uid="Connector-101" startpinid="Node-66-2" endpinid="Node-63-2" pointList="740,304,740,376" />
 
 </circuit>

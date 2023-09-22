@@ -8,7 +8,7 @@
 #include "Wire.h"
 
 void setup() {
-//  Serial.begin(9600);
+  Serial.begin(9600);
   delay(500);
 
   power_control_init();
@@ -21,7 +21,7 @@ void setup() {
 
   power_control_on_init_done();
 
-//  Serial.println("Chip ready");
+  Serial.println("Chip ready");
 }
 
 void loop() {

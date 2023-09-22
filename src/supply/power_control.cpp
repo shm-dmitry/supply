@@ -51,10 +51,14 @@ void power_control_init() {
   Wire.begin();
   Wire.setClock(100000);
 
+  #if I2C_SIMUL_MEMORY
+  ;
+  #else
   // configure power-control chip with default configuration
   power_control_set_V(POWER_CONTROL_DEFAULT_V);
   power_control_set_I(POWER_CONTROL_DEFAULT_I);
   power_control_set_enabled(POWER_CONTROL_DEFAULT_EN);
+  #endif
 }
 
 void power_control_on_init_done() {

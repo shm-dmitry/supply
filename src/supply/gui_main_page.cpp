@@ -97,9 +97,12 @@ void gui_main_page_write_current(uint16_t x, uint16_t y, uint8_t text_size, uint
     }
     display_print16((value % 1000) / 10);
 
+    display_set_textcolor(DISPLAY_GRAY);
     display_prints(" A");
   } else {
     display_print16(value);
+
+    display_set_textcolor(DISPLAY_GRAY);
     display_prints(" mA");
   }
 }
@@ -149,23 +152,23 @@ void gui_main_page_draw_static_lines() {
   display_draw_rect(0, DISPLAY_H - GUI_ICONS_USB_HEIGHT - 4, DISPLAY_W, GUI_ICONS_USB_HEIGHT + 4, DISPLAY_WHITE);
   display_draw_bitmap(2, DISPLAY_H - GUI_ICONS_USB_HEIGHT - 2, GUI_ICONS_USB, GUI_ICONS_USB_WIDTH, GUI_ICONS_USB_HEIGHT, DISPLAY_WHITE);
   display_set_textsize(1);
-  display_set_cursor(GUI_ICONS_USB_WIDTH + 4 + 4*6, DISPLAY_H - GUI_ICONS_USB_HEIGHT - 2);
+  display_set_cursor(GUI_ICONS_USB_WIDTH + 44, DISPLAY_H - GUI_ICONS_USB_HEIGHT - 2);
   display_prints("V");
-  display_set_cursor(GUI_ICONS_USB_WIDTH + 4 + 4*6, DISPLAY_H - GUI_ICONS_USB_HEIGHT - 2 + 9);
+  display_set_cursor(GUI_ICONS_USB_WIDTH + 44, DISPLAY_H - GUI_ICONS_USB_HEIGHT - 2 + 9);
   display_prints("A");
 
-  display_draw_line(GUI_ICONS_USB_WIDTH + 4 + 5*6 + 5, DISPLAY_H - GUI_ICONS_USB_HEIGHT - 2, GUI_ICONS_USB_WIDTH + 4 + 5*6 + 5, DISPLAY_H - 3,  DISPLAY_WHITE);
+  display_draw_line(GUI_ICONS_USB_WIDTH + 57, DISPLAY_H - GUI_ICONS_USB_HEIGHT - 2, GUI_ICONS_USB_WIDTH + 57, DISPLAY_H - 3,  DISPLAY_WHITE);
 
-  display_set_cursor(GUI_ICONS_USB_WIDTH + 4 + 4*6 + 10 + 4*6 + 6, DISPLAY_H - GUI_ICONS_USB_HEIGHT - 2);
+  display_set_cursor(GUI_ICONS_USB_WIDTH + 87, DISPLAY_H - GUI_ICONS_USB_HEIGHT - 2);
   display_prints("V");
-  display_set_cursor(GUI_ICONS_USB_WIDTH + 4 + 4*6 + 10 + 4*6 + 6, DISPLAY_H - GUI_ICONS_USB_HEIGHT - 2 + 9);
+  display_set_cursor(GUI_ICONS_USB_WIDTH + 87, DISPLAY_H - GUI_ICONS_USB_HEIGHT - 2 + 9);
   display_prints("A");
 
-  display_draw_line(GUI_ICONS_USB_WIDTH + 4 + 5*6 + 10 + 4*6 + 20, DISPLAY_H - GUI_ICONS_USB_HEIGHT - 2, GUI_ICONS_USB_WIDTH + 4 + 5*6 + 10 + 4*6 + 20, DISPLAY_H - 3,  DISPLAY_WHITE);
+  display_draw_line(GUI_ICONS_USB_WIDTH + 100, DISPLAY_H - GUI_ICONS_USB_HEIGHT - 2, GUI_ICONS_USB_WIDTH + 100, DISPLAY_H - 3,  DISPLAY_WHITE);
 
-  display_set_cursor(GUI_ICONS_USB_WIDTH + 4 + 4*6 + 10 + 4*6 + 30 + 4*6 + 6, DISPLAY_H - GUI_ICONS_USB_HEIGHT - 2);
+  display_set_cursor(GUI_ICONS_USB_WIDTH + 130, DISPLAY_H - GUI_ICONS_USB_HEIGHT - 2);
   display_prints("V");
-  display_set_cursor(GUI_ICONS_USB_WIDTH + 4 + 4*6 + 10 + 4*6 + 30 + 4*6 + 6, DISPLAY_H - GUI_ICONS_USB_HEIGHT - 2 + 9);
+  display_set_cursor(GUI_ICONS_USB_WIDTH + 130, DISPLAY_H - GUI_ICONS_USB_HEIGHT - 2 + 9);
   display_prints("A");
 }
 
@@ -289,13 +292,14 @@ void gui_main_page_draw_usb() {
   }
 
   const uint16_t y = DISPLAY_H - GUI_ICONS_USB_HEIGHT - 2;
+  uint16_t x = 33;
 
   uint8_t v = status.usb_1_v / 100;
   if (v != gui_main_page_usb_V[0]) {
     if (gui_main_page_usb_V[0] != 0xFF) {
-      gui_main_page_write_number_dot_1(GUI_ICONS_USB_WIDTH + 4, y, 1, gui_main_page_usb_V[0], DISPLAY_BLACK);
+      gui_main_page_write_number_dot_1(x, y, 1, gui_main_page_usb_V[0], DISPLAY_BLACK);
     }
-    gui_main_page_write_number_dot_1(GUI_ICONS_USB_WIDTH + 4, y, 1, v, DISPLAY_WHITE);
+    gui_main_page_write_number_dot_1(x, y, 1, v, DISPLAY_WHITE);
 
     gui_main_page_usb_V[0] = v;
   }
@@ -303,14 +307,14 @@ void gui_main_page_draw_usb() {
    v = status.usb_1_i / 100;
   if (v != gui_main_page_usb_I[0]) {
     if (gui_main_page_usb_I[0] != 0xFF) {
-      gui_main_page_write_number_dot_1(GUI_ICONS_USB_WIDTH + 4, y + 9, 1, gui_main_page_usb_I[0], DISPLAY_BLACK);
+      gui_main_page_write_number_dot_1(x, y + 9, 1, gui_main_page_usb_I[0], DISPLAY_BLACK);
     }
-    gui_main_page_write_number_dot_1(GUI_ICONS_USB_WIDTH + 4, y + 9, 1, v, gui_main_page_usb_current_to_color(status.usb_1_i));
+    gui_main_page_write_number_dot_1(x, y + 9, 1, v, gui_main_page_usb_current_to_color(status.usb_1_i));
 
     gui_main_page_usb_I[0] = v;
   }
 
-  uint16_t x = GUI_ICONS_USB_WIDTH + 4 + 5*6 + 10;
+  x = 77;
 
   v = status.usb_2_v / 100;
   if (v != gui_main_page_usb_V[1]) {
@@ -332,7 +336,7 @@ void gui_main_page_draw_usb() {
     gui_main_page_usb_I[1] = v;
   }
 
-  x = GUI_ICONS_USB_WIDTH + 4 + 5*6 + 10 + 4*6 + 30;
+  x = 120;
 
   v = status.usb_3_v / 100;
   if (v != gui_main_page_usb_V[2]) {
