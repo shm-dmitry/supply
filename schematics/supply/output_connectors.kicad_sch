@@ -2939,7 +2939,7 @@
     (property "Reference" "R54" (at 166.37 199.39 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "2K" (at 166.37 201.93 0)
+    (property "Value" "510" (at 166.37 201.93 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 162.052 200.66 90)

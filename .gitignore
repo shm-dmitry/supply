@@ -3,3 +3,5 @@ schematics/supply-uv/supply-uv-backups/*.zip
 src/power-output-control/build/
 src/supply/build/
 3d/*.gcode
+3d/*.FCBak
+

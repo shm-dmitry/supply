@@ -542,6 +542,13 @@
     (uuid f9a630bc-f8d7-413a-8f55-bc0f0fc87e28)
   )
 
+  (text_box "Known issues:\n1. Wrong symbol for protection diodes SMAJxx, be carefull with soldering!"
+    (at 314.96 17.78 0) (size 83.82 59.69)
+    (stroke (width 0) (type default))
+    (fill (type none))
+    (effects (font (size 1.27 1.27)) (justify left top))
+    (uuid 26e1e79a-edcb-437a-8ece-a67e702ac4e5)
+  )
   (text_box "Startup sequence:\n1. UV board\n1.0 check resistance on 220V connector, OUT_400V connector and STB VCC connector\n1.1 connect 220V\n1.2 check: \n    - OUT_400V is a 310V\n    - PFC EN jumper has 13.7V on one side \n    - STB EN is a HIGH on one side\n    - STB VCC has no power\n    - relay is OFF\n    - LED PFCRDY is ON\n    - LED STBOK is OFF\n1.3 solder PFC EN jumoer\n1.4 check:\n    - OUT_400V is a 400V\n    - PFC EN jumper has 13.7V\n    - STB EN is a LOW on one side\n    - STB VCC has no power\n    - relay is ON\n    - LED PFCRDY is ON\n    - LED STBOK is OFF\n1.5 solder STB EN\n1.6 check:\n    - OUT_400V is a 400V\n    - PFC EN jumper has 13.7V\n    - STB EN is a LOW\n    - STB VCC has 13.7V\n    - relay is ON\n    - LED PFCRDY is ON\n    - LED STBOK is ON\n\n2. UV board & power boards\n2.1 check resistance on +400V connector, PWR OUT connector, 5V connector 3.3V connector and all jumpers\n2.2 flush firmwares\n2.3 connect VV board to power board and connect 220V\n2.4 check:\n    - +400V has 400V\n    - STB VCC has 13.7V\n    - PWR OUT has now power\n    - +5V and 3.3V connectors power\n    - USBx jumper and +5V SYS jumper has 5V on one side\n2.5 insert +5V SYS fuse\n2.6 check:\n    - +5V and 3.3V connectors has no power\n    - USBx jumper has 5V on one side\n    - +5V SYS has 5V\n    - Display is ON\n    - PWR OUT voltage controlled by chips\n    - FAN controlled by termisters and chip\n2.7 solder USB2 & USB3 jumpers\n2.8 check: \n    - usb2 & usb3 works\n    - usb2 & usb3 leds works\n    - display shows usb2 & usb3 voltage and current\n2.9 solder USB1 jumper\n2.10 check \n    - usb1 works\n    - usb1 QC works\n    - usb1 led works\n    - display shows usb1 voltage and current\n"
     (at -74.93 30.48 0) (size 76.2 129.54)
     (stroke (width 0) (type default))

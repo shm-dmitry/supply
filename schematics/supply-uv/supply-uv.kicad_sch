@@ -208,6 +208,14 @@
     (uuid c517d1ca-13af-4756-bc50-922b0de79ddd)
   )
 
+  (text_box "Known issues:\n- wrong place for R1-R3 (not a problem)\n- probably cooler required on QP1 (THIS IS PROBLEM!)\n- bad board layout near PFC GND"
+    (at 212.09 16.51 0) (size 68.58 48.26)
+    (stroke (width 0) (type default))
+    (fill (type none))
+    (effects (font (size 1.27 1.27)) (justify left top))
+    (uuid b60810c6-67e7-4969-a187-175ce72e95fa)
+  )
+
   (text "Holes on board#2" (at 74.93 156.21 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid b92ea466-3203-4ac1-bb57-bc905fd18cc0)

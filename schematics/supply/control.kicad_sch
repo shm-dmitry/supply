@@ -5928,7 +5928,7 @@
     (property "Reference" "X2" (at 204.47 302.26 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "CSX-750FCC, 16MHz" (at 213.36 304.8 0)
+    (property "Value" "16MHz, SMD3225" (at 213.36 304.8 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Oscillator:Oscillator_SMD_Abracon_ASE-4Pin_3.2x2.5mm" (at 182.88 308.61 0)

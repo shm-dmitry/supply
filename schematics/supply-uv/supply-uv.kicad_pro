@@ -56,9 +56,9 @@
         }
       ],
       "drc_exclusions": [
-        "courtyards_overlap|81750001|129632501|2ec3efe7-0092-4b06-9771-90464041ad92|f3d98f82-369f-4f8b-b4ea-d775f3026f01",
-        "silk_edge_clearance|101500000|50000000|2c8b8d77-d4ae-475d-9697-8ba13897ac68|f7e10cbf-871a-4152-9338-21ea925968f2",
-        "silk_edge_clearance|60500000|50000000|2c8b8d77-d4ae-475d-9697-8ba13897ac68|db1dff20-458e-4f23-95c7-a053662be2e3"
+        "courtyards_overlap|84750001|123832501|2ec3efe7-0092-4b06-9771-90464041ad92|f3d98f82-369f-4f8b-b4ea-d775f3026f01",
+        "silk_edge_clearance|104500000|44000000|2c8b8d77-d4ae-475d-9697-8ba13897ac68|f7e10cbf-871a-4152-9338-21ea925968f2",
+        "silk_edge_clearance|63500000|44000000|2c8b8d77-d4ae-475d-9697-8ba13897ac68|db1dff20-458e-4f23-95c7-a053662be2e3"
       ],
       "meta": {
         "version": 2
@@ -179,7 +179,8 @@
         0.0,
         0.5,
         1.0,
-        2.0
+        2.0,
+        3.0
       ],
       "via_dimensions": [
         {
