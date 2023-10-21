@@ -2582,8 +2582,8 @@
     (property "Datasheet" "~" (at 95.25 133.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 81d3a10e-3cd0-4daa-b148-ae72ce38d344))
-    (pin "2" (uuid db978572-6bce-4f42-9278-ea6c29e98e5e))
+    (pin "1" (uuid 36f413ea-708d-4759-9647-361a3be207c1))
+    (pin "2" (uuid e7d2a42c-57d6-47fa-91e4-dea66ebbea2e))
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/bcabd54f-a555-4409-9a4f-89c20a3d7682"
@@ -2986,7 +2986,7 @@
     (property "Reference" "R53" (at 360.68 166.37 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "49K5" (at 360.68 168.91 0)
+    (property "Value" "47K" (at 360.68 168.91 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 359.918 167.64 90)
@@ -3434,7 +3434,7 @@
     (property "Reference" "C17" (at 121.92 111.76 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "100 nF" (at 121.92 114.3 0)
+    (property "Value" "1 uF" (at 121.92 114.3 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 117.1448 109.22 0)

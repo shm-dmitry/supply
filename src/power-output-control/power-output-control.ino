@@ -4,6 +4,19 @@
 #include "config.h"
 
 void setup() {
+#if defined(__AVR_ATtiny1616__)
+#if EXT_CLOCK_ENABLED
+  #pragma message "Ext clock enabled"
+  // start external clock
+  CCP = 0xD8; // allow change CLOCK SOURCE
+  CLKCTRL.MCLKCTRLA = 0x3; // enable EXT CLOCK SOURCE
+  if (CLKCTRL.MCLKCTRLA == 0x3) {
+    while ((CLKCTRL.MCLKSTATUS & 0b10000000) == 0); // await EXT CLOCK started
+  }
+#endif
+#endif
+
+
   power_output_control_init();
   i2c_slave_init();
 
