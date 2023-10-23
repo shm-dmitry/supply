@@ -13,6 +13,10 @@
 #define GUI_MAIN_PAGE_DELTA_SLOW 100
 #define GUI_MAIN_PAGE_DELTA_FAST 1000
 
+#define GUI_MAIN_PAGE_ERR_POWER_OUTPUT (_BV(0))
+#define GUI_MAIN_PAGE_ERR_USB          (_BV(1))
+#define GUI_MAIN_PAGE_ERR_SOCKETS      (_BV(2))
+
 // powerV - 0 ... 50.0 - 2 bytes [100mV precision]
 // powerI - 0 ... 10.0 - 1 byte  [100mA precision]
 uint16_t gui_main_page_limit_V = 0;
@@ -34,6 +38,8 @@ uint16_t gui_main_page_socket_3v3_I = 0;
 uint16_t gui_main_page_pwm_freq = 0;
 uint8_t gui_main_page_pwm_duty = 0;
 uint8_t gui_main_page_pwm_enabled = 0;
+
+uint8_t gui_main_page_error_read = 0;
 
 void gui_main_page_draw_static_lines();
 void gui_main_page_draw_power_output();
@@ -69,6 +75,8 @@ void gui_main_page_on_reset(uint8_t, uint8_t) {
   gui_main_page_pwm_freq = 0xFFFF;
   gui_main_page_pwm_duty = 0xFF;
   gui_main_page_pwm_enabled = 0xFF;
+
+  gui_main_page_error_read = 0;
 }
 
 void gui_main_page_write_number_dot_1(uint16_t x, uint16_t y, uint8_t text_size, uint16_t value, uint16_t color) {
@@ -204,7 +212,17 @@ void gui_main_page_draw_power_output() {
   t_power_output_stats status;
   memset(&status, 0, sizeof(t_power_output_stats));
   if (!power_control_powerout_status(status)) {
+    if (!(gui_main_page_error_read & GUI_MAIN_PAGE_ERR_POWER_OUTPUT)) {
+      display_fill_rect(80, 16, 3, 3, DISPLAY_RED);
+      gui_main_page_error_read = gui_main_page_error_read | GUI_MAIN_PAGE_ERR_POWER_OUTPUT;
+    }
+
     return;
+  }
+
+  if (gui_main_page_error_read & GUI_MAIN_PAGE_ERR_POWER_OUTPUT) {
+      display_fill_rect(80, 16, 3, 3, DISPLAY_BLACK);
+      gui_main_page_error_read &= ~(GUI_MAIN_PAGE_ERR_POWER_OUTPUT);
   }
 
   uint16_t v = status.actual_V / 100;
@@ -288,7 +306,17 @@ void gui_main_page_draw_usb() {
   t_power_output_usb_stats status;
   memset(&status, 0, sizeof(t_power_output_usb_stats));
   if (!power_control_usbstatus(status)) {
+    if (!(gui_main_page_error_read & GUI_MAIN_PAGE_ERR_USB)) {
+      display_fill_rect(15, DISPLAY_H - 5, 3, 3, DISPLAY_RED);
+      gui_main_page_error_read = gui_main_page_error_read | GUI_MAIN_PAGE_ERR_USB;
+    }
+
     return;
+  }
+
+  if (gui_main_page_error_read & GUI_MAIN_PAGE_ERR_USB) {
+      display_fill_rect(15, DISPLAY_H - 5, 3, 3, DISPLAY_BLACK);
+      gui_main_page_error_read &= ~(GUI_MAIN_PAGE_ERR_USB);
   }
 
   const uint16_t y = DISPLAY_H - GUI_ICONS_USB_HEIGHT - 2;
@@ -375,7 +403,17 @@ void gui_main_page_draw_socket() {
   uint16_t i_5v = 0;
   uint16_t i_3v3 = 0;
   if (!power_control_5v_3v3_line_status(i_5v, i_3v3)) {
+    if (!(gui_main_page_error_read & GUI_MAIN_PAGE_ERR_SOCKETS)) {
+      display_fill_rect(103, 46, 3, 3, DISPLAY_RED);
+      gui_main_page_error_read = gui_main_page_error_read | GUI_MAIN_PAGE_ERR_SOCKETS;
+    }
+
     return;
+  }
+
+  if (gui_main_page_error_read & GUI_MAIN_PAGE_ERR_SOCKETS) {
+      display_fill_rect(103, 46, 3, 3, DISPLAY_BLACK);
+      gui_main_page_error_read &= ~(GUI_MAIN_PAGE_ERR_SOCKETS);
   }
 
   if (gui_main_page_socket_5v_I != i_5v) {
@@ -420,17 +458,20 @@ void gui_main_page_draw_pwm() {
 
   display_set_textsize(1);
 
-  if (status.enabled != gui_main_page_pwm_enabled) {
-    display_set_cursor(40, 78);
+  uint8_t actualEn = (status.enabled ? 0x01 : 0x00);
+
+  if (actualEn != gui_main_page_pwm_enabled) {
     if (gui_main_page_pwm_enabled != 0xFF) {
+      display_set_cursor(40, 78);
       display_set_textcolor(DISPLAY_BLACK);
       display_prints((gui_main_page_pwm_enabled == 0x01) ? "ENABLED" : "DISABLED");
     }
 
+    display_set_cursor(40, 78);
     display_set_textcolor(status.enabled ? DISPLAY_GREEN : DISPLAY_WHITE);
     display_prints(status.enabled ? "ENABLED" : "DISABLED");
 
-    gui_main_page_pwm_enabled = status.enabled ? 0x01 : 0x00;
+    gui_main_page_pwm_enabled = actualEn;
   }
 
   if (gui_main_page_pwm_freq != status.freq / 100) {

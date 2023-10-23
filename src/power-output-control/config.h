@@ -1,9 +1,9 @@
 #ifndef CONFIG_H_
 #define CONFIG_H_
 
-#define UART_ENABLED false
+#define UART_ENABLED true
 
-#define EXT_CLOCK_ENABLED true
+#define EXT_CLOCK_ENABLED false
 
 // C2
 #define OVERLOADED_PIN A2

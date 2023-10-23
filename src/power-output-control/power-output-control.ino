@@ -1,7 +1,7 @@
 #include "power_output_control.h"
 #include "i2c_slave.h"
-
 #include "config.h"
+#include "uart_console.h"
 
 void setup() {
 #if defined(__AVR_ATtiny1616__)
@@ -21,7 +21,7 @@ void setup() {
   i2c_slave_init();
 
   #if UART_ENABLED
-  Serial.begin(9600);
+  uart_console_init();
   Serial.println("Ready!");
   #endif
 
@@ -32,7 +32,8 @@ void setup() {
 
 void loop() {
   power_output_control_on_main_loop();
+
   #if UART_ENABLED
-  i2c_slave_on_main_loop();
+  uart_console_on_main_loop();
   #endif
 }
