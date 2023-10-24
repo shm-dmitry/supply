@@ -704,12 +704,6 @@
       (property "Datasheet" "https://static.chipdip.ru/lib/848/DOC018848830.pdf" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "TP4056_0_0"
-        (pin no_connect non_logic (at 11.43 2.54 180) (length 2.54)
-          (name "NC" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
       (symbol "TP4056_0_1"
         (polyline
           (pts
@@ -721,6 +715,12 @@
           )
           (stroke (width 0) (type default))
           (fill (type background))
+        )
+      )
+      (symbol "TP4056_1_0"
+        (pin input line (at 11.43 2.54 180) (length 2.54)
+          (name "TEMP" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
         )
       )
       (symbol "TP4056_1_1"
@@ -1306,6 +1306,7 @@
   (no_connect (at 186.69 121.92) (uuid 0c2efc15-a1b7-4934-ab2f-a874b90a7d59))
   (no_connect (at 203.2 52.07) (uuid 75f76b19-77cf-4897-8398-a1ec007d4ca2))
   (no_connect (at 186.69 119.38) (uuid 7930a4ec-add8-4350-9182-5ed751b6b16e))
+  (no_connect (at 92.71 209.55) (uuid 8eb1fc67-8208-4431-85e6-03277c7ed58d))
   (no_connect (at 210.82 52.07) (uuid bc96d2f6-6633-4ca5-b712-821e84d5ebe7))
   (no_connect (at 201.93 29.21) (uuid ce9680c4-0739-4ed5-ae6f-23ee7b6d28cf))
   (no_connect (at 186.69 124.46) (uuid ed154f38-c2ca-42b0-8d04-aaa19b71540b))
@@ -3278,15 +3279,15 @@
     (property "Datasheet" "https://static.chipdip.ru/lib/848/DOC018848830.pdf" (at 81.28 212.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid aba83e08-0adb-4fa1-8170-f860ab24eb32))
-    (pin "2" (uuid e3efcf65-a73b-408f-860e-f792c0c60962))
-    (pin "3" (uuid 675a1b38-b076-42db-ad0c-5b98519550c6))
-    (pin "4" (uuid 8bd7a319-2438-4589-8e92-0dae0734af6f))
-    (pin "5" (uuid 4b5ec70b-88d7-405e-b4ee-94d633e92d9e))
-    (pin "6" (uuid bde7a93e-f848-4340-94d9-b334905009cb))
-    (pin "7" (uuid ff8707aa-89c7-472a-afd5-1abf77889533))
-    (pin "8" (uuid 370adbd4-9ab4-43ed-a103-c916c1dc1ed1))
-    (pin "9" (uuid bad2ef0f-d233-4266-8c2c-145a8d3a71bf))
+    (pin "1" (uuid 104d8043-0d70-4709-ab21-d4a4c7a46331))
+    (pin "2" (uuid fb3ebbb3-c718-4d0f-8fbd-29f0c56d3269))
+    (pin "3" (uuid 63dcd7f4-4338-4b36-b5f0-8540306269b8))
+    (pin "4" (uuid a2415bf7-e258-430e-8fd2-acfc4e686eea))
+    (pin "5" (uuid d6602915-96c8-4e59-9f4c-bf4429689338))
+    (pin "6" (uuid ecb23fc8-c20a-49a4-8436-7f7ee5bb99f2))
+    (pin "7" (uuid 454eb08e-c96c-47aa-9c6c-25d587b6a31d))
+    (pin "8" (uuid 4d2eab70-c815-428f-ab63-dbe1bec7ee43))
+    (pin "9" (uuid a619176b-2407-48e5-93c6-f3890b303c94))
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"

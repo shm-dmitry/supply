@@ -9,7 +9,7 @@
 
 void setup() {
   Serial.begin(9600);
-  delay(500);
+  delay(10);
 
   power_control_init();
 
@@ -28,4 +28,6 @@ void loop() {
   fan_control_on_main_loop();
   gui_manager_on_main_loop();
   power_control_on_main_loop();
+
+  delay(10); // ~100Hz refresh screen rate, I think it's OK )
 }

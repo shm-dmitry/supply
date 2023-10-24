@@ -14,7 +14,7 @@
 #endif
 
 #define DISPLAY_DC_PIN      A3
-#define DISPLAY_ENABLE_PIN  A1
+#define DISPLAY_ENABLE_PIN  A2
 
 #if DISPLAY_TYOE_SIMUL_ADAFRUIT
 Adafruit_ILI9341 * display_tft = NULL;
@@ -25,7 +25,7 @@ Adafruit_ST7735 * display_tft = NULL;
 void display_init() {
   pinMode(DISPLAY_ENABLE_PIN, OUTPUT);
   digitalWrite(DISPLAY_ENABLE_PIN, LOW);
-  delay(100);
+  delay(500);
 
 #if DISPLAY_TYOE_SIMUL_ADAFRUIT
   display_tft = new Adafruit_ILI9341(-1, DISPLAY_DC_PIN, -1);

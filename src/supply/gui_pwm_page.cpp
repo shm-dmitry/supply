@@ -12,7 +12,7 @@
 #define GUI_MAIN_PAGE_DELTA_FREQ_FAST 10000
 
 #define GUI_MAIN_PAGE_DELTA_DUTY_SLOW 1
-#define GUI_MAIN_PAGE_DELTA_DUTY_FAST 10
+#define GUI_MAIN_PAGE_DELTA_DUTY_FAST 3
 
 uint32_t gui_pwm_page_pwm_freq = 0;
 uint8_t gui_pwm_page_pwm_duty = 0;
