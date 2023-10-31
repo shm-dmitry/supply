@@ -39,6 +39,8 @@
     } \
   }
 
+bool power_control_out_enabled = false;
+
 void power_control_init() {
   pinMode(POWER_CONTROL_RESET, OUTPUT);
   digitalWrite(POWER_CONTROL_RESET, LOW);
@@ -46,7 +48,8 @@ void power_control_init() {
   delay(50);
 
   pinMode(POWER_CONTROL_ENABLE_PIN, OUTPUT);
-  digitalWrite(POWER_CONTROL_ENABLE_PIN, HIGH); // disable
+  digitalWrite(POWER_CONTROL_ENABLE_PIN, LOW); // disable
+  power_control_out_enabled = false;
 
   Wire.begin();
   Wire.setClock(100000);
@@ -135,11 +138,16 @@ void power_control_add_V(uint16_t mV, bool add) {
 }
 
 void power_control_set_enabled(bool enable) {
-  digitalWrite(POWER_CONTROL_ENABLE_PIN, enable ? LOW : HIGH);
+  power_control_out_enabled = enable;
+
+  digitalWrite(POWER_CONTROL_ENABLE_PIN, power_control_out_enabled ? HIGH : LOW);
+
+  Serial.print("change power control: ");
+  Serial.println(power_control_out_enabled);
 
   uint8_t data[4] = {
     I2C_COMMAND_SET_ENABLE,
-    (enable ? (uint8_t)0x01 : (uint8_t)0x00),
+    (power_control_out_enabled ? (uint8_t)0x01 : (uint8_t)0x00),
     0x00,
     0x00
   };
@@ -154,8 +162,7 @@ void power_control_set_enabled(bool enable) {
 }
 
 void power_control_inv_enabled() {
-  bool enabled = digitalRead(POWER_CONTROL_ENABLE_PIN) == LOW;
-  power_control_set_enabled(!enabled);
+  power_control_set_enabled(!power_control_out_enabled);
 }
 
 bool power_control_powerout_status(t_power_output_stats & status) {

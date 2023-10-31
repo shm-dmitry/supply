@@ -3302,7 +3302,7 @@
     (property "Reference" "RP16" (at 208.28 149.86 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "62K" (at 208.28 152.4 0)
+    (property "Value" "68K" (at 208.28 152.4 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 203.962 151.13 90)

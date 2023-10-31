@@ -3,7 +3,7 @@
 #include "Arduino.h"
 
 // PB2
-#define PWM_CONTROL_PIN 10
+#define PWM_CONTROL_PIN 11
 
 #define PWM_CONTROL_DEFAULT_FREQ 40000
 #define PWM_CONTROL_DEFAULT_DUTY 20

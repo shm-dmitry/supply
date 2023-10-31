@@ -22,8 +22,11 @@
 #define USERINPUT_PIN_V_CLICK   PD7
 #define USERINPUT_PIN_ONOFF     8
 
+#define USERINPUT_ONOFF_AWAIT_NEXT_PRESS 100
+
 volatile uint8_t user_input_flags = 0;
-volatile bool user_input_onoff_button_pressed = false;
+volatile uint32_t user_input_onoff_next_press = 0;
+volatile bool user_input_onoff_await_release = false;
 
 volatile uint8_t userinput_i_lastStateA = LOW;
 volatile bool userinput_i_turnFlag = false;
@@ -35,12 +38,6 @@ volatile bool userinput_v_turnFlag = false;
 #define USERINPUT_RESETFLAG(flag) user_input_flags &= ~(flag)
 
 void isrcall_process_encoder(bool first);
-
-ISR(PCINT0_vect) {
-  if (digitalRead(USERINPUT_PIN_ONOFF) == HIGH) {
-    user_input_onoff_button_pressed = true;
-  }
-}
 
 ISR(PCINT2_vect) {
   if (digitalRead(USERINPUT_PIN_I_CLICK) == LOW) {
@@ -126,23 +123,27 @@ void user_input_init() {
 
   pinMode(USERINPUT_PIN_ONOFF, INPUT);
 
-  PCICR =  _BV(PCIE0) | _BV(PCIE2);
-  PCMSK0 = _BV(PCINT0);
+  PCICR =  _BV(PCIE2);
   PCMSK2 = _BV(PCINT18) | _BV(PCINT19) | _BV(PCINT20) | _BV(PCINT21) | _BV(PCINT22) | _BV(PCINT23);
 }
 
 bool user_input_onoff_pressed() {
-  bool result = false;
+  if (user_input_onoff_next_press < millis()) {
+    if (digitalRead(USERINPUT_PIN_ONOFF) == HIGH) {
+      if (!user_input_onoff_await_release) {
+        user_input_onoff_await_release = true;
+        Serial.println("ON/OFF pressed");
+        return true;
+      }
+    } else {
+      if (user_input_onoff_await_release) {
+        user_input_onoff_next_press = millis() + USERINPUT_ONOFF_AWAIT_NEXT_PRESS;
+        user_input_onoff_await_release = false;
+      }
+    }
+  }
 
-  uint8_t oldSREG = SREG;
-  cli();
-
-  result = user_input_onoff_button_pressed;
-  user_input_onoff_button_pressed = false;
-  
-  SREG = oldSREG;
-  
-  return result;
+  return false;
 }
 
 uint8_t user_input_encoder_i_status() {

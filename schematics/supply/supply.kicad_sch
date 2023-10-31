@@ -542,7 +542,7 @@
     (uuid f9a630bc-f8d7-413a-8f55-bc0f0fc87e28)
   )
 
-  (text_box "Known issues:\n1. Wrong symbol for protection diodes SMAJxx, be carefull with soldering!"
+  (text_box "Known issues:\n1. Wrong symbol for protection diodes SMAJxx, be carefull with soldering!\n2. Power output starts without +5VSYS"
     (at 314.96 17.78 0) (size 83.82 59.69)
     (stroke (width 0) (type default))
     (fill (type none))

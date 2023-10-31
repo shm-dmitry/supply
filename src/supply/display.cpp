@@ -25,7 +25,7 @@ Adafruit_ST7735 * display_tft = NULL;
 void display_init() {
   pinMode(DISPLAY_ENABLE_PIN, OUTPUT);
   digitalWrite(DISPLAY_ENABLE_PIN, LOW);
-  delay(500);
+  delay(10);
 
 #if DISPLAY_TYOE_SIMUL_ADAFRUIT
   display_tft = new Adafruit_ILI9341(-1, DISPLAY_DC_PIN, -1);

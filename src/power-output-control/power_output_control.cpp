@@ -12,14 +12,15 @@
 
 uint16_t power_output_control_I_x1000 = 0;
 uint16_t power_output_control_V_x1000 = 0;
-bool power_output_control_enabled = false;
 
+bool power_output_enabled = false;
 bool power_output_control_out_enabled = false;
 
 void power_output_control_init() {
   pinMode(POWER_OUTPUT_FB, OUTPUT);
   digitalWrite(POWER_OUTPUT_FB, HIGH); // disable output
   power_output_control_out_enabled = false;
+  power_output_enabled = false;
 
   power_output_sense_init();
   overloaded_led_init();
@@ -28,7 +29,7 @@ void power_output_control_init() {
 void power_output_control_on_main_loop() {
   bool allowWork = true;
 
-  if (power_output_control_V_x1000 == 0 || power_output_control_I_x1000 == 0 || power_output_control_enabled == false) {
+  if (power_output_control_V_x1000 == 0 || power_output_control_I_x1000 == 0 || power_output_enabled == false) {
     allowWork = false;
 
     overloaded_led_set(false);
@@ -52,7 +53,7 @@ void power_output_control_status(t_power_output_stats & status) {
   status.limit_V = power_output_control_V_x1000;
   status.actual_I = power_output_sense_readI_x1000(false);
   status.actual_V = power_output_sense_readV_x1000(false);
-  status.enabled = power_output_control_enabled;
+  status.enabled = power_output_enabled;
 }
 
 void power_output_control_setV(uint16_t voltage_x1000) {
@@ -96,5 +97,7 @@ void power_output_control_addI(uint16_t delta, bool add) {
 }
 
 void power_output_control_start(bool enable) {
-  power_output_control_enabled = enable;
+  power_output_enabled = enable;
+  Serial.print("Change out enabled: ");
+  Serial.println(power_output_enabled);
 }
