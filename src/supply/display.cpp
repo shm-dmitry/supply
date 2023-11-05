@@ -2,6 +2,7 @@
 
 #include "Arduino.h"
 #include "config.h"
+#include "SPI.h"
 
 #if DISPLAY_TYOE_SIMUL_ADAFRUIT
 #include <Adafruit_ILI9341.h>
@@ -23,6 +24,8 @@ Adafruit_ST7735 * display_tft = NULL;
 #endif
 
 void display_init() {
+  SPI.begin();
+
   pinMode(DISPLAY_DC_PIN, OUTPUT);
   digitalWrite(DISPLAY_DC_PIN, LOW);
   pinMode(DISPLAY_ENABLE_PIN, OUTPUT);

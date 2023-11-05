@@ -240,15 +240,26 @@ bool power_control_ina3221_read_i(uint8_t address, uint8_t channel, uint16_t & r
 
   unsigned long timeout = millis() + I2C_TIMEOUT_MS;
   I2C_WAIT_FOR_DATA();
-  result = Wire.read() << 8;
+  uint32_t temp = Wire.read() << 8;
   I2C_WAIT_FOR_DATA();
-  result += Wire.read();
+  temp += Wire.read();
 
-  if (result > 0x28F) {
-    return false; // WTF? current > 65A ??
-  } else {
-    result *= 100; // 1 / 0.01ohm
+  if (temp & 0x8000) {
+    temp -= 0x8000;
   }
+
+  #if I2C_SIMUL_MEMORY
+  ;
+  #else
+  temp *= 5; // LSB -> uV
+  temp = temp * 100 / 1000; // uV -> mA
+  #endif
+  
+  if (temp > 30000) {
+    return false; // WTF? current > 30A ??
+  }
+
+  result = (uint16_t)temp;
 
   return true;
 }
