@@ -21,6 +21,9 @@ void setup() {
 
   power_control_on_init_done();
 
+  user_input_start();
+  display_restart();
+
   Serial.println("Chip ready");
 }
 

@@ -123,7 +123,7 @@ void user_input_init() {
 
   pinMode(USERINPUT_PIN_ONOFF, INPUT);
 
-  PCICR =  _BV(PCIE2);
+  PCICR = 0;
   PCMSK2 = _BV(PCINT18) | _BV(PCINT19) | _BV(PCINT20) | _BV(PCINT21) | _BV(PCINT22) | _BV(PCINT23);
 }
 
@@ -208,4 +208,8 @@ uint8_t user_input_encoder_v_status() {
   SREG = oldSREG;
   
   return result;
+}
+
+void user_input_start() {
+  PCICR =  _BV(PCIE2);
 }

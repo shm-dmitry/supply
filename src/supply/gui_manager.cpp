@@ -42,7 +42,12 @@ void gui_manager_on_main_loop() {
     refresh = true;
   }
 
+  uint8_t istatus = user_input_encoder_i_status();
   uint8_t vstatus = user_input_encoder_v_status();
+  if (vstatus == USER_INPUT_STATUS_CLICK && istatus == USER_INPUT_STATUS_CLICK) {
+    display_restart();
+  }
+
   if (vstatus == USER_INPUT_STATUS_CLICK) {
     gui_page_current++;
     if (gui_page_current >= PAGES_COUNT) {
@@ -70,7 +75,6 @@ void gui_manager_on_main_loop() {
     }
   }
 
-  uint8_t istatus = user_input_encoder_i_status();
   if (istatus != USER_INPUT_STATUS_NONE) {
     t_page_callback func = PAGES_VTABLE[gui_page_current][GUI_PAGE_ACTION_ONACTION];
     if (func != NULL) {

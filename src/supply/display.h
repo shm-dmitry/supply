@@ -14,6 +14,7 @@
 #define DISPLAY_H      128
 
 void display_init();
+void display_restart();
 
 void display_fill_rect(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color);
 void display_draw_rect(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color);

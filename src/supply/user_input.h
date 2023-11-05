@@ -17,5 +17,6 @@ void user_input_init();
 uint8_t user_input_encoder_i_status();
 uint8_t user_input_encoder_v_status();
 bool user_input_onoff_pressed();
+void user_input_start();
 
 #endif /* #define USER_INPUT_H_ */
