@@ -2048,7 +2048,7 @@
   )
 
   (symbol (lib_id "Device:C") (at 165.1 121.92 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp yes)
     (uuid 20862c95-6ab7-4139-a202-9b0ade6858b9)
     (property "Reference" "C9" (at 172.72 120.65 0)
       (effects (font (size 1.27 1.27)) (justify left))
