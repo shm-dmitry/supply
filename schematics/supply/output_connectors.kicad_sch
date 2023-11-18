@@ -2064,7 +2064,7 @@
           (reference "R54") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "R60") (unit 1)
+          (reference "R63") (unit 1)
         )
       )
     )
@@ -2095,7 +2095,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR0142") (unit 1)
+          (reference "#PWR0141") (unit 1)
         )
       )
     )
@@ -2124,7 +2124,7 @@
           (reference "R20") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "R67") (unit 1)
+          (reference "R70") (unit 1)
         )
       )
     )
@@ -2155,7 +2155,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR0131") (unit 1)
+          (reference "#PWR0130") (unit 1)
         )
       )
     )
@@ -2164,7 +2164,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Pin") (at 243.84 222.25 0) (mirror x) (unit 1)
     (in_bom no) (on_board no) (dnp yes)
     (uuid 1d120dfe-47b7-42d9-b0dd-aa4af427ed62)
-    (property "Reference" "J21" (at 256.54 224.79 0)
+    (property "Reference" "J25" (at 256.54 224.79 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "Conn_01x02_Pin" (at 256.54 227.33 0)
@@ -2181,7 +2181,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "J21") (unit 1)
+          (reference "J25") (unit 1)
         )
       )
     )
@@ -2236,7 +2236,7 @@
           (reference "R54") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "R63") (unit 1)
+          (reference "R66") (unit 1)
         )
       )
     )
@@ -2267,7 +2267,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR0134") (unit 1)
+          (reference "#PWR0133") (unit 1)
         )
       )
     )
@@ -2276,7 +2276,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Socket") (at 266.7 45.72 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2f52aca0-ce70-4371-b416-cc5e12fb7f3f)
-    (property "Reference" "J24" (at 267.97 43.18 0)
+    (property "Reference" "J28" (at 267.97 43.18 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "jst xh angle" (at 267.97 45.72 0)
@@ -2293,7 +2293,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "J24") (unit 1)
+          (reference "J28") (unit 1)
         )
       )
     )
@@ -2324,7 +2324,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR0132") (unit 1)
+          (reference "#PWR0131") (unit 1)
         )
       )
     )
@@ -2353,7 +2353,7 @@
           (reference "R29") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "R62") (unit 1)
+          (reference "R65") (unit 1)
         )
       )
     )
@@ -2432,7 +2432,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Socket") (at 201.93 19.05 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3adf4a02-e037-44f9-a11c-78b6c3a8dcb1)
-    (property "Reference" "J17" (at 203.2 19.05 0)
+    (property "Reference" "J21" (at 203.2 19.05 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "banana jack + fuse 15A" (at 203.2 21.59 0)
@@ -2449,7 +2449,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "J17") (unit 1)
+          (reference "J21") (unit 1)
         )
       )
     )
@@ -2478,7 +2478,7 @@
           (reference "R54") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "R64") (unit 1)
+          (reference "R67") (unit 1)
         )
       )
     )
@@ -2509,7 +2509,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR0137") (unit 1)
+          (reference "#PWR0136") (unit 1)
         )
       )
     )
@@ -2540,7 +2540,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR0126") (unit 1)
+          (reference "#PWR0125") (unit 1)
         )
       )
     )
@@ -2575,7 +2575,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Socket") (at 266.7 21.59 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 519a4d78-8760-4468-a2bd-5c5d84aaac9f)
-    (property "Reference" "J23" (at 267.97 19.05 0)
+    (property "Reference" "J27" (at 267.97 19.05 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "jst xh angle" (at 267.97 21.59 0)
@@ -2592,7 +2592,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "J23") (unit 1)
+          (reference "J27") (unit 1)
         )
       )
     )
@@ -2649,7 +2649,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR0129") (unit 1)
+          (reference "#PWR0128") (unit 1)
         )
       )
     )
@@ -2680,7 +2680,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR0133") (unit 1)
+          (reference "#PWR0132") (unit 1)
         )
       )
     )
@@ -2712,7 +2712,7 @@
           (reference "C48") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "C68") (unit 1)
+          (reference "C65") (unit 1)
         )
       )
     )
@@ -2741,7 +2741,7 @@
           (reference "R29") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "R61") (unit 1)
+          (reference "R64") (unit 1)
         )
       )
     )
@@ -2772,7 +2772,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR0136") (unit 1)
+          (reference "#PWR0135") (unit 1)
         )
       )
     )
@@ -2845,7 +2845,7 @@
           (reference "R54") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "R66") (unit 1)
+          (reference "R69") (unit 1)
         )
       )
     )
@@ -2876,7 +2876,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR0135") (unit 1)
+          (reference "#PWR0134") (unit 1)
         )
       )
     )
@@ -2942,7 +2942,7 @@
           (reference "C48") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "C67") (unit 1)
+          (reference "C64") (unit 1)
         )
       )
     )
@@ -2973,7 +2973,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR0130") (unit 1)
+          (reference "#PWR0129") (unit 1)
         )
       )
     )
@@ -3002,7 +3002,7 @@
           (reference "R54") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "R65") (unit 1)
+          (reference "R68") (unit 1)
         )
       )
     )
@@ -3011,7 +3011,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Pin") (at 234.95 222.25 180) (unit 1)
     (in_bom yes) (on_board no) (dnp yes)
     (uuid 9ef6b500-2567-4083-b114-040c5032274d)
-    (property "Reference" "J20" (at 223.52 224.79 0)
+    (property "Reference" "J24" (at 223.52 224.79 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "Conn_01x02_Pin" (at 223.52 227.33 0)
@@ -3028,7 +3028,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "J20") (unit 1)
+          (reference "J24") (unit 1)
         )
       )
     )
@@ -3037,7 +3037,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Socket") (at 208.28 41.91 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9f0f516d-f802-4cb7-b372-198508b7f2a6)
-    (property "Reference" "J18" (at 209.55 41.91 0)
+    (property "Reference" "J22" (at 209.55 41.91 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "banana jack + fuse 15A" (at 209.55 44.45 0)
@@ -3054,7 +3054,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "J18") (unit 1)
+          (reference "J22") (unit 1)
         )
       )
     )
@@ -3063,7 +3063,7 @@
   (symbol (lib_id "Connector:Conn_01x05_Pin") (at 176.53 212.09 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a37f1448-7bb9-49ae-959d-89f9bdbe296a)
-    (property "Reference" "J16" (at 177.8 210.82 0)
+    (property "Reference" "J20" (at 177.8 210.82 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "Conn_01x05_Pin" (at 177.8 213.36 0)
@@ -3083,7 +3083,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "J16") (unit 1)
+          (reference "J20") (unit 1)
         )
       )
     )
@@ -3111,7 +3111,7 @@
           (reference "#PWR04") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR0138") (unit 1)
+          (reference "#PWR0137") (unit 1)
         )
       )
     )
@@ -3175,7 +3175,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR0143") (unit 1)
+          (reference "#PWR0142") (unit 1)
         )
       )
     )
@@ -3206,7 +3206,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR0127") (unit 1)
+          (reference "#PWR0126") (unit 1)
         )
       )
     )
@@ -3267,7 +3267,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR0140") (unit 1)
+          (reference "#PWR0139") (unit 1)
         )
       )
     )
@@ -3358,7 +3358,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR0128") (unit 1)
+          (reference "#PWR0127") (unit 1)
         )
       )
     )
@@ -3389,7 +3389,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR0139") (unit 1)
+          (reference "#PWR0138") (unit 1)
         )
       )
     )
@@ -3503,7 +3503,7 @@
   (symbol (lib_id "Connector_Generic:Conn_02x04_Odd_Even") (at 256.54 87.63 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e5f90eab-a4b3-4b4a-ac3d-0b02f8f61f0e)
-    (property "Reference" "J22" (at 257.81 78.74 0)
+    (property "Reference" "J26" (at 257.81 78.74 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_02x04_Odd_Even" (at 257.81 81.28 0)
@@ -3526,7 +3526,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "J22") (unit 1)
+          (reference "J26") (unit 1)
         )
       )
     )
@@ -3583,7 +3583,7 @@
           (reference "#PWR0120") (unit 1)
         )
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "#PWR0141") (unit 1)
+          (reference "#PWR0140") (unit 1)
         )
       )
     )
@@ -3592,7 +3592,7 @@
   (symbol (lib_id "Connector:Conn_01x05_Pin") (at 214.63 212.09 0) (mirror x) (unit 1)
     (in_bom no) (on_board no) (dnp yes)
     (uuid f94723fc-e4eb-4f04-905c-0013a3fe2f66)
-    (property "Reference" "J19" (at 213.36 210.82 0)
+    (property "Reference" "J23" (at 213.36 210.82 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "Conn_01x05_Pin" (at 213.36 213.36 0)
@@ -3612,7 +3612,7 @@
     (instances
       (project "supply"
         (path "/1e139717-fcd1-4008-a6ea-4c993845e928/39d9543b-2a42-4758-87e9-56ce3e85ea36"
-          (reference "J19") (unit 1)
+          (reference "J23") (unit 1)
         )
       )
     )
