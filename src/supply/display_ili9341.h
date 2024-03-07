@@ -9,6 +9,6 @@ This code based on projects:
 
 #include "display_spi.h"
 
-void display_ili9341_init(uint8_t dc);
+void display_ili9341_init(uint8_t cs, uint8_t dc);
 
 #endif /* DISPLAY_ILI9341_H_ */

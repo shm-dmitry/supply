@@ -24,7 +24,6 @@ typedef struct t_power_output_usb_stats {
 } t_power_output_usb_stats;
 
 void power_control_init();
-void power_control_on_init_done();
 void power_control_on_main_loop();
 
 void power_control_add_I(uint16_t mA, bool add);

@@ -99,8 +99,8 @@ static const uint8_t PROGMEM DISPLAY_ST7335_COMMAND_LIST3[] = {                 
 
 void display_st7735_run_command_list(const uint8_t *addr);
 
-void display_st7735_init(uint8_t dc) {
-  display_spi_init(dc);
+void display_st7735_init(uint8_t cs, uint8_t dc) {
+  display_spi_init(cs, dc);
 
   display_st7735_run_command_list(DISPLAY_ST7335_COMMAND_LIST1);
   display_st7735_run_command_list(DISPLAY_ST7335_COMMAND_LIST2);

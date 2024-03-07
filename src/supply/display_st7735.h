@@ -10,6 +10,6 @@ This code based on projects:
 
 #include "display_spi.h"
 
-void display_st7735_init(uint8_t dc);
+void display_st7735_init(uint8_t cs, uint8_t dc);
 
 #endif /* DISPLAY_ST7735_H_ */

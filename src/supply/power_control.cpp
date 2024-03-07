@@ -10,9 +10,6 @@
 
 #include "config.h"
 
-#define POWER_CONTROL_RESET       A1
-#define POWER_CONTROL_ENABLE_PIN  9
-
 #define POWER_CONTROL_DEFAULT_V  5000
 #define POWER_CONTROL_DEFAULT_I  3000
 #define POWER_CONTROL_DEFAULT_EN false
@@ -42,14 +39,9 @@
 bool power_control_out_enabled = false;
 
 void power_control_init() {
-  pinMode(POWER_CONTROL_RESET, OUTPUT);
-  digitalWrite(POWER_CONTROL_RESET, LOW);
-
-  delay(50);
-
-  pinMode(POWER_CONTROL_ENABLE_PIN, OUTPUT);
-  digitalWrite(POWER_CONTROL_ENABLE_PIN, LOW); // disable
   power_control_out_enabled = false;
+
+  delay(64); // power control chip startup time: 64ms
 
   Wire.begin();
   Wire.setClock(100000);
@@ -62,11 +54,6 @@ void power_control_init() {
   power_control_set_I(POWER_CONTROL_DEFAULT_I);
   power_control_set_enabled(POWER_CONTROL_DEFAULT_EN);
   #endif
-}
-
-void power_control_on_init_done() {
-  digitalWrite(POWER_CONTROL_RESET, HIGH);
-  delay(10); // await power controller started up
 }
 
 void power_control_set_I(uint16_t mA) {
@@ -139,8 +126,6 @@ void power_control_add_V(uint16_t mV, bool add) {
 
 void power_control_set_enabled(bool enable) {
   power_control_out_enabled = enable;
-
-  digitalWrite(POWER_CONTROL_ENABLE_PIN, power_control_out_enabled ? HIGH : LOW);
 
   Serial.print("change power control: ");
   Serial.println(power_control_out_enabled);

@@ -10,4 +10,6 @@
 
 #define I2C_SIMUL_MEMORY false
 
+#define SPI_DEFAULT_FREQ 16000000L
+
 #endif /* CONFIG_H_ */

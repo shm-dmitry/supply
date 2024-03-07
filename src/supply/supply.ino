@@ -8,8 +8,8 @@
 #include "Wire.h"
 
 void setup() {
-  Serial.begin(9600);
-  delay(10);
+//  Serial.begin(9600);
+//  delay(10);
 
   power_control_init();
 
@@ -18,8 +18,7 @@ void setup() {
   user_input_init();
   display_init();
   gui_manager_init();
-
-  power_control_on_init_done();
+  pwm_control_configure_startup();
 
   user_input_start();
 

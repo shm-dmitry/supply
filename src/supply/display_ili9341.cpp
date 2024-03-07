@@ -54,8 +54,8 @@ static const uint8_t PROGMEM ILI9341_INIT_CMD[] = {
   0x00                                   // End of list
 };
 
-void display_ili9341_init(uint8_t dc) {
-  display_spi_init(dc);
+void display_ili9341_init(uint8_t cs, uint8_t dc) {
+  display_spi_init(cs, dc);
 
   display_spi_send_command(ILI9341_SWRESET);
   delay(150);

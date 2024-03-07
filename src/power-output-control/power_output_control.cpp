@@ -2,7 +2,7 @@
 
 #include "Arduino.h"
 
-#include "overloaded_led.h"
+#include "led.h"
 #include "power_output_sense.h"
 
 #include "config.h"
@@ -17,13 +17,16 @@ bool power_output_enabled = false;
 bool power_output_control_out_enabled = false;
 
 void power_output_control_init() {
-  pinMode(POWER_OUTPUT_FB, OUTPUT);
-  digitalWrite(POWER_OUTPUT_FB, HIGH); // disable output
+  pinMode(PIN_POWER_OUTPUT_IC_FB, OUTPUT);
+  digitalWrite(PIN_POWER_OUTPUT_IC_FB, HIGH); // disable output
+  pinMode(PIN_POWER_OUTPUT_SHUTDOWN, OUTPUT);
+  digitalWrite(PIN_POWER_OUTPUT_SHUTDOWN, LOW); // shutdown ON
+
   power_output_control_out_enabled = false;
   power_output_enabled = false;
 
   power_output_sense_init();
-  overloaded_led_init();
+  led_init();
 }
 
 void power_output_control_on_main_loop() {
@@ -32,18 +35,18 @@ void power_output_control_on_main_loop() {
   if (power_output_control_V_x1000 == 0 || power_output_control_I_x1000 == 0 || power_output_enabled == false) {
     allowWork = false;
 
-    overloaded_led_set(false);
+    led_set_overloaded(false);
   } else {
     uint16_t current_I = power_output_sense_readI_x1000(true);
     uint16_t current_V = power_output_sense_readV_x1000(true);
 
     allowWork = current_V <= power_output_control_V_x1000 && current_I <= power_output_control_I_x1000;
 
-    overloaded_led_set(current_I >= power_output_control_I_x1000);
+    led_set_overloaded(current_I >= power_output_control_I_x1000);
   }
 
   if (power_output_control_out_enabled != allowWork) {
-    digitalWrite(POWER_OUTPUT_FB, allowWork ? LOW : HIGH);
+    digitalWrite(PIN_POWER_OUTPUT_IC_FB, allowWork ? LOW : HIGH);
     power_output_control_out_enabled = allowWork;
   }
 }
@@ -98,6 +101,10 @@ void power_output_control_addI(uint16_t delta, bool add) {
 
 void power_output_control_start(bool enable) {
   power_output_enabled = enable;
+
+  digitalWrite(PIN_POWER_OUTPUT_SHUTDOWN, (power_output_enabled ? HIGH : LOW));
+  led_set_poweroutput(enable);
+
   Serial.print("Change out enabled: ");
   Serial.println(power_output_enabled);
 }

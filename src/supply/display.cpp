@@ -16,6 +16,7 @@
 
 #define DISPLAY_DC_PIN      A3
 #define DISPLAY_ENABLE_PIN  A2
+#define DISPLAY_CS_PIN      10 // PB2
 
 #if DISPLAY_TYOE_SIMUL_ADAFRUIT
 Adafruit_ILI9341 * display_tft = NULL;
@@ -30,6 +31,8 @@ void display_init() {
   digitalWrite(DISPLAY_DC_PIN, LOW);
   pinMode(DISPLAY_ENABLE_PIN, OUTPUT);
   digitalWrite(DISPLAY_ENABLE_PIN, LOW);
+  pinMode(DISPLAY_CS_PIN, OUTPUT);
+  digitalWrite(DISPLAY_CS_PIN, HIGH);
   delay(3);
 
 #if DISPLAY_TYOE_SIMUL_ADAFRUIT
@@ -41,9 +44,9 @@ void display_init() {
   display_tft->initR(INITR_BLACKTAB);
   display_tft->setRotation(3);
 #elif DISPLAY_TYPE_SIMIL_CUSTOM
-  display_ili9341_init(DISPLAY_DC_PIN);
+  display_ili9341_init(DISPLAY_CS_PIN, DISPLAY_DC_PIN);
 #elif DISPLAY_TYPE_ST7335_CUSTOM
-  display_st7735_init(DISPLAY_DC_PIN);
+  display_st7735_init(DISPLAY_CS_PIN, DISPLAY_DC_PIN);
 #endif
 
   display_fill_rect(0, 0, 160, 128, DISPLAY_BLACK);

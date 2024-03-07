@@ -10,8 +10,8 @@ This code based on projects:
 #include "display_spi.h"
 #include "display_spi_font.h"
 #include "SPI.h"
+#include "config.h"
 
-#define SPI_DEFAULT_FREQ 8000000L
 #define AVR_WRITESPI(x) for (SPDR = (x); (!(SPSR & _BV(SPIF)));)
 #define SPI_WRITE16(x) \
   SPI.transfer(x >> 8); \
@@ -29,6 +29,7 @@ This code based on projects:
   SPI.transfer(x);
 
 uint8_t display_spi_dc;
+uint8_t display_spi_cs;
 SPISettings settings;
 
 #define DISPLAY_WIDTH 160
@@ -43,13 +44,13 @@ SPISettings settings;
 
 inline void display_spi_start_write();
 inline void display_spi_end_write();
-void display_spi_write_fill_rect_preclipped(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color);
-void display_spi_write_command(uint8_t cmd);
-void display_spi_write_color(uint16_t color, uint16_t count);
-void display_spi_write_pixel(uint16_t x, uint16_t y, uint16_t color);
-void display_spi_set_addr_window(uint16_t x, uint16_t y, uint16_t w, uint16_t h);
-void display_spi_write_line(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color);
-void display_spi_write_char(char c);
+void _display_spi_write_fill_rect_preclipped(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color);
+void _display_spi_write_command(uint8_t cmd);
+void _display_spi_write_color(uint16_t color, uint16_t count);
+void _display_spi_write_pixel(uint16_t x, uint16_t y, uint16_t color);
+void _display_spi_set_addr_window(uint16_t x, uint16_t y, uint16_t w, uint16_t h);
+void _display_spi_write_line(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color);
+void _display_spi_write_char(char c);
 
 uint16_t  display_spi_cursor_x;
 uint16_t  display_spi_cursor_y;
@@ -69,10 +70,13 @@ void display_spi_set_textsize(uint8_t size) {
   display_spi_cursor_size = size;
 }
 
-void display_spi_init(uint8_t dc) {
+void display_spi_init(uint8_t cs, uint8_t dc) {
   display_spi_dc = dc;
+  display_spi_cs = cs;
   pinMode(display_spi_dc, OUTPUT);
   digitalWrite(display_spi_dc, HIGH);
+  pinMode(display_spi_cs, OUTPUT);
+  digitalWrite(display_spi_cs, HIGH);
 
   SPI.begin();
 
@@ -81,23 +85,32 @@ void display_spi_init(uint8_t dc) {
 
 void display_spi_send_command_pgm(uint8_t command, const uint8_t * data, uint8_t datasize) {
   SPI.beginTransaction(settings);
+  digitalWrite(display_spi_cs, LOW);
+
+
   digitalWrite(display_spi_dc, LOW);
   AVR_WRITESPI(command);
   digitalWrite(display_spi_dc, HIGH);
   for (uint8_t i = 0; i<datasize; i++) {
     AVR_WRITESPI(pgm_read_byte(data++));
   }
+
+  digitalWrite(display_spi_cs, HIGH);
   SPI.endTransaction();
 }
 
 void display_spi_send_command(uint8_t command, const uint8_t * data, uint8_t datasize) {
   SPI.beginTransaction(settings);
+  digitalWrite(display_spi_cs, LOW);
+
   digitalWrite(display_spi_dc, LOW);
   AVR_WRITESPI(command);
   digitalWrite(display_spi_dc, HIGH);
   for (uint8_t i = 0; i<datasize; i++) {
     AVR_WRITESPI(data[i]);
   }
+
+  digitalWrite(display_spi_cs, HIGH);
   SPI.endTransaction();
 }
 
@@ -123,45 +136,47 @@ void display_spi_fill_rect(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint1
   }
 
   display_spi_start_write();
-  display_spi_write_fill_rect_preclipped(x, y, w, h, color);
+  _display_spi_write_fill_rect_preclipped(x, y, w, h, color);
   display_spi_end_write();
 }
 
 inline void display_spi_start_write() {
   SPI.beginTransaction(settings);
+  digitalWrite(display_spi_cs, LOW);
 }
 
 inline void display_spi_end_write() {
+  digitalWrite(display_spi_cs, HIGH);
   SPI.endTransaction();
 }
 
-void display_spi_write_fill_rect_preclipped(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color) {
-  display_spi_set_addr_window(x, y, w, h);
-  display_spi_write_color(color, (uint16_t) w * (uint16_t) h);
+void _display_spi_write_fill_rect_preclipped(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color) {
+  _display_spi_set_addr_window(x, y, w, h);
+  _display_spi_write_color(color, (uint16_t) w * (uint16_t) h);
 }
 
-void display_spi_set_addr_window(uint16_t x, uint16_t y, uint16_t w, uint16_t h) {
+void _display_spi_set_addr_window(uint16_t x, uint16_t y, uint16_t w, uint16_t h) {
   uint16_t tmp = x + w - 1;
 
-  display_spi_write_command(DISPLAY_SPI_CASET);
+  _display_spi_write_command(DISPLAY_SPI_CASET);
   SPI_WRITE16(x);
   SPI_WRITE16(tmp);
 
   tmp = y + h - 1;
-  display_spi_write_command(DISPLAY_SPI_PASET);
+  _display_spi_write_command(DISPLAY_SPI_PASET);
   SPI_WRITE16(y);
   SPI_WRITE16(tmp);
 
-  display_spi_write_command(DISPLAY_SPI_RAMWR);
+  _display_spi_write_command(DISPLAY_SPI_RAMWR);
 }
 
-void display_spi_write_command(uint8_t cmd) {
+void _display_spi_write_command(uint8_t cmd) {
   digitalWrite(display_spi_dc, LOW);
   SPI.transfer(cmd);
   digitalWrite(display_spi_dc, HIGH);
 }
 
-void display_spi_write_color(uint16_t color, uint16_t count) {
+void _display_spi_write_color(uint16_t color, uint16_t count) {
   if (!count) {
     return;
   }
@@ -189,16 +204,16 @@ void display_spi_draw_bitmap(uint16_t x, uint16_t y, const uint8_t bitmap[], uin
       }
 
       if (b & 0x80) {
-        display_spi_write_pixel(x + i, y, color);
+        _display_spi_write_pixel(x + i, y, color);
       }
     }
   }
   display_spi_end_write();
 }
 
-void display_spi_write_pixel(uint16_t x, uint16_t y, uint16_t color) {
+void _display_spi_write_pixel(uint16_t x, uint16_t y, uint16_t color) {
   if ((x < DISPLAY_WIDTH) && (y < DISPLAY_HEIGHT)) {
-    display_spi_set_addr_window(x, y, 1, 1);
+    _display_spi_set_addr_window(x, y, 1, 1);
     SPI_WRITE16(color);
   }
 }
@@ -210,12 +225,12 @@ void display_spi_draw_line(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, u
     display_spi_fill_rect(x0, y0, x1 - x0 + 1, 1, color);
   } else {
     display_spi_start_write();
-    display_spi_write_line(x0, y0, x1, y1, color);
+    _display_spi_write_line(x0, y0, x1, y1, color);
     display_spi_end_write();
   }
 }
 
-void display_spi_write_line(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color) {
+void _display_spi_write_line(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color) {
   bool steep = abs(y1 - y0) > abs(x1 - x0);
   if (steep) {
     SWAP_INT16_T(x0, y0);
@@ -241,9 +256,9 @@ void display_spi_write_line(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, 
 
   for (; x0 <= x1; x0++) {
     if (steep) {
-      display_spi_write_pixel(y0, x0, color);
+      _display_spi_write_pixel(y0, x0, color);
     } else {
-      display_spi_write_pixel(x0, y0, color);
+      _display_spi_write_pixel(x0, y0, color);
     }
     err -= dy;
     if (err < 0) {
@@ -268,9 +283,9 @@ void display_spi_write_char(char c) {
     for (uint8_t j = 0; j < 8; j++, line >>= 1) {
       if (line & 1) {
         if (display_spi_cursor_size == 1)
-          display_spi_write_pixel(display_spi_cursor_x + i, display_spi_cursor_y + j, display_spi_cursor_color);
+          _display_spi_write_pixel(display_spi_cursor_x + i, display_spi_cursor_y + j, display_spi_cursor_color);
         else
-          display_spi_write_fill_rect_preclipped(display_spi_cursor_x + i * display_spi_cursor_size, 
+          _display_spi_write_fill_rect_preclipped(display_spi_cursor_x + i * display_spi_cursor_size, 
                                                  display_spi_cursor_y + j * display_spi_cursor_size, 
                                                  display_spi_cursor_size, 
                                                  display_spi_cursor_size, 

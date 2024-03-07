@@ -1,153 +1,231 @@
 #include "pwm_control.h"
 
 #include "Arduino.h"
+#include "SPI.h"
+#include "config.h"
+#include "Wire.h"
 
-// PB2
-#define PWM_CONTROL_PIN 11
+#define PWM_CONTROL_DAC_I2C_ADDRESS    0x60
+
+#define PWM_CONTROL_PIN_SIGNAL_CS      9 // PB1
+#define PWM_CONTROL_PIN_GEN_SHUTDOWN   0 // PD0
+#define PWM_CONTROL_PIN_GEN_ALWAYS_ON  A1
 
 #define PWM_CONTROL_DEFAULT_FREQ 40000
 #define PWM_CONTROL_DEFAULT_DUTY 20
 
+#define PWM_CONTROL_GENOUT_MINV  50
+#define PWM_CONTROL_GENOUT_VPP   450
+#define PWM_CONTROL_GENOUT_MAXV  (PWM_CONTROL_GENOUT_MINV + PWM_CONTROL_GENOUT_VPP)
+
+#define PWM_CONTROL_MIN_FREQ 1
 #define PWM_CONTROL_MAX_FREQ 1000000
 
+SPISettings spisettings = SPISettings(SPI_DEFAULT_FREQ, MSBFIRST, SPI_MODE2);
+
+uint32_t pwm_control_freq = PWM_CONTROL_DEFAULT_FREQ;
+uint8_t pwm_control_duty = PWM_CONTROL_DEFAULT_DUTY;
 bool pwm_control_enabled = false;
 
+void pwm_contorl_reset_dac();
+void pwm_contorl_reset_gen();
+void pwm_control_reconfigure_dac();
+void pwm_control_reconfigure_gen();
+void pwm_control_apply();
+void pwm_control_spi_write16(uint16_t value);
+void pwm_control_spi_write32(uint16_t value1, uint16_t value2);
+void pwm_control_ic2_write24(uint8_t value1, uint8_t value2, uint8_t value3);
+
 void pwm_control_init() {
-  pinMode(PWM_CONTROL_PIN, OUTPUT);
-  digitalWrite(PWM_CONTROL_PIN, LOW);
+  pinMode(PWM_CONTROL_PIN_GEN_SHUTDOWN, OUTPUT);
+  digitalWrite(PWM_CONTROL_PIN_GEN_SHUTDOWN, HIGH);
 
-  TCCR1A = _BV(WGM11) | _BV(WGM10);
-  pwm_control_start(false);
-  pwm_control_set(PWM_CONTROL_DEFAULT_FREQ, PWM_CONTROL_DEFAULT_DUTY);
+  pinMode(PWM_CONTROL_PIN_GEN_ALWAYS_ON, OUTPUT);
+  digitalWrite(PWM_CONTROL_PIN_GEN_ALWAYS_ON, LOW);
 
-  pwm_control_enabled = false;
+  pinMode(PWM_CONTROL_PIN_SIGNAL_CS, OUTPUT);
+  digitalWrite(PWM_CONTROL_PIN_SIGNAL_CS, HIGH);
+}
+
+void pwm_control_configure_startup() {
+  pwm_control_apply();
 }
 
 void pwm_control_set(uint32_t freq, uint8_t duty) {
-  if (freq == 0) {
-    pwm_control_start(false);
-    OCR1A = 0;
-  } else {
-    OCR1A = (uint32_t)F_CPU / (uint32_t)2 / (uint32_t)freq;
-  }
+  if (freq <= PWM_CONTROL_MAX_FREQ && freq >= PWM_CONTROL_MIN_FREQ && duty <= 100) {
+    pwm_control_freq = freq;
+    pwm_control_duty = duty;
 
-  OCR1B = ((uint32_t)OCR1A * (uint32_t)duty) / (uint32_t)100;
-  if (OCR1B == 0) {
-    pwm_control_start(false);
-  } else if (OCR1A == OCR1B && pwm_control_enabled) {
-    pwm_control_start(true);
+    if (pwm_control_enabled) {
+      pwm_control_apply();
+    }
   }
 }
 
 void pwm_control_add_freq(uint16_t delta, bool add) {
-  if (OCR1A == 0) {
-    pwm_control_set(delta, 0);
+  if (add) {
+    if (pwm_control_freq + delta < PWM_CONTROL_MAX_FREQ) {
+      pwm_control_freq += delta;
+    } else {
+      pwm_control_freq = PWM_CONTROL_MAX_FREQ;
+    }
   } else {
-    uint16_t prevOCR1A = OCR1A;
-    t_pwm_control_status status;
-    pwm_control_status(status);
-      
-    while(prevOCR1A == OCR1A) {
-      if (add) {
-        status.freq += delta;
-        if (status.freq > PWM_CONTROL_MAX_FREQ) {
-          status.freq = PWM_CONTROL_MAX_FREQ;
-        }
-      } else {
-        if (status.freq < (uint32_t)delta) {
-          status.freq = 0;
-        } else {
-          status.freq -= delta;
-        }
-      }
-
-      pwm_control_set(status.freq, status.duty);
-
-      if (status.freq == 0 || status.freq == PWM_CONTROL_MAX_FREQ) {
-        break;
-      }
+    if (pwm_control_freq > delta + PWM_CONTROL_MIN_FREQ) {
+      pwm_control_freq -= delta;
+    } else {
+      pwm_control_freq = PWM_CONTROL_MIN_FREQ;
     }
+  }
 
-    // correct duty
-    uint8_t expected = status.duty;
-    pwm_control_status(status);
-
-    if (status.duty < expected) {
-      OCR1B++;
-    }
+  if (pwm_control_enabled) {
+    pwm_control_apply();
   }
 }
 
 void pwm_control_add_duty(uint8_t delta, bool add) {
-  if (OCR1A == 0) {
-    pwm_control_set(PWM_CONTROL_DEFAULT_FREQ, delta);
-  } else {
-    uint16_t saveOCR1B = OCR1B;
-
-    t_pwm_control_status status;
-    pwm_control_status(status);
-    while (saveOCR1B == OCR1B) {
-      if (add) {
-        if (delta > 100) {
-          delta = 100;
-        }
-
-        if (status.duty > 100 - delta) {
-          status.duty = 100;
-        } else {
-          status.duty += delta;
-        }
-      } else {
-        if (status.duty < delta) {
-          status.duty = 0;
-        } else {
-          status.duty -= delta;
-        }
-      }
-
-      pwm_control_set(status.freq, status.duty);
-
-      if (status.duty == 100 || status.duty == 0) {
-        break;
-      }
+  if (add) {
+    if (pwm_control_duty + delta < 100) {
+      pwm_control_duty += delta;
+    } else {
+      pwm_control_duty = 100;
     }
+  } else {
+    if (pwm_control_duty > delta) {
+      pwm_control_duty -= delta;
+    } else {
+      pwm_control_duty = 0;
+    }
+  }
+
+  if (pwm_control_enabled) {
+    pwm_control_apply();
   }
 }
 
 void pwm_control_start() {
-  pwm_control_start(TCCR1B == 0);
+  pwm_control_start(!pwm_control_enabled);
 }
 
 void pwm_control_start(bool enabled) {
-  if (enabled) {
-    if (OCR1A == 0 || OCR1B == 0) {
-      return;
+  if (pwm_control_enabled != enabled) {
+    pwm_control_enabled = enabled;
+    pwm_control_apply();
+  }
+}
+
+void pwm_control_apply() {
+  Serial.print("pwm_control_apply: ");
+  Serial.print(pwm_control_freq);
+  Serial.print("Hz; ");
+  Serial.print(pwm_control_duty);
+  Serial.print("%; ");
+  Serial.println(pwm_control_enabled ? "enabled" : "disabled");
+ if (pwm_control_enabled) {
+    digitalWrite(PWM_CONTROL_PIN_GEN_SHUTDOWN, HIGH);
+
+    if (pwm_control_duty == 100 || pwm_control_duty == 0) {
+      pwm_contorl_reset_dac();
+      pwm_contorl_reset_gen();
+    } else {
+      pwm_control_reconfigure_dac();
+      pwm_control_reconfigure_gen();
     }
 
-    if (OCR1A == OCR1B) {
-      TCCR1B = 0;
-      digitalWrite(PWM_CONTROL_PIN, HIGH);
-    } else {    
-      digitalWrite(PWM_CONTROL_PIN, LOW);
-      TCCR1B = _BV(WGM13) | _BV(CS10);
-    }
-
-    pwm_control_enabled = true;
+    digitalWrite(PWM_CONTROL_PIN_GEN_ALWAYS_ON, (pwm_control_duty == 100) ? HIGH : LOW);
+    
+    digitalWrite(PWM_CONTROL_PIN_GEN_SHUTDOWN, LOW);
   } else {
-    TCCR1B = 0;
-    digitalWrite(PWM_CONTROL_PIN, LOW);
+    digitalWrite(PWM_CONTROL_PIN_GEN_SHUTDOWN, HIGH);
+    digitalWrite(PWM_CONTROL_PIN_GEN_ALWAYS_ON, LOW);
 
-    pwm_control_enabled = false;
+    pwm_contorl_reset_dac();
+    pwm_contorl_reset_gen();
   }
 }
 
 void pwm_control_status(t_pwm_control_status & status) {
+  status.duty = pwm_control_duty;
+  status.freq = pwm_control_freq;
   status.enabled = pwm_control_enabled;
-  if (OCR1A == 0) {
-    status.duty = 0;
-    status.freq = 0;
-  } else {
-    status.freq =  (uint32_t)F_CPU / (uint32_t)2 / (uint32_t)OCR1A;
-    status.duty = ((uint32_t)OCR1B * (uint32_t)100) / (uint32_t) OCR1A;
-  }
 }
+
+void pwm_contorl_reset_dac() {
+  pwm_control_ic2_write24(_BV(6) | _BV(4) | _BV(3) | _BV(1), 0, 0);
+}
+
+void pwm_contorl_reset_gen() {
+  pwm_control_spi_write16(_BV(8) | _BV(6) | _BV(7));
+}
+
+void pwm_control_reconfigure_dac() {
+  uint16_t vout = PWM_CONTROL_GENOUT_MAXV - ((uint32_t)PWM_CONTROL_GENOUT_VPP * (uint32_t)pwm_control_duty / (uint32_t)100);
+  uint16_t dacreg = ((uint32_t)vout * (uint32_t)4095) / (uint32_t)4096;
+
+  Serial.print("dac vout = ");
+  Serial.println(vout);
+
+  pwm_control_ic2_write24(_BV(6) | _BV(4) | _BV(3), (dacreg >> 4), ((dacreg & 0b00001111) << 4));
+}
+
+void pwm_control_reconfigure_gen() {
+  pwm_control_spi_write16(_BV(13) | _BV(8));
+
+  uint32_t freqreg = (((uint64_t)pwm_control_freq) * ((uint64_t)268435456)) / (uint64_t)25000000;
+  Serial.print("freqreg = ");
+  Serial.println(freqreg);
+
+  uint16_t freq0 = _BV(14) + (freqreg & 0b0011111111111111);
+  uint16_t freq1 = _BV(14) + (freqreg >> 14);
+
+  pwm_control_spi_write32(freq0, freq1);
+
+  pwm_control_spi_write16(_BV(15) | _BV(14));
+
+  pwm_control_spi_write16(_BV(13) | _BV(1));
+}
+
+void pwm_control_spi_write16(uint16_t value) {
+  SPI.beginTransaction(spisettings);
+  digitalWrite(PWM_CONTROL_PIN_SIGNAL_CS, LOW);
+
+  SPI.transfer16(value);
+
+  digitalWrite(PWM_CONTROL_PIN_SIGNAL_CS, HIGH);
+  SPI.endTransaction();
+
+  Serial.print("SPI write ");
+  Serial.println(value, HEX);
+}
+
+void pwm_control_spi_write32(uint16_t value1, uint16_t value2) {
+  SPI.beginTransaction(spisettings);
+  digitalWrite(PWM_CONTROL_PIN_SIGNAL_CS, LOW);
+
+  SPI.transfer16(value1);
+  SPI.transfer16(value2);
+
+  digitalWrite(PWM_CONTROL_PIN_SIGNAL_CS, HIGH);
+  SPI.endTransaction();
+
+  Serial.print("SPI write ");
+  Serial.print(value1, HEX);
+  Serial.print(" / ");
+  Serial.println(value2, HEX);
+}
+
+void pwm_control_ic2_write24(uint8_t value1, uint8_t value2, uint8_t value3) {
+  Wire.beginTransmission(PWM_CONTROL_DAC_I2C_ADDRESS);
+  Wire.write(value1);
+  Wire.write(value2);
+  Wire.write(value3);
+  Wire.endTransmission(true);
+
+  Serial.print("I2C write: ");
+  Serial.print(value1, HEX);
+  Serial.print(" / ");
+  Serial.print(value2, HEX);
+  Serial.print(" / ");
+  Serial.println(value3, HEX);
+}
+
+

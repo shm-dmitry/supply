@@ -9,7 +9,7 @@ This code based on projects:
 
 #include "stdint.h"
 
-void display_spi_init(uint8_t dc);
+void display_spi_init(uint8_t cs, uint8_t dc);
 void display_spi_send_command(uint8_t command, const uint8_t * data = 0, uint8_t datasize = 0);
 void display_spi_send_command_pgm(uint8_t command, const uint8_t * data = 0, uint8_t datasize = 0);
 

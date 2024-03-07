@@ -23,13 +23,13 @@ uint16_t power_output_sense_cache_i = 0;
 uint16_t power_output_sense_cache_v = 0;
 
 void power_output_sense_init() {
-  pinMode(POWER_OUTPUT_SENSE_PIN_I, INPUT);
-  pinMode(POWER_OUTPUT_SENSE_PIN_V, INPUT);
+  pinMode(PIN_POWER_OUTPUT_SENSE_I, INPUT);
+  pinMode(PIN_POWER_OUTPUT_SENSE_V, INPUT);
 }
 
 uint16_t power_output_sense_readI_x1000(bool readactual) {
   if (readactual) {
-    power_output_sense_cache_i = POWER_OUTPUT_SENSE_VI_TO_I(analogRead(POWER_OUTPUT_SENSE_PIN_I));
+    power_output_sense_cache_i = POWER_OUTPUT_SENSE_VI_TO_I(analogRead(PIN_POWER_OUTPUT_SENSE_I));
   }
   
   return power_output_sense_cache_i;
@@ -37,7 +37,7 @@ uint16_t power_output_sense_readI_x1000(bool readactual) {
 
 uint16_t power_output_sense_readV_x1000(bool readactual) {
   if (readactual) {
-  power_output_sense_cache_v = POWER_OUTPUT_SENSE_VV_TO_V(analogRead(POWER_OUTPUT_SENSE_PIN_V));
+    power_output_sense_cache_v = POWER_OUTPUT_SENSE_VV_TO_V(analogRead(PIN_POWER_OUTPUT_SENSE_V));
   }
 
   return power_output_sense_cache_v;
