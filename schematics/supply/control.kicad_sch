@@ -14559,7 +14559,7 @@
 				)
 			)
 		)
-		(property "Value" "220 nF"
+		(property "Value" "10 nF"
 			(at 77.47 165.1 90)
 			(effects
 				(font
@@ -16010,10 +16010,9 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Value" "220 nF"
+		(property "Value" "10 nF"
 			(at 171.45 165.1 90)
 			(effects
 				(font
@@ -18818,7 +18817,7 @@
 				)
 			)
 		)
-		(property "Value" "220 nF"
+		(property "Value" "10 nF"
 			(at 77.47 179.07 90)
 			(effects
 				(font
@@ -23823,7 +23822,7 @@
 				)
 			)
 		)
-		(property "Value" "220 nF"
+		(property "Value" "10 nF"
 			(at 171.45 179.07 90)
 			(effects
 				(font
