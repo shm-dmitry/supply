@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.0,
-          "height": 1.7,
-          "width": 1.7
+          "drill": 0.0,
+          "height": 2.0,
+          "width": 2.0
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -111,9 +111,7 @@
         "silk_edge_clearance|190460000|235500000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|6161897e-7c0c-4b75-b40c-de3668583afc",
         "silk_edge_clearance|193000000|235500000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|a36c0a4e-eb42-411d-9b55-b5f4b769ad2b",
         "silk_edge_clearance|195600000|235500000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|9141804b-b491-4cc1-be36-4ac9917861ad",
-        "silk_edge_clearance|88640000|235500000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|cf4bca9e-22c7-483b-b78e-4c2fb80505dd",
-        "unresolved_variable|115500000|203200000|f1a01a6e-142b-48a0-9223-9a3f8df43f07|00000000-0000-0000-0000-000000000000",
-        "unresolved_variable|117000000|149100000|c23c0b24-7236-4371-8d20-e67fe707bebf|00000000-0000-0000-0000-000000000000"
+        "silk_edge_clearance|88640000|235500000|10cffe6c-8ad2-4f8c-bdde-06141bf7a59f|cf4bca9e-22c7-483b-b78e-4c2fb80505dd"
       ],
       "meta": {
         "version": 2
@@ -135,6 +133,7 @@
         "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
         "hole_near_hole": "error",
+        "holes_co_located": "warning",
         "invalid_outline": "error",
         "isolated_copper": "warning",
         "item_on_disabled_layer": "error",
@@ -796,7 +795,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "production/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -807,6 +806,7 @@
   },
   "schematic": {
     "annotate_start_num": 0,
+    "bom_export_filename": "",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",

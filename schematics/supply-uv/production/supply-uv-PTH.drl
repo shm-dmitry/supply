@@ -1,29 +1,29 @@
 M48
-; DRILL file {KiCad 7.0.8-7.0.8~ubuntu22.04.1} date Вт 31 окт 2023 14:25:46
+; DRILL file {KiCad 8.0.1-8.0.1-1~ubuntu22.04.1} date 2024-04-06T20:35:12+0300
 ; FORMAT={-:-/ absolute / inch / decimal}
-; #@! TF.CreationDate,2023-10-31T14:25:46+03:00
-; #@! TF.GenerationSoftware,Kicad,Pcbnew,7.0.8-7.0.8~ubuntu22.04.1
+; #@! TF.CreationDate,2024-04-06T20:35:12+03:00
+; #@! TF.GenerationSoftware,Kicad,Pcbnew,8.0.1-8.0.1-1~ubuntu22.04.1
 ; #@! TF.FileFunction,Plated,1,2,PTH
 FMAT,2
 INCH
 ; #@! TA.AperFunction,Plated,PTH,ViaDrill
 T1C0.0157
 ; #@! TA.AperFunction,Plated,PTH,ComponentDrill
-T2C0.0315
+T2C0.0300
 ; #@! TA.AperFunction,Plated,PTH,ComponentDrill
-T3C0.0354
+T3C0.0315
 ; #@! TA.AperFunction,Plated,PTH,ComponentDrill
-T4C0.0394
+T4C0.0354
 ; #@! TA.AperFunction,Plated,PTH,ComponentDrill
-T5C0.0433
+T5C0.0394
 ; #@! TA.AperFunction,Plated,PTH,ComponentDrill
-T6C0.0472
+T6C0.0433
 ; #@! TA.AperFunction,Plated,PTH,ComponentDrill
-T7C0.0512
+T7C0.0472
 ; #@! TA.AperFunction,Plated,PTH,ComponentDrill
-T8C0.0551
+T8C0.0512
 ; #@! TA.AperFunction,Plated,PTH,ComponentDrill
-T9C0.0591
+T9C0.0551
 ; #@! TA.AperFunction,Plated,PTH,ComponentDrill
 T10C0.0630
 ; #@! TA.AperFunction,Plated,PTH,ComponentDrill
@@ -40,6 +40,8 @@ X4.5669Y-4.4843
 X4.6161Y-4.1845
 X6.1024Y-4.2913
 T2
+X2.5197Y-3.8386
+T3
 X4.2067Y-2.124
 X4.313Y-1.8287
 X4.4587Y-2.124
@@ -64,15 +66,15 @@ X6.0994Y-3.5039
 X6.0994Y-3.8039
 X6.1994Y-3.5039
 X6.1994Y-3.8039
-T3
+T4
 X4.8228Y-4.1589
 X4.8228Y-4.2589
 X5.1382Y-4.0251
 X5.2382Y-4.0251
-T4
+T5
 X4.2657Y-2.876
 X4.7382Y-2.876
-T5
+T6
 X3.2222Y-3.9906
 X3.2222Y-4.0906
 X3.2222Y-4.1906
@@ -85,26 +87,24 @@ X5.7756Y-5.0555
 X6.0913Y-4.9055
 X6.1913Y-4.9055
 X6.2913Y-4.9055
-T6
+T7
 X2.7213Y-3.3543
 X3.0166Y-3.3543
 X5.0118Y-1.8189
 X5.0118Y-2.4094
 X5.9365Y-5.3386
 X6.2318Y-5.3386
-T7
+T8
 X4.2638Y-2.3937
 X4.5Y-2.9528
 X4.7382Y-2.3957
-T8
+T9
 X2.9997Y-2.7354
 X3.1997Y-2.7354
 X3.3997Y-2.7354
 X3.5997Y-2.7354
 X5.0433Y-2.7093
 X5.0433Y-2.9994
-T9
-X2.6083Y-3.9582
 T10
 X3.4843Y-3.2074
 X3.4843Y-3.4074
@@ -147,5 +147,4 @@ X5.0Y-5.5822
 X5.3346Y-1.8701
 X5.3346Y-2.1772
 X5.3346Y-2.4843
-T0
 M30

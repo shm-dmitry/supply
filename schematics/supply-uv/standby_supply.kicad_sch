@@ -2797,7 +2797,7 @@
 				)
 			)
 			(property "Datasheet" "https://www.infineon.com/dgdl/irlml5203pbf.pdf?fileId=5546d462533600a40153566868da261d"
-				(at 0 0 0)
+				(at 5.08 -3.81 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3122,7 +3122,7 @@
 				(pin power_out line
 					(at 0 0 90)
 					(length 0)
-					(name "pwr"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3726,7 +3726,7 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 77.47) (xy 81.28 77.47)
+			(xy 67.31 77.47) (xy 73.66 77.47)
 		)
 		(stroke
 			(width 0)
@@ -3816,6 +3816,16 @@
 	)
 	(wire
 		(pts
+			(xy 92.71 77.47) (xy 104.14 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "714495f8-ed52-4396-b729-e5ccf2d01842")
+	)
+	(wire
+		(pts
 			(xy 153.67 67.31) (xy 153.67 77.47)
 		)
 		(stroke
@@ -3893,6 +3903,16 @@
 			(type default)
 		)
 		(uuid "7d0d352e-1401-4bd1-83f8-2e8d9b8b4c0e")
+	)
+	(wire
+		(pts
+			(xy 81.28 77.47) (xy 85.09 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d317ea7-586e-446a-8ec9-70dbd1b4f143")
 	)
 	(wire
 		(pts
@@ -4103,16 +4123,6 @@
 			(type default)
 		)
 		(uuid "afa586c7-489a-416b-b3a2-c458179342c1")
-	)
-	(wire
-		(pts
-			(xy 88.9 77.47) (xy 104.14 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b1f30235-e7d7-4122-afac-16dcf8717c0b")
 	)
 	(wire
 		(pts
@@ -4815,7 +4825,7 @@
 	)
 	(symbol
 		(lib_id "Device:D")
-		(at 85.09 77.47 0)
+		(at 77.47 77.47 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4823,7 +4833,7 @@
 		(dnp no)
 		(uuid "0c32a278-11fd-4d7d-876a-d72e85263e0d")
 		(property "Reference" "D3"
-			(at 81.28 74.93 0)
+			(at 73.66 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4831,7 +4841,7 @@
 			)
 		)
 		(property "Value" "FR107"
-			(at 88.9 74.93 0)
+			(at 81.28 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4839,7 +4849,7 @@
 			)
 		)
 		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal"
-			(at 85.09 77.47 0)
+			(at 77.47 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4848,7 +4858,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 85.09 77.47 0)
+			(at 77.47 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4857,7 +4867,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 85.09 77.47 0)
+			(at 77.47 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4866,7 +4876,7 @@
 			)
 		)
 		(property "Sim.Device" "D"
-			(at 85.09 77.47 0)
+			(at 77.47 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4875,7 +4885,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 85.09 77.47 0)
+			(at 77.47 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5176,7 +5186,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Special symbol for telling ERC where power comes from"
 			(at 48.26 95.25 0)
 			(effects
 				(font
@@ -5360,7 +5370,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "3a67f7db-fe12-4743-ad7d-8de2d2409902")
 		(property "Reference" "C7"
 			(at 119.38 101.6 0)
@@ -5446,7 +5456,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "33"
+		(property "Value" "10"
 			(at 81.28 101.6 90)
 			(effects
 				(font
@@ -5907,7 +5917,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6dbad363-b1ad-49f3-9420-d044d644b3cd")
-		(property "Reference" "D1"
+		(property "Reference" "D5"
 			(at 128.5875 167.64 0)
 			(effects
 				(font
@@ -5958,12 +5968,12 @@
 		)
 		(instances
 			(project "supply"
-				(path "/1e139717-fcd1-4008-a6ea-4c993845e928/b56319b0-4827-4b6e-9ec0-247d1d8495e7"
-					(reference "D1")
-					(unit 1)
-				)
 				(path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
 					(reference "D5")
+					(unit 1)
+				)
+				(path "/1e139717-fcd1-4008-a6ea-4c993845e928/b56319b0-4827-4b6e-9ec0-247d1d8495e7"
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -6142,7 +6152,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5"
+		(property "Value" "10"
 			(at 81.28 109.22 90)
 			(effects
 				(font
@@ -6557,7 +6567,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "-3.0A Id, -30V Vds, 98mOhm Rds, P-Channel HEXFET Power MOSFET, SOT-23"
 			(at 231.14 129.54 0)
 			(effects
 				(font
@@ -6583,12 +6593,12 @@
 				)
 			)
 			(project "supply"
-				(path "/1e139717-fcd1-4008-a6ea-4c993845e928/ce2ff71a-422a-4b17-921a-2433d38ec044"
-					(reference "Q10")
-					(unit 1)
-				)
 				(path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
 					(reference "Q2")
+					(unit 1)
+				)
+				(path "/1e139717-fcd1-4008-a6ea-4c993845e928/ce2ff71a-422a-4b17-921a-2433d38ec044"
+					(reference "Q10")
 					(unit 1)
 				)
 			)
@@ -6685,7 +6695,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8ba5182e-1071-4750-9cb9-387923bf8236")
-		(property "Reference" "JP6"
+		(property "Reference" "JP7"
 			(at 204.47 135.89 0)
 			(effects
 				(font
@@ -6736,12 +6746,12 @@
 		)
 		(instances
 			(project "supply"
-				(path "/1e139717-fcd1-4008-a6ea-4c993845e928/ce2ff71a-422a-4b17-921a-2433d38ec044"
-					(reference "JP6")
-					(unit 1)
-				)
 				(path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
 					(reference "JP7")
+					(unit 1)
+				)
+				(path "/1e139717-fcd1-4008-a6ea-4c993845e928/ce2ff71a-422a-4b17-921a-2433d38ec044"
+					(reference "JP6")
 					(unit 1)
 				)
 			)
@@ -6911,7 +6921,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "958f02c4-b9c5-4cea-bf4e-5d9b81b6abb0")
-		(property "Reference" "QP1"
+		(property "Reference" "Q1"
 			(at 100.33 102.87 0)
 			(effects
 				(font
@@ -6965,12 +6975,12 @@
 		)
 		(instances
 			(project "supply"
-				(path "/1e139717-fcd1-4008-a6ea-4c993845e928/b56319b0-4827-4b6e-9ec0-247d1d8495e7"
-					(reference "QP1")
-					(unit 1)
-				)
 				(path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
 					(reference "Q1")
+					(unit 1)
+				)
+				(path "/1e139717-fcd1-4008-a6ea-4c993845e928/b56319b0-4827-4b6e-9ec0-247d1d8495e7"
+					(reference "QP1")
 					(unit 1)
 				)
 			)
@@ -7068,7 +7078,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9e7990ab-31b5-4085-b4b8-a38b293814f0")
-		(property "Reference" "D1"
+		(property "Reference" "D6"
 			(at 219.71 72.0725 90)
 			(effects
 				(font
@@ -7121,12 +7131,12 @@
 		)
 		(instances
 			(project "supply"
-				(path "/1e139717-fcd1-4008-a6ea-4c993845e928/b56319b0-4827-4b6e-9ec0-247d1d8495e7"
-					(reference "D1")
-					(unit 1)
-				)
 				(path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
 					(reference "D6")
+					(unit 1)
+				)
+				(path "/1e139717-fcd1-4008-a6ea-4c993845e928/b56319b0-4827-4b6e-9ec0-247d1d8495e7"
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -7419,7 +7429,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Special symbol for telling ERC where power comes from"
 			(at 39.37 173.99 0)
 			(effects
 				(font
@@ -7623,7 +7633,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d03eeb3f-95f7-4bc5-b089-4e93bfee8944")
-		(property "Reference" "U24"
+		(property "Reference" "U5"
 			(at 151.13 116.84 90)
 			(effects
 				(font
@@ -7681,12 +7691,12 @@
 		)
 		(instances
 			(project "supply"
-				(path "/1e139717-fcd1-4008-a6ea-4c993845e928/bcabd54f-a555-4409-9a4f-89c20a3d7682"
-					(reference "U24")
-					(unit 1)
-				)
 				(path "/1e139717-fcd1-4008-a6ea-4c993845e928/07fd8385-9dfd-4a86-92c6-a09da3061b53"
 					(reference "U5")
+					(unit 1)
+				)
+				(path "/1e139717-fcd1-4008-a6ea-4c993845e928/bcabd54f-a555-4409-9a4f-89c20a3d7682"
+					(reference "U24")
 					(unit 1)
 				)
 			)
@@ -7743,7 +7753,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Special symbol for telling ERC where power comes from"
 			(at 22.86 154.94 0)
 			(effects
 				(font
@@ -7765,6 +7775,73 @@
 			(project "supply-uv"
 				(path "/ef40850c-d0bf-4cba-961b-9aba418f8e73/1d298a4f-cf0d-440c-81b9-131daf06c23a"
 					(reference "#FLG03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 88.9 77.47 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e36a5179-eda9-40c8-bfd0-f2d43da3f064")
+		(property "Reference" "R20"
+			(at 85.852 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "150"
+			(at 91.694 80.264 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 88.9 79.248 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 88.9 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "42fbda8f-72b0-4a87-a788-aa62cc94e9f5")
+		)
+		(pin "2"
+			(uuid "99cf10f9-c1e1-474d-b6fc-55394a9f4c5e")
+		)
+		(instances
+			(project "supply-uv"
+				(path "/ef40850c-d0bf-4cba-961b-9aba418f8e73/1d298a4f-cf0d-440c-81b9-131daf06c23a"
+					(reference "R20")
 					(unit 1)
 				)
 			)

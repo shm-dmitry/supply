@@ -59,9 +59,8 @@
         }
       ],
       "drc_exclusions": [
-        "courtyards_overlap|84750001|123832501|2ec3efe7-0092-4b06-9771-90464041ad92|f3d98f82-369f-4f8b-b4ea-d775f3026f01",
-        "silk_edge_clearance|104500000|44000000|2c8b8d77-d4ae-475d-9697-8ba13897ac68|f7e10cbf-871a-4152-9338-21ea925968f2",
-        "silk_edge_clearance|63500000|44000000|2c8b8d77-d4ae-475d-9697-8ba13897ac68|db1dff20-458e-4f23-95c7-a053662be2e3"
+        "silk_edge_clearance|104500000|44000000|2c8b8d77-d4ae-475d-9697-8ba13897ac68|eaff9942-fbfd-48e9-a4bf-69be442afc85",
+        "silk_edge_clearance|63500000|44000000|2c8b8d77-d4ae-475d-9697-8ba13897ac68|82664839-8f57-4149-99e4-6d9d5e2dced4"
       ],
       "meta": {
         "version": 2
@@ -83,6 +82,7 @@
         "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
         "hole_near_hole": "error",
+        "holes_co_located": "warning",
         "invalid_outline": "error",
         "isolated_copper": "warning",
         "item_on_disabled_layer": "error",
@@ -750,7 +750,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "production/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -761,6 +761,7 @@
   },
   "schematic": {
     "annotate_start_num": 0,
+    "bom_export_filename": "",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
