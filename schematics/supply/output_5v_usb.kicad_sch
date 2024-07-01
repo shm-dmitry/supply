@@ -10864,25 +10864,6 @@
 		)
 		(uuid "fec2500d-6c15-4511-8c24-5efc5fe2a0b2")
 	)
-	(text_box "CHANGES:\n1. capacitor[10 nF] on U12 [out-ref]\n2. R[2K] on U3 [pin 1-2]\n3. capacitor[100 nF] on U5[9->gnd]"
-		(exclude_from_sim no)
-		(at 271.78 -97.79 0)
-		(size 88.9 66.04)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "f5ddf41d-7fdb-4e93-a589-d2f2a3ccff0c")
-	)
 	(text "http://rones.su/techno/charging_ports_types.html?ysclid=lhaecelpgh622142446"
 		(exclude_from_sim no)
 		(at 175.26 19.05 0)
