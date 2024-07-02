@@ -2988,10 +2988,6 @@
 		(uuid "35236f86-6f80-4d20-a253-51eaa046caad")
 	)
 	(no_connect
-		(at 144.78 106.68)
-		(uuid "4de62879-e098-4f29-a075-754600077573")
-	)
-	(no_connect
 		(at 144.78 101.6)
 		(uuid "8a7d823f-4c91-428e-927a-8c8448de7329")
 	)
@@ -3441,6 +3437,16 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 106.68) (xy 149.86 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "718e831b-669a-4f32-ae5e-beeeb22c8f5d")
+	)
+	(wire
+		(pts
 			(xy 486.41 121.92) (xy 486.41 124.46)
 		)
 		(stroke
@@ -3528,6 +3534,16 @@
 			(type default)
 		)
 		(uuid "7f4fd9f3-deb0-480b-9a07-1ce1d64eed22")
+	)
+	(wire
+		(pts
+			(xy 83.82 223.52) (xy 88.9 223.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "80a7cdb1-14f4-467a-be53-9d79bbd2fd12")
 	)
 	(wire
 		(pts
@@ -4270,6 +4286,17 @@
 		)
 		(uuid "2f49a13a-0be5-4fe1-a52f-d84e9a8cb3f9")
 	)
+	(label "IS_ONOFF_BUTTON_PRESSED"
+		(at 149.86 106.68 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "35951d8d-8ed0-4885-91a9-30d356498d84")
+	)
 	(label "POWER_OUTPUT_OVERLOADED_LED"
 		(at 107.95 124.46 180)
 		(fields_autoplaced yes)
@@ -4509,6 +4536,18 @@
 			(justify right)
 		)
 		(uuid "34983c4a-78f8-44bb-b0e4-92c36929d615")
+	)
+	(hierarchical_label "VSYS_PWR_GND"
+		(shape input)
+		(at 83.82 223.52 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "373bad3b-bc59-494d-98da-23aa2d3c7c5d")
 	)
 	(hierarchical_label "VSYS_GND"
 		(shape input)
@@ -4832,7 +4871,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "01402d74-e190-4c03-b454-88ecdd9b2189")
-		(property "Reference" "TP17"
+		(property "Reference" "TP35"
 			(at 222.25 109.728 0)
 			(effects
 				(font
@@ -4883,7 +4922,7 @@
 		(instances
 			(project "supply-uv"
 				(path "/ef40850c-d0bf-4cba-961b-9aba418f8e73/8f5c41f8-d5bb-4869-a96f-64e58008be54"
-					(reference "TP17")
+					(reference "TP35")
 					(unit 1)
 				)
 			)
@@ -4899,7 +4938,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "034a9777-3f38-4af1-9ead-fbd8550b0146")
-		(property "Reference" "TP20"
+		(property "Reference" "TP38"
 			(at 521.97 105.918 0)
 			(effects
 				(font
@@ -4950,7 +4989,7 @@
 		(instances
 			(project "supply-uv"
 				(path "/ef40850c-d0bf-4cba-961b-9aba418f8e73/8f5c41f8-d5bb-4869-a96f-64e58008be54"
-					(reference "TP20")
+					(reference "TP38")
 					(unit 1)
 				)
 			)
@@ -5094,7 +5133,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "18c58084-4457-412e-b2ce-a496105952cb")
-		(property "Reference" "D18"
+		(property "Reference" "D20"
 			(at 502.92 88.9 0)
 			(effects
 				(font
@@ -5164,7 +5203,7 @@
 		(instances
 			(project "supply-uv"
 				(path "/ef40850c-d0bf-4cba-961b-9aba418f8e73/8f5c41f8-d5bb-4869-a96f-64e58008be54"
-					(reference "D18")
+					(reference "D20")
 					(unit 1)
 				)
 			)
@@ -5266,7 +5305,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "27905312-93fb-46f2-8432-c026e85c6c05")
-		(property "Reference" "TP14"
+		(property "Reference" "TP32"
 			(at 222.25 77.9779 0)
 			(effects
 				(font
@@ -5317,7 +5356,7 @@
 		(instances
 			(project "supply-uv"
 				(path "/ef40850c-d0bf-4cba-961b-9aba418f8e73/8f5c41f8-d5bb-4869-a96f-64e58008be54"
-					(reference "TP14")
+					(reference "TP32")
 					(unit 1)
 				)
 			)
@@ -5543,7 +5582,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4a036706-38dd-49d7-8204-d5cdb58a01e5")
-		(property "Reference" "TP15"
+		(property "Reference" "TP33"
 			(at 222.25 89.408 0)
 			(effects
 				(font
@@ -5594,7 +5633,7 @@
 		(instances
 			(project "supply-uv"
 				(path "/ef40850c-d0bf-4cba-961b-9aba418f8e73/8f5c41f8-d5bb-4869-a96f-64e58008be54"
-					(reference "TP15")
+					(reference "TP33")
 					(unit 1)
 				)
 			)
@@ -5678,7 +5717,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6434e2a7-c27b-4ed6-88bd-be6aed9b008e")
-		(property "Reference" "TP18"
+		(property "Reference" "TP36"
 			(at 491.49 88.138 0)
 			(effects
 				(font
@@ -5729,7 +5768,7 @@
 		(instances
 			(project "supply-uv"
 				(path "/ef40850c-d0bf-4cba-961b-9aba418f8e73/8f5c41f8-d5bb-4869-a96f-64e58008be54"
-					(reference "TP18")
+					(reference "TP36")
 					(unit 1)
 				)
 			)
@@ -5745,7 +5784,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6a44b1dc-937c-43d7-8b74-15a40a25e5fd")
-		(property "Reference" "TP16"
+		(property "Reference" "TP34"
 			(at 222.25 99.568 0)
 			(effects
 				(font
@@ -5796,7 +5835,7 @@
 		(instances
 			(project "supply-uv"
 				(path "/ef40850c-d0bf-4cba-961b-9aba418f8e73/8f5c41f8-d5bb-4869-a96f-64e58008be54"
-					(reference "TP16")
+					(reference "TP34")
 					(unit 1)
 				)
 			)
@@ -5812,7 +5851,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6b194848-5c71-4aa3-a6b6-e429f41fdcd9")
-		(property "Reference" "J6"
+		(property "Reference" "J7"
 			(at 300.99 129.54 0)
 			(effects
 				(font
@@ -5869,7 +5908,7 @@
 		(instances
 			(project "supply-uv"
 				(path "/ef40850c-d0bf-4cba-961b-9aba418f8e73/8f5c41f8-d5bb-4869-a96f-64e58008be54"
-					(reference "J6")
+					(reference "J7")
 					(unit 1)
 				)
 			)
@@ -6098,6 +6137,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 88.9 223.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "82cac4dc-6bdf-48e7-85f1-0187793984be")
+		(property "Reference" "TP31"
+			(at 91.44 218.9479 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "VSYS_GND"
+			(at 91.44 221.4879 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Library:TestPoint_Plated_Hole_D1.0mm"
+			(at 93.98 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 93.98 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 88.9 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c7072200-fb8f-4144-a640-3b61f73b8cbc")
+		)
+		(instances
+			(project "supply-uv"
+				(path "/ef40850c-d0bf-4cba-961b-9aba418f8e73/8f5c41f8-d5bb-4869-a96f-64e58008be54"
+					(reference "TP31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x03_Pin")
 		(at 322.58 130.81 0)
 		(unit 1)
@@ -6107,7 +6213,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "82f847a5-bcca-4765-b2b3-f6483cbed33a")
-		(property "Reference" "J7"
+		(property "Reference" "J8"
 			(at 323.215 123.19 0)
 			(effects
 				(font
@@ -6162,7 +6268,7 @@
 		(instances
 			(project "supply-uv"
 				(path "/ef40850c-d0bf-4cba-961b-9aba418f8e73/8f5c41f8-d5bb-4869-a96f-64e58008be54"
-					(reference "J7")
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -6178,7 +6284,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8e0f5973-6db1-4755-8c69-27f869b0272e")
-		(property "Reference" "J5"
+		(property "Reference" "J6"
 			(at 223.52 29.21 0)
 			(effects
 				(font
@@ -6281,7 +6387,7 @@
 		(instances
 			(project "supply-uv"
 				(path "/ef40850c-d0bf-4cba-961b-9aba418f8e73/8f5c41f8-d5bb-4869-a96f-64e58008be54"
-					(reference "J5")
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -6512,7 +6618,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9d605b8d-c7fc-4565-ab0e-eccc1b33240a")
-		(property "Reference" "C69"
+		(property "Reference" "C68"
 			(at 171.45 223.52 0)
 			(effects
 				(font
@@ -6566,7 +6672,7 @@
 		(instances
 			(project "supply-uv"
 				(path "/ef40850c-d0bf-4cba-961b-9aba418f8e73/8f5c41f8-d5bb-4869-a96f-64e58008be54"
-					(reference "C69")
+					(reference "C68")
 					(unit 1)
 				)
 			)
@@ -6582,7 +6688,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a33a6e40-1b9c-4d59-895e-7c9badbb3cf7")
-		(property "Reference" "C68"
+		(property "Reference" "C70"
 			(at 476.25 97.7899 0)
 			(effects
 				(font
@@ -6636,7 +6742,7 @@
 		(instances
 			(project "supply-uv"
 				(path "/ef40850c-d0bf-4cba-961b-9aba418f8e73/8f5c41f8-d5bb-4869-a96f-64e58008be54"
-					(reference "C68")
+					(reference "C70")
 					(unit 1)
 				)
 			)
@@ -6652,7 +6758,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a4cf075b-9268-4133-b806-e69a23594fec")
-		(property "Reference" "D16"
+		(property "Reference" "D18"
 			(at 363.22 134.9375 90)
 			(effects
 				(font
@@ -6706,7 +6812,7 @@
 		(instances
 			(project "supply-uv"
 				(path "/ef40850c-d0bf-4cba-961b-9aba418f8e73/8f5c41f8-d5bb-4869-a96f-64e58008be54"
-					(reference "D16")
+					(reference "D18")
 					(unit 1)
 				)
 			)
@@ -7075,7 +7181,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b73a06de-d69d-4ae9-ac87-4859b3dae347")
-		(property "Reference" "TP19"
+		(property "Reference" "TP37"
 			(at 491.49 116.078 0)
 			(effects
 				(font
@@ -7126,7 +7232,7 @@
 		(instances
 			(project "supply-uv"
 				(path "/ef40850c-d0bf-4cba-961b-9aba418f8e73/8f5c41f8-d5bb-4869-a96f-64e58008be54"
-					(reference "TP19")
+					(reference "TP37")
 					(unit 1)
 				)
 			)
@@ -7142,7 +7248,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c8a67c72-8187-4735-a03b-636a67c9ac9f")
-		(property "Reference" "D15"
+		(property "Reference" "D17"
 			(at 345.44 134.9375 90)
 			(effects
 				(font
@@ -7196,7 +7302,7 @@
 		(instances
 			(project "supply-uv"
 				(path "/ef40850c-d0bf-4cba-961b-9aba418f8e73/8f5c41f8-d5bb-4869-a96f-64e58008be54"
-					(reference "D15")
+					(reference "D17")
 					(unit 1)
 				)
 			)
@@ -7212,7 +7318,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cc77d03a-a163-4faf-b41e-cf146cd3440f")
-		(property "Reference" "D17"
+		(property "Reference" "D19"
 			(at 501.65 116.84 0)
 			(effects
 				(font
@@ -7282,7 +7388,7 @@
 		(instances
 			(project "supply-uv"
 				(path "/ef40850c-d0bf-4cba-961b-9aba418f8e73/8f5c41f8-d5bb-4869-a96f-64e58008be54"
-					(reference "D17")
+					(reference "D19")
 					(unit 1)
 				)
 			)
@@ -7298,7 +7404,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e32c7608-bff8-4963-abbd-dc0d19dfacbd")
-		(property "Reference" "C70"
+		(property "Reference" "C69"
 			(at 194.31 223.52 0)
 			(effects
 				(font
@@ -7352,7 +7458,7 @@
 		(instances
 			(project "supply-uv"
 				(path "/ef40850c-d0bf-4cba-961b-9aba418f8e73/8f5c41f8-d5bb-4869-a96f-64e58008be54"
-					(reference "C70")
+					(reference "C69")
 					(unit 1)
 				)
 			)

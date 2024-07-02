@@ -918,15 +918,11 @@
     ],
     [
       "bcabd54f-a555-4409-9a4f-89c20a3d7682",
-      "Internal 5V & out usb"
+      "usb ports"
     ],
     [
       "ce2ff71a-422a-4b17-921a-2433d38ec044",
       "Control & Fan"
-    ],
-    [
-      "4671650e-ec71-47e3-a051-fc2ad6d25f63",
-      "Power output"
     ],
     [
       "39d9543b-2a42-4758-87e9-56ce3e85ea36",
