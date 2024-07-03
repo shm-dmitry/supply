@@ -9524,6 +9524,18 @@
 		)
 		(uuid "3b8b90ea-c48b-4bd5-9580-a656c6cdd2ea")
 	)
+	(text "Output:\n17.2V@1A, UNISOLATED\n5V@1A, ISOLATED\n5V@0.5A, ISOLATED\n\n"
+		(exclude_from_sim no)
+		(at 491.744 62.23 0)
+		(effects
+			(font
+				(size 5 5)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "41012d26-4144-4f29-9faf-62b1e4ff54e4")
+	)
 	(text "8 ... 12 V"
 		(exclude_from_sim no)
 		(at 170.18 165.354 0)
