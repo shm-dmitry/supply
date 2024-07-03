@@ -8037,7 +8037,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Library:TestPoint_Plated_Hole_D1.0mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
 			(at 534.67 123.19 0)
 			(effects
 				(font
@@ -8929,7 +8929,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Library:TestPoint_Plated_Hole_D1.0mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
 			(at 111.76 153.67 0)
 			(effects
 				(font
