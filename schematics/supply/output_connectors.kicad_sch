@@ -3709,12 +3709,6 @@
 		(uuid "8274505f-6260-403d-90fd-0554c03f6541")
 	)
 	(junction
-		(at 359.41 88.9)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "85a97fa3-fd32-4ae0-812a-9541370482d9")
-	)
-	(junction
 		(at 207.01 181.61)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3787,6 +3781,12 @@
 		(uuid "ebab055c-85a4-4fe8-a7ac-5cdfcdca62bf")
 	)
 	(junction
+		(at 359.41 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eedefba4-655d-4851-8325-e96e41c4e64e")
+	)
+	(junction
 		(at 44.45 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3814,7 +3814,7 @@
 	)
 	(wire
 		(pts
-			(xy 359.41 91.44) (xy 361.95 91.44)
+			(xy 359.41 91.44) (xy 363.22 91.44)
 		)
 		(stroke
 			(width 0)
@@ -3884,7 +3884,7 @@
 	)
 	(wire
 		(pts
-			(xy 353.06 20.32) (xy 356.87 20.32)
+			(xy 344.17 59.69) (xy 347.98 59.69)
 		)
 		(stroke
 			(width 0)
@@ -4094,7 +4094,7 @@
 	)
 	(wire
 		(pts
-			(xy 351.79 17.78) (xy 356.87 17.78)
+			(xy 342.9 57.15) (xy 347.98 57.15)
 		)
 		(stroke
 			(width 0)
@@ -4204,7 +4204,7 @@
 	)
 	(wire
 		(pts
-			(xy 353.06 44.45) (xy 356.87 44.45)
+			(xy 344.17 69.85) (xy 347.98 69.85)
 		)
 		(stroke
 			(width 0)
@@ -4441,16 +4441,6 @@
 			(type default)
 		)
 		(uuid "6054b952-9fc5-4edd-a55e-9bce7a77f69c")
-	)
-	(wire
-		(pts
-			(xy 382.27 88.9) (xy 382.27 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "60a5372e-5fe1-4185-b562-9d74475da642")
 	)
 	(wire
 		(pts
@@ -4884,6 +4874,16 @@
 	)
 	(wire
 		(pts
+			(xy 363.22 83.82) (xy 359.41 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "abf5f40e-8527-4a37-acbe-4e318460283a")
+	)
+	(wire
+		(pts
 			(xy 359.41 86.36) (xy 359.41 88.9)
 		)
 		(stroke
@@ -5164,7 +5164,7 @@
 	)
 	(wire
 		(pts
-			(xy 350.52 41.91) (xy 356.87 41.91)
+			(xy 341.63 67.31) (xy 347.98 67.31)
 		)
 		(stroke
 			(width 0)
@@ -5294,16 +5294,6 @@
 	)
 	(wire
 		(pts
-			(xy 359.41 88.9) (xy 382.27 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f683570f-7798-49c7-88e6-0765894a077f")
-	)
-	(wire
-		(pts
 			(xy 165.1 251.46) (xy 168.91 251.46)
 		)
 		(stroke
@@ -5429,7 +5419,7 @@
 		(uuid "118c9ce8-2d83-4d61-924a-7badc8ffdd8d")
 	)
 	(label "5V_FUSE"
-		(at 350.52 41.91 180)
+		(at 341.63 67.31 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5737,7 +5727,7 @@
 		(uuid "ef3a905f-6dae-49ea-ae4a-2d458629cd41")
 	)
 	(label "3.3V_FUSE"
-		(at 351.79 17.78 180)
+		(at 342.9 57.15 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5819,7 +5809,7 @@
 	)
 	(hierarchical_label "+5V_GND"
 		(shape input)
-		(at 353.06 20.32 180)
+		(at 344.17 59.69 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5951,7 +5941,7 @@
 	)
 	(hierarchical_label "+5V_GND"
 		(shape input)
-		(at 353.06 44.45 180)
+		(at 344.17 69.85 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5999,13 +5989,13 @@
 	)
 	(hierarchical_label "+5V_GND"
 		(shape input)
-		(at 382.27 91.44 270)
+		(at 363.22 83.82 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "a84af3fb-a884-4a0e-98cb-ee2226210028")
 	)
@@ -6059,7 +6049,7 @@
 	)
 	(hierarchical_label "SIGNAL_OUT"
 		(shape input)
-		(at 361.95 91.44 0)
+		(at 363.22 91.44 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6531,7 +6521,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Socket")
-		(at 361.95 44.45 0)
+		(at 353.06 69.85 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6540,7 +6530,7 @@
 		(dnp no)
 		(uuid "2f52aca0-ce70-4371-b416-cc5e12fb7f3f")
 		(property "Reference" "J20"
-			(at 363.22 41.91 0)
+			(at 354.33 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6549,7 +6539,7 @@
 			)
 		)
 		(property "Value" "jst xh angle"
-			(at 363.22 44.45 0)
+			(at 354.33 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6558,7 +6548,7 @@
 			)
 		)
 		(property "Footprint" "Connector_JST:JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal"
-			(at 361.95 44.45 0)
+			(at 353.06 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6567,7 +6557,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 361.95 44.45 0)
+			(at 353.06 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6576,7 +6566,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 361.95 44.45 0)
+			(at 353.06 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7110,7 +7100,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Socket")
-		(at 361.95 20.32 0)
+		(at 353.06 59.69 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7119,7 +7109,7 @@
 		(dnp no)
 		(uuid "519a4d78-8760-4468-a2bd-5c5d84aaac9f")
 		(property "Reference" "J19"
-			(at 363.22 17.78 0)
+			(at 354.33 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7128,7 +7118,7 @@
 			)
 		)
 		(property "Value" "jst xh angle"
-			(at 363.22 20.32 0)
+			(at 354.33 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7137,7 +7127,7 @@
 			)
 		)
 		(property "Footprint" "Connector_JST:JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal"
-			(at 361.95 20.32 0)
+			(at 353.06 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7146,7 +7136,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 361.95 20.32 0)
+			(at 353.06 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7155,7 +7145,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 361.95 20.32 0)
+			(at 353.06 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
