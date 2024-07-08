@@ -3904,16 +3904,6 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 24.13) (xy 63.5 24.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3bd5e195-b351-424b-87cb-b0f8c3617812")
-	)
-	(wire
-		(pts
 			(xy 222.25 186.69) (xy 224.79 186.69)
 		)
 		(stroke
@@ -3981,16 +3971,6 @@
 			(type default)
 		)
 		(uuid "4592f64d-702a-4a4d-85c5-885a6912f221")
-	)
-	(wire
-		(pts
-			(xy 53.34 26.67) (xy 53.34 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "45dc4ea4-cda3-46b9-9143-346dd87925ad")
 	)
 	(wire
 		(pts
@@ -5114,6 +5094,16 @@
 	)
 	(wire
 		(pts
+			(xy 55.88 24.13) (xy 63.5 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d35dfde1-b54a-49e7-9e7c-c4e2852f4a1f")
+	)
+	(wire
+		(pts
 			(xy 104.14 66.04) (xy 123.19 66.04)
 		)
 		(stroke
@@ -5181,6 +5171,16 @@
 			(type default)
 		)
 		(uuid "dca05adc-8cb0-4d50-9d3e-0d3242a6f326")
+	)
+	(wire
+		(pts
+			(xy 53.34 26.67) (xy 53.34 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de03471f-f5bb-4dc6-aabc-eacb12d6e246")
 	)
 	(wire
 		(pts
@@ -5710,13 +5710,13 @@
 		(uuid "505ccc9e-2e54-4c1f-9daa-e7e2daa167e5")
 	)
 	(label "USB_3_+5V"
-		(at 53.34 33.02 180)
+		(at 63.5 24.13 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "5675ff0a-71a3-4732-aed3-bf09499c0920")
 	)
@@ -5930,13 +5930,13 @@
 		(uuid "a141f155-045a-43a8-9cdb-eea21000908a")
 	)
 	(label "USB_2_+5V"
-		(at 63.5 24.13 0)
+		(at 53.34 33.02 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "a5245975-47b9-4248-a713-28655ac0d3ee")
 	)
