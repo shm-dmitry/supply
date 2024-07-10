@@ -3200,7 +3200,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 38.1) (xy 62.23 38.1)
+			(xy 66.04 30.48) (xy 62.23 30.48)
 		)
 		(stroke
 			(width 0)
@@ -3440,7 +3440,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 17.78) (xy 62.23 17.78)
+			(xy 66.04 20.32) (xy 62.23 20.32)
 		)
 		(stroke
 			(width 0)
@@ -3530,7 +3530,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 30.48) (xy 62.23 30.48)
+			(xy 66.04 38.1) (xy 62.23 38.1)
 		)
 		(stroke
 			(width 0)
@@ -3550,7 +3550,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 20.32) (xy 62.23 20.32)
+			(xy 66.04 17.78) (xy 62.23 17.78)
 		)
 		(stroke
 			(width 0)
@@ -3580,7 +3580,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 35.56) (xy 62.23 35.56)
+			(xy 66.04 33.02) (xy 62.23 33.02)
 		)
 		(stroke
 			(width 0)
@@ -3660,7 +3660,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 33.02) (xy 62.23 33.02)
+			(xy 66.04 35.56) (xy 62.23 35.56)
 		)
 		(stroke
 			(width 0)
@@ -4225,7 +4225,7 @@
 		(uuid "14b2da11-d58a-42e8-9659-c00a7feadc99")
 	)
 	(label "+5V_PWR_VCC"
-		(at 66.04 20.32 0)
+		(at 66.04 17.78 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4335,7 +4335,7 @@
 		(uuid "29ad1107-2557-431a-b319-9641645e3159")
 	)
 	(label "VSYS_SDA"
-		(at 66.04 35.56 0)
+		(at 66.04 33.02 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4500,7 +4500,7 @@
 		(uuid "88f9651e-227c-4853-a16f-37106f06931d")
 	)
 	(label "VSYS_SCL"
-		(at 66.04 38.1 0)
+		(at 66.04 30.48 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4577,7 +4577,7 @@
 		(uuid "9cddd06e-72a9-46c3-9168-b1bac1d01016")
 	)
 	(label "VSYS_VCC"
-		(at 66.04 33.02 0)
+		(at 66.04 35.56 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4720,7 +4720,7 @@
 		(uuid "dbca2044-957a-48d2-a101-71dad814ac43")
 	)
 	(label "+5V_PWR_GND"
-		(at 66.04 17.78 0)
+		(at 66.04 20.32 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4753,7 +4753,7 @@
 		(uuid "ecc41b8e-b3d0-4d07-90d8-49a46076daab")
 	)
 	(label "VSYS_GND"
-		(at 66.04 30.48 0)
+		(at 66.04 38.1 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5845,7 +5845,8 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Socket")
-		(at 57.15 20.32 180)
+		(at 57.15 17.78 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5853,7 +5854,7 @@
 		(dnp no)
 		(uuid "5302d308-014f-4617-9579-fe567b95d361")
 		(property "Reference" "J1"
-			(at 52.578 17.526 0)
+			(at 52.578 20.574 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5861,7 +5862,7 @@
 			)
 		)
 		(property "Value" "power +5V connector from board#1"
-			(at 37.846 20.574 0)
+			(at 37.846 17.526 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5869,7 +5870,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Wire:SolderWire-1.5sqmm_1x02_P6mm_D1.7mm_OD3mm"
-			(at 57.15 20.32 0)
+			(at 57.15 17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5878,7 +5879,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 57.15 20.32 0)
+			(at 57.15 17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5887,7 +5888,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 57.15 20.32 0)
+			(at 57.15 17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7069,7 +7070,8 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x04_Socket")
-		(at 57.15 35.56 180)
+		(at 57.15 33.02 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7077,7 +7079,7 @@
 		(dnp no)
 		(uuid "e260a59c-3772-4b4c-a157-3b4365a4a6a9")
 		(property "Reference" "J2"
-			(at 55.372 30.734 0)
+			(at 55.372 37.846 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7086,7 +7088,7 @@
 			)
 		)
 		(property "Value" "VSYS connector from Board#1"
-			(at 55.88 33.0201 0)
+			(at 55.88 35.5599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7095,7 +7097,7 @@
 			)
 		)
 		(property "Footprint" "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical"
-			(at 57.15 35.56 0)
+			(at 57.15 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7104,7 +7106,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 57.15 35.56 0)
+			(at 57.15 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7113,7 +7115,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 57.15 35.56 0)
+			(at 57.15 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
