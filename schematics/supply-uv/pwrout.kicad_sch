@@ -4717,12 +4717,6 @@
 		(uuid "2c96f923-0b72-44d2-b036-49f5421b0117")
 	)
 	(junction
-		(at 185.42 48.26)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2d321976-262f-4302-a3aa-46d263fb3469")
-	)
-	(junction
 		(at 168.91 134.62)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4981,12 +4975,6 @@
 		(uuid "e8af592a-953c-46f0-a2f9-b5e8975ff68a")
 	)
 	(junction
-		(at 185.42 30.48)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ead22257-2828-4a2e-9557-c55ba84daed5")
-	)
-	(junction
 		(at 106.68 173.99)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5211,16 +5199,6 @@
 			(type default)
 		)
 		(uuid "10a11c87-6a5c-4b53-bdaa-ecb6e977e00f")
-	)
-	(wire
-		(pts
-			(xy 185.42 48.26) (xy 205.74 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "112a8e51-3054-4a05-90f5-9d4942615309")
 	)
 	(wire
 		(pts
@@ -5454,16 +5432,6 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 30.48) (xy 185.42 30.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "29dfe40d-d483-4b1e-8748-620b355635b7")
-	)
-	(wire
-		(pts
 			(xy 55.88 241.3) (xy 55.88 243.84)
 		)
 		(stroke
@@ -5674,7 +5642,7 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 35.56) (xy 205.74 30.48)
+			(xy 215.9 35.56) (xy 215.9 30.48)
 		)
 		(stroke
 			(width 0)
@@ -5711,16 +5679,6 @@
 			(type default)
 		)
 		(uuid "4107501c-2a12-466a-9238-815631af224c")
-	)
-	(wire
-		(pts
-			(xy 76.2 203.2) (xy 81.28 203.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "429eaa40-8f30-497b-9205-b69caaa9b7e2")
 	)
 	(wire
 		(pts
@@ -5884,6 +5842,16 @@
 	)
 	(wire
 		(pts
+			(xy 81.28 213.36) (xy 81.28 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5166e178-9eac-435a-9e1c-6032e47c86a8")
+	)
+	(wire
+		(pts
 			(xy 33.02 156.21) (xy 33.02 158.75)
 		)
 		(stroke
@@ -6024,7 +5992,7 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 43.18) (xy 205.74 48.26)
+			(xy 215.9 43.18) (xy 215.9 48.26)
 		)
 		(stroke
 			(width 0)
@@ -6164,6 +6132,16 @@
 	)
 	(wire
 		(pts
+			(xy 76.2 203.2) (xy 81.28 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72427c83-6cd1-49c6-8916-ac1d16b33fee")
+	)
+	(wire
+		(pts
 			(xy 382.27 146.05) (xy 382.27 148.59)
 		)
 		(stroke
@@ -6281,6 +6259,16 @@
 			(type default)
 		)
 		(uuid "7fcc1084-6fad-4c7b-82c8-fba9379ae9d3")
+	)
+	(wire
+		(pts
+			(xy 213.36 30.48) (xy 215.9 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7fcf27e0-e5cb-4cd5-b86e-71fe155a8d1e")
 	)
 	(wire
 		(pts
@@ -7164,16 +7152,6 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 213.36) (xy 81.28 215.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d9f55715-e055-48de-afb6-8b10d3c136fb")
-	)
-	(wire
-		(pts
 			(xy 57.15 102.87) (xy 74.93 102.87)
 		)
 		(stroke
@@ -7702,6 +7680,17 @@
 		)
 		(uuid "1bdd34de-6c2d-4f01-b3ae-d9132641859b")
 	)
+	(label "HV_VCC_FUSE"
+		(at 213.36 30.48 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "27ffb63e-0c9e-4707-b255-e4af50a16fe0")
+	)
 	(label "DCDC_2V5_VREF"
 		(at 49.53 149.86 0)
 		(fields_autoplaced yes)
@@ -7833,6 +7822,17 @@
 			(justify left bottom)
 		)
 		(uuid "a12f1cbd-1cbb-49eb-8681-11e9b678ad26")
+	)
+	(label "DCDC_CURRENT_SENSE"
+		(at 215.9 48.26 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a69c78ce-8e47-499e-a3af-5ce154b41f61")
 	)
 	(label "DCDC_FEEDBACK"
 		(at 71.12 85.09 180)
@@ -8881,6 +8881,7 @@
 	(symbol
 		(lib_id "Jumper:SolderJumper_3_Open")
 		(at 81.28 208.28 90)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim yes)
 		(in_bom no)
@@ -8888,7 +8889,7 @@
 		(dnp no)
 		(uuid "0bbf9443-8412-4adf-8b57-8e9ea17cb30b")
 		(property "Reference" "JP7"
-			(at 89.408 204.47 90)
+			(at 89.408 212.09 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8897,7 +8898,7 @@
 			)
 		)
 		(property "Value" "Overpower mode"
-			(at 101.346 206.502 90)
+			(at 101.346 210.058 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8905,7 +8906,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical"
+		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Bridged2Bar12_RoundedPad1.0x1.5mm_NumberLabels"
 			(at 81.28 208.28 0)
 			(effects
 				(font
@@ -10250,7 +10251,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 205.74 39.37 180)
+		(at 215.9 39.37 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10258,7 +10259,7 @@
 		(dnp no)
 		(uuid "3dd3eaa7-0a96-4010-b5b0-ec11041b1086")
 		(property "Reference" "C64"
-			(at 212.09 37.846 0)
+			(at 222.25 37.846 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10266,7 +10267,7 @@
 			)
 		)
 		(property "Value" "К73-17 0.22 uF@630V"
-			(at 221.488 40.386 0)
+			(at 231.648 40.386 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10274,7 +10275,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_THT:C_Axial_L12.0mm_D6.5mm_P20.00mm_Horizontal"
-			(at 204.7748 35.56 0)
+			(at 214.9348 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10283,7 +10284,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 205.74 39.37 0)
+			(at 215.9 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10292,7 +10293,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 205.74 39.37 0)
+			(at 215.9 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
