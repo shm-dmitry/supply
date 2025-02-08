@@ -6578,7 +6578,6 @@
 	)
 	(label "DCDC_SHUTDOWN"
 		(at 127 90.17 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6589,7 +6588,6 @@
 	)
 	(label "DCDC_CURRENT_SENSE"
 		(at 240.03 107.95 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6600,7 +6598,6 @@
 	)
 	(label "DCDC_FEEDBACK"
 		(at 114.3 156.21 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6611,7 +6608,6 @@
 	)
 	(label "HV_VCC_FUSE"
 		(at 83.82 22.86 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6622,7 +6618,6 @@
 	)
 	(label "HV_VCC_FUSE"
 		(at 276.86 44.45 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6633,7 +6628,6 @@
 	)
 	(label "FEEDBACK"
 		(at 372.11 132.08 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6644,7 +6638,6 @@
 	)
 	(label "DCDC_CURRENT_SENSE"
 		(at 276.86 62.23 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6655,7 +6648,6 @@
 	)
 	(label "DCDC_5V_VREF"
 		(at 63.5 87.63 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6666,7 +6658,6 @@
 	)
 	(label "DCDC_FEEDBACK"
 		(at 127 82.55 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6677,7 +6668,6 @@
 	)
 	(label "DCDC_5V_VREF"
 		(at 86.36 151.13 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6688,7 +6678,6 @@
 	)
 	(label "HV_VCC_FUSE"
 		(at 236.22 71.12 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6699,7 +6688,6 @@
 	)
 	(label "DCDC_2V5_VREF"
 		(at 64.77 100.33 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6710,7 +6698,6 @@
 	)
 	(label "HV_VCC_FUSE"
 		(at 251.46 140.97 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6721,7 +6708,6 @@
 	)
 	(label "FEEDBACK"
 		(at 44.45 167.64 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6732,7 +6718,6 @@
 	)
 	(label "DCDC_SHUTDOWN"
 		(at 83.82 120.65 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6743,7 +6728,6 @@
 	)
 	(label "DCDC_5V_VREF"
 		(at 62.23 43.18 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6754,7 +6738,6 @@
 	)
 	(label "DCDC_5V_VREF"
 		(at 127 87.63 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6765,7 +6748,6 @@
 	)
 	(label "DCDC_2V5_VREF"
 		(at 127 80.01 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6776,7 +6758,6 @@
 	)
 	(label "DCDC_CURRENT_SENSE"
 		(at 36.83 125.73 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6787,7 +6768,6 @@
 	)
 	(label "DCDC_5V_VREF"
 		(at 48.26 96.52 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6798,7 +6778,6 @@
 	)
 	(label "HV_VCC_FUSE"
 		(at 241.3 44.45 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6810,7 +6789,6 @@
 	(hierarchical_label "+5V_PWR_GND"
 		(shape input)
 		(at 391.16 121.92 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6822,7 +6800,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 63.5 111.76 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6834,7 +6811,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 184.15 128.27 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6846,7 +6822,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 181.61 147.32 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6858,7 +6833,6 @@
 	(hierarchical_label "STB_VCC"
 		(shape input)
 		(at 144.78 67.31 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6870,7 +6844,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 96.52 95.25 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6882,7 +6855,6 @@
 	(hierarchical_label "+5V_PWR_GND"
 		(shape input)
 		(at 431.8 125.73 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6894,7 +6866,6 @@
 	(hierarchical_label "+5V_PWR_GND"
 		(shape input)
 		(at 467.36 130.81 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6906,7 +6877,6 @@
 	(hierarchical_label "STB_VCC"
 		(shape input)
 		(at 184.15 115.57 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6918,7 +6888,6 @@
 	(hierarchical_label "STB_VCC"
 		(shape input)
 		(at 92.71 48.26 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6930,7 +6899,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 96.52 60.96 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6942,7 +6910,6 @@
 	(hierarchical_label "HV_GND"
 		(shape input)
 		(at 284.48 140.97 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6954,7 +6921,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 72.39 115.57 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6966,7 +6932,6 @@
 	(hierarchical_label "+5V_PWR_GND"
 		(shape input)
 		(at 448.31 125.73 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6978,7 +6943,6 @@
 	(hierarchical_label "HV_VCC"
 		(shape input)
 		(at 67.31 22.86 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6990,7 +6954,6 @@
 	(hierarchical_label "+5V_PWR"
 		(shape input)
 		(at 35.56 151.13 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7002,7 +6965,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 143.51 113.03 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7014,7 +6976,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 186.69 110.49 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7026,7 +6987,6 @@
 	(hierarchical_label "+5V_PWR_GND"
 		(shape input)
 		(at 416.56 157.48 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7038,7 +6998,6 @@
 	(hierarchical_label "STB_VCC"
 		(shape input)
 		(at 154.94 116.84 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7050,7 +7009,6 @@
 	(hierarchical_label "+5V_PWR_GND"
 		(shape input)
 		(at 347.98 118.11 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7062,7 +7020,6 @@
 	(hierarchical_label "HV_GND"
 		(shape input)
 		(at 181.61 156.21 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7074,7 +7031,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 125.73 121.92 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7086,7 +7042,6 @@
 	(hierarchical_label "+5V_PWR_GND"
 		(shape input)
 		(at 372.11 119.38 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7098,7 +7053,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 154.94 129.54 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7110,7 +7064,6 @@
 	(hierarchical_label "STB_VCC"
 		(shape input)
 		(at 62.23 33.02 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7122,7 +7075,6 @@
 	(hierarchical_label "HV_GND"
 		(shape input)
 		(at 236.22 125.73 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7134,7 +7086,6 @@
 	(hierarchical_label "+5V_PWR_GND"
 		(shape input)
 		(at 328.93 118.11 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7146,7 +7097,6 @@
 	(hierarchical_label "+5V_PWR"
 		(shape input)
 		(at 477.52 104.14 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7158,7 +7108,6 @@
 	(hierarchical_label "STB_VCC"
 		(shape input)
 		(at 111.76 48.26 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7170,7 +7119,6 @@
 	(hierarchical_label "+5V_PWR_GND"
 		(shape input)
 		(at 298.45 104.14 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7182,7 +7130,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 104.14 166.37 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7194,7 +7141,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 48.26 109.22 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7206,7 +7152,6 @@
 	(hierarchical_label "STB_VCC"
 		(shape input)
 		(at 179.07 71.12 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7218,7 +7163,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 86.36 166.37 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7230,7 +7174,6 @@
 	(hierarchical_label "HV_GND"
 		(shape input)
 		(at 241.3 62.23 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7242,7 +7185,6 @@
 	(hierarchical_label "+5V_PWR_GND"
 		(shape input)
 		(at 403.86 125.73 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7254,7 +7196,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 114.3 60.96 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7266,7 +7207,6 @@
 	(hierarchical_label "HV_GND"
 		(shape input)
 		(at 50.8 137.16 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7278,7 +7218,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 109.22 121.92 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7324,7 +7263,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/uc2525b.pdf"
+		(property "Datasheet" "https://static.chipdip.ru/lib/877/DOC003877016.pdf"
 			(at 143.51 92.71 0)
 			(effects
 				(font
@@ -7828,7 +7767,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "SM6T30CA"
+		(property "Value" "SMAJ5.0CA-TR"
 			(at 69.85 132.0799 90)
 			(effects
 				(font
@@ -9961,7 +9900,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "af6def02-8c87-48bf-957d-5263660db7a1")
 		(property "Reference" "C35"
 			(at 111.76 160.02 0)
@@ -10613,7 +10552,7 @@
 				)
 			)
 		)
-		(property "Value" "220"
+		(property "Value" "200"
 			(at 44.45 123.19 90)
 			(effects
 				(font
@@ -11225,8 +11164,8 @@
 				)
 			)
 		)
-		(property "Value" "1 uF"
-			(at 201.93 91.44 0)
+		(property "Value" "47 nF .... 120 nF *"
+			(at 209.55 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11253,6 +11192,15 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 196.85 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Actual" "100 nF"
+			(at 203.962 92.964 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11431,7 +11379,7 @@
 				)
 			)
 		)
-		(property "Value" "4K7"
+		(property "Value" "1K2"
 			(at 90.17 162.56 0)
 			(effects
 				(font
@@ -11555,7 +11503,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "ecbeffcc-b6e3-4142-8a4f-d9625ae6c984")
 		(property "Reference" "C50"
 			(at 398.78 137.16 0)

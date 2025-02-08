@@ -9618,7 +9618,7 @@
 		)
 		(uuid "46b883cf-d277-45da-ad96-7a9661d307be")
 	)
-	(text "1.5A"
+	(text "1A"
 		(exclude_from_sim no)
 		(at 212.344 302.006 0)
 		(effects
@@ -9627,16 +9627,6 @@
 			)
 		)
 		(uuid "4ee4c39f-026c-4401-9e41-838a08fe2180")
-	)
-	(text "CHANGE?"
-		(exclude_from_sim no)
-		(at 250.444 130.302 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "5743ed13-fd78-42c6-982d-73a96b824eab")
 	)
 	(text "1A"
 		(exclude_from_sim no)
@@ -9671,7 +9661,7 @@
 		)
 		(uuid "7b23ef40-8a15-4504-970b-9688b6d3034e")
 	)
-	(text "0.5A"
+	(text "0.2A"
 		(exclude_from_sim no)
 		(at 211.582 360.934 0)
 		(effects
@@ -9694,7 +9684,6 @@
 	)
 	(label "VSYS2_PRE_VCC"
 		(at 175.26 166.37 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9705,7 +9694,6 @@
 	)
 	(label "HV_VCC_FUSE"
 		(at 72.39 91.44 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9716,7 +9704,6 @@
 	)
 	(label "FEEDBACK"
 		(at 78.74 176.53 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9727,7 +9714,6 @@
 	)
 	(label "V_STANDBY_PRE"
 		(at 336.55 50.8 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9738,7 +9724,6 @@
 	)
 	(label "STARTUP_PROTECT_IN"
 		(at 68.58 48.26 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9749,7 +9734,6 @@
 	)
 	(label "STB_READY_VREF"
 		(at 240.03 248.92 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9760,7 +9744,6 @@
 	)
 	(label "V_STANDBY_PRE"
 		(at 194.31 248.92 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9771,7 +9754,6 @@
 	)
 	(label "STARTUP_PROTECT_OUT"
 		(at 90.17 53.34 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9782,7 +9764,6 @@
 	)
 	(label "HV_VCC_FUSE"
 		(at 157.48 96.52 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9793,7 +9774,6 @@
 	)
 	(label "HV_VCC_FUSE"
 		(at 58.42 146.05 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9804,7 +9784,6 @@
 	)
 	(label "STB_READY_VREF"
 		(at 353.06 226.06 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9815,7 +9794,6 @@
 	)
 	(label "V_STANDBY_PRE"
 		(at 322.58 213.36 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9826,7 +9804,6 @@
 	)
 	(label "IS_VSTANDBY_OK#"
 		(at 375.92 228.6 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9837,7 +9814,6 @@
 	)
 	(label "VSYS1_PRE_VCC"
 		(at 120.65 303.53 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9848,7 +9824,6 @@
 	)
 	(label "STARTUP_PROTECT_IN"
 		(at 271.78 30.48 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9859,7 +9834,6 @@
 	)
 	(label "FEEDBACK"
 		(at 203.2 158.75 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9870,7 +9844,6 @@
 	)
 	(label "STARTUP_PROTECT_OUT"
 		(at 342.9 30.48 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9881,7 +9854,6 @@
 	)
 	(label "VSYS2_PRE_VCC"
 		(at 120.65 363.22 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9892,7 +9864,6 @@
 	)
 	(label "IS_VSTANDBY_OK#"
 		(at 322.58 143.51 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9903,7 +9874,6 @@
 	)
 	(label "V_STANDBY_PRE"
 		(at 326.39 116.84 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9914,7 +9884,6 @@
 	)
 	(label "HV_VCC_FUSE"
 		(at 96.52 128.27 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9925,7 +9894,6 @@
 	)
 	(label "VSYS1_PRE_VCC"
 		(at 176.53 147.32 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9936,7 +9904,6 @@
 	)
 	(label "V_STANDBY_PRE"
 		(at 361.95 217.17 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9948,7 +9915,6 @@
 	(hierarchical_label "VSYS2_GND"
 		(shape input)
 		(at 278.13 377.19 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9960,7 +9926,6 @@
 	(hierarchical_label "VSYS1_GND"
 		(shape input)
 		(at 87.63 257.81 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9972,7 +9937,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 361.95 245.11 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9984,7 +9948,6 @@
 	(hierarchical_label "VSYS2_GND"
 		(shape input)
 		(at 175.26 181.61 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9996,7 +9959,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 370.84 142.24 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10008,7 +9970,6 @@
 	(hierarchical_label "STB_VCC"
 		(shape input)
 		(at 63.5 378.46 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10020,7 +9981,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 63.5 335.28 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10032,7 +9992,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 388.62 151.13 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10044,7 +10003,6 @@
 	(hierarchical_label "HV_GND"
 		(shape input)
 		(at 59.69 194.31 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10056,7 +10014,6 @@
 	(hierarchical_label "VSYS2_GND"
 		(shape input)
 		(at 250.19 383.54 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10068,7 +10025,6 @@
 	(hierarchical_label "HV_GND"
 		(shape input)
 		(at 72.39 115.57 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10080,7 +10036,6 @@
 	(hierarchical_label "HV_GND"
 		(shape input)
 		(at 181.61 64.77 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10092,7 +10047,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 274.32 140.97 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10104,7 +10058,6 @@
 	(hierarchical_label "HV_GND"
 		(shape input)
 		(at 24.13 25.4 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10116,7 +10069,6 @@
 	(hierarchical_label "HV_VCC"
 		(shape input)
 		(at 181.61 41.91 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10128,7 +10080,6 @@
 	(hierarchical_label "HV_GND"
 		(shape input)
 		(at 207.01 171.45 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10140,7 +10091,6 @@
 	(hierarchical_label "HV_GND"
 		(shape input)
 		(at 132.08 194.31 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10152,7 +10102,6 @@
 	(hierarchical_label "VSYS1_GND"
 		(shape input)
 		(at 250.19 323.85 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10164,7 +10113,6 @@
 	(hierarchical_label "STB_VCC"
 		(shape input)
 		(at 63.5 318.77 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10176,7 +10124,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 341.63 245.11 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10188,7 +10135,6 @@
 	(hierarchical_label "HV_GND"
 		(shape input)
 		(at 87.63 236.22 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10200,7 +10146,6 @@
 	(hierarchical_label "VSYS1_VCC"
 		(shape input)
 		(at 87.63 250.19 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10212,7 +10157,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 248.92 193.04 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10224,7 +10168,6 @@
 	(hierarchical_label "VSYS2_GND"
 		(shape input)
 		(at 124.46 396.24 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10236,7 +10179,6 @@
 	(hierarchical_label "STB_VCC"
 		(shape input)
 		(at 396.24 128.27 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10248,7 +10190,6 @@
 	(hierarchical_label "VSYS2_VCC"
 		(shape input)
 		(at 294.64 363.22 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10260,7 +10201,6 @@
 	(hierarchical_label "STB_VCC"
 		(shape input)
 		(at 88.9 224.79 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10272,7 +10212,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 179.07 143.51 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10284,7 +10223,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 332.74 156.21 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10296,7 +10234,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 234.95 267.97 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10308,7 +10245,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 87.63 243.84 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10320,7 +10256,6 @@
 	(hierarchical_label "HV_GND"
 		(shape input)
 		(at 91.44 194.31 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10332,7 +10267,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 63.5 394.97 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10344,7 +10278,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 322.58 245.11 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10356,7 +10289,6 @@
 	(hierarchical_label "HV_VCC"
 		(shape input)
 		(at 140.97 96.52 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10368,7 +10300,6 @@
 	(hierarchical_label "VSYS2_GND"
 		(shape input)
 		(at 87.63 273.05 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10380,7 +10311,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 293.37 153.67 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10392,7 +10322,6 @@
 	(hierarchical_label "VSYS1_GND"
 		(shape input)
 		(at 124.46 336.55 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10404,7 +10333,6 @@
 	(hierarchical_label "VSYS2_GND"
 		(shape input)
 		(at 171.45 384.81 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10416,7 +10344,6 @@
 	(hierarchical_label "VSYS1_GND"
 		(shape input)
 		(at 171.45 325.12 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10428,7 +10355,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 215.9 267.97 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10440,7 +10366,6 @@
 	(hierarchical_label "VSYS1_GND"
 		(shape input)
 		(at 175.26 162.56 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10452,7 +10377,6 @@
 	(hierarchical_label "HV_GND"
 		(shape input)
 		(at 139.7 160.02 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10464,7 +10388,6 @@
 	(hierarchical_label "HV_GND"
 		(shape input)
 		(at 110.49 194.31 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10476,7 +10399,6 @@
 	(hierarchical_label "VSYS2_VCC"
 		(shape input)
 		(at 87.63 265.43 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10488,7 +10410,6 @@
 	(hierarchical_label "HV_GND"
 		(shape input)
 		(at 104.14 160.02 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10500,7 +10421,6 @@
 	(hierarchical_label "STB_GND"
 		(shape input)
 		(at 295.91 50.8 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10512,7 +10432,6 @@
 	(hierarchical_label "VSYS1_VCC"
 		(shape input)
 		(at 270.51 303.53 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10905,7 +10824,7 @@
 				)
 			)
 		)
-		(property "Value" "ETD 29/16/10@N87@s=0.2mm N41/8/9@0.5mm"
+		(property "Value" "ETD 29/16/10@N87@s=0.2mm N53/7@0.5mm N7/4@1mm N4@0.5mm"
 			(at 149.606 119.634 0)
 			(effects
 				(font
@@ -11136,7 +11055,7 @@
 		(fields_autoplaced yes)
 		(uuid "10800610-77db-401e-813a-0923d84b2f63")
 		(property "Reference" "R11"
-			(at 127 310.515 0)
+			(at 127 309.8799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11144,8 +11063,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10K"
-			(at 127 313.055 0)
+		(property "Value" "15K"
+			(at 127 312.4199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13317,7 +13236,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "50K"
+		(property "Value" "100K"
 			(at 325.12 222.2499 0)
 			(effects
 				(font
@@ -14731,7 +14650,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "510"
+		(property "Value" "470"
 			(at 252.73 378.46 0)
 			(effects
 				(font
@@ -15092,7 +15011,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10K"
+		(property "Value" "20K"
 			(at 325.12 238.7599 0)
 			(effects
 				(font
@@ -16469,7 +16388,7 @@
 		(dnp no)
 		(uuid "bd51512c-bb7e-4772-8d32-f70d0e45eeea")
 		(property "Reference" "D2"
-			(at 94.742 186.944 90)
+			(at 94.488 192.532 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16477,8 +16396,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SMBJ3.3A"
-			(at 94.742 189.484 90)
+		(property "Value" "SMAJ5.0CA-TR"
+			(at 94.488 195.072 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17545,7 +17464,7 @@
 				)
 			)
 		)
-		(property "Value" "510"
+		(property "Value" "470"
 			(at 205.74 245.11 90)
 			(effects
 				(font
@@ -18525,7 +18444,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "510"
+		(property "Value" "470"
 			(at 252.73 318.77 0)
 			(effects
 				(font
@@ -18788,7 +18707,7 @@
 		(fields_autoplaced yes)
 		(uuid "f8bbfb28-5289-479d-b9d5-788c10379af5")
 		(property "Reference" "R12"
-			(at 127 370.205 0)
+			(at 127 369.5699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18796,8 +18715,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10K"
-			(at 127 372.745 0)
+		(property "Value" "15K"
+			(at 127 372.1099 0)
 			(effects
 				(font
 					(size 1.27 1.27)

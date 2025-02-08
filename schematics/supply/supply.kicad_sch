@@ -7285,10 +7285,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "fabacfc5-71c8-4318-8430-46a1df52aba4")
 		(property "Reference" "U2"
-			(at 286.2265 102.87 0)
+			(at 289.56 120.396 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7297,7 +7296,7 @@
 			)
 		)
 		(property "Value" "6N137"
-			(at 286.2265 105.41 0)
+			(at 289.56 122.936 0)
 			(effects
 				(font
 					(size 1.27 1.27)

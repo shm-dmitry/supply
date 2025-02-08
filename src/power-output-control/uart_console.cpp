@@ -2,6 +2,7 @@
 
 #include "Arduino.h"
 #include "power_output_control.h"
+#include "power_output_sense.h"
 
 #if UART_ENABLED
 void uart_console_init() {
@@ -81,6 +82,21 @@ void uart_console_on_main_loop() {
 
       Serial.print("Enabled: ");
       Serial.println(status.enabled);
+    } else if (v == 'R') {
+      uint16_t v = 0;
+      uint16_t i = 0;
+      uint16_t r = 0;
+
+      power_output_sense_getraw(&v, &i, &r);
+
+      Serial.print("Vraw : ");
+      Serial.println(v);
+
+      Serial.print("Iraw : ");
+      Serial.println(i);
+
+      Serial.print("RefRaw : ");
+      Serial.println(r);
     } else if (v != '\r' && v != '\n') {
       Serial.print("Unknown command: ");
       Serial.println(v);

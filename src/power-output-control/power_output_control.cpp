@@ -30,6 +30,8 @@ void power_output_control_init() {
 }
 
 void power_output_control_on_main_loop() {
+  power_output_sense_on_main_loop();
+
   bool allowWork = true;
 
   if (power_output_control_V_x1000 == 0 || power_output_control_I_x1000 == 0 || power_output_enabled == false) {
